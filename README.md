@@ -23,16 +23,18 @@ Contact person: [Osama Mohammed Afzal](mailto:osama.afzal@tu-darmstadt.de)
 python -m venv .venv
 source .venv/bin/activate
 pip install .
-pip install -r requirements-dev.txt # Only needed for development
+pip install -r requirements.txt
 ```
 
 ### Prerequisites
 
 1. **API Keys**: Copy `.env.example` to `.env` and add your API keys:
+
    - `OPENAI_API_KEY`: Required for structured extraction and novelty assessment
    - `SEMANTIC_SCHOLAR_API_KEY`: Optional, improves rate limits for paper retrieval
 
 2. **GROBID Setup**: The pipeline requires GROBID for extracting structured metadata from PDFs:
+
    - **Installation**: Follow the installation instructions at [GROBID repository](https://github.com/kermitt2/grobid)
    - **Usage**: Process your PDF papers to generate TEI XML files:
      ```bash
@@ -45,25 +47,29 @@ pip install -r requirements-dev.txt # Only needed for development
      ```
 
 3. **OCR Processing**: The pipeline requires OCR processing of PDF papers to extract introductions. You can use either:
+
    - **Nougat OCR**: Follow installation instructions at [Nougat repository](https://github.com/facebookresearch/nougat)
    - **MinerU OCR**: Follow installation instructions at [MinerU repository](https://github.com/opendatalab/MinerU)
-   
+
    The pipeline expects OCR output in these specific directory structures:
-   
+
    **For Main Paper** (any one of these):
+
    ```
    data/{submission_id}/ocr_output/{submission_id}/auto/{submission_id}.md
    data/{submission_id}/nougat_output/{submission_id}.mmd
    data/{submission_id}/mineru_output/{submission_id}.md
    ```
-   
+
    **For Related Papers** (any one of these):
+
    ```
    data/{submission_id}/related_work_data/ocr_output/{paper_id}/auto/{paper_id}.md
    data/{submission_id}/related_work_data/nougat_output/{paper_id}.mmd
    ```
-   
+
    **Generated Introduction Files** (created by pipeline):
+
    ```
    data/{submission_id}/ours/{submission_id}_intro.txt              # main paper
    data/{submission_id}/ours/related_papers/{paper_id}_intro.txt    # related papers
@@ -76,6 +82,7 @@ pip install -r requirements-dev.txt # Only needed for development
 The novelty assessment pipeline consists of several stages. For a single submission:
 
 0. **GROBID Processing**: Process submission PDF with GROBID (external step)
+
    ```bash
    # Start GROBID service (refer to GROBID documentation)
    # Process PDF to generate TEI XML file
@@ -83,36 +90,42 @@ The novelty assessment pipeline consists of several stages. For a single submiss
    ```
 
 1. **Preprocess**: Extract metadata from GROBID TEI XML
+
    ```bash
    cd src/preprocess
    python extract_metadata.py --data-dir /path/to/data --submission-id SUBMISSION_ID
    ```
 
 2. **Enrich Citations**: Add Semantic Scholar data to citations
+
    ```bash
    cd src/retrieval
    python match_papers_to_s2.py --input /path/to/data --submission-id SUBMISSION_ID
    ```
 
 3. **Retrieve Related Papers**: Find and rank related papers
+
    ```bash
    cd src/retrieval
    python retrieval.py --input /path/to/data --submission-id SUBMISSION_ID
    ```
 
 4. **Download PDFs**: Download PDFs of ranked papers
+
    ```bash
    cd src/retrieval
    python get_cited_pdfs.py --data-dir /path/to/data --submission-id SUBMISSION_ID
    ```
 
 5. **OCR Processing**: Process PDFs with Nougat or MinerU (external step)
+
    ```bash
    # Process main paper PDF and related paper PDFs with OCR tool of choice
    # Save outputs in expected directory structure (see Prerequisites)
    ```
 
 6. **Extract Introductions**: Extract introductions from OCR output
+
    ```bash
    cd src/retrieval
    python extract_introductions.py --data-dir /path/to/data --submission-id SUBMISSION_ID
@@ -166,12 +179,14 @@ data/{submission_id}/
 **Key Output Files:**
 
 1. **`summary_{submission_id}.json`** - The main output containing:
+
    - **Executive Summary**: High-level novelty assessment and recommendations
    - **Detailed Analysis**: Evidence-based comparison with related work
    - **Reviewer Guidance**: Structured feedback for peer reviewers
    - **Supporting Evidence**: Citations and specific comparisons
 
 2. **`novelty_assessment_{submission_id}.json`** - Detailed technical analysis including:
+
    - Methodological comparisons with related work
    - Innovation assessment across different dimensions
    - Evidence-based novelty scoring
@@ -199,13 +214,15 @@ The pipeline components accept these main parameters:
 For development work:
 
 1. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 2. The codebase is organized into three main stages:
+
    - `src/preprocess/`: Metadata extraction from GROBID TEI files
-   - `src/retrieval/`: Paper retrieval, PDF download, and introduction extraction  
+   - `src/retrieval/`: Paper retrieval, PDF download, and introduction extraction
    - `src/novelty_assessment/`: LLM-based analysis and summary generation
 
 3. Each component includes both CLI interface and pipeline integration methods for flexible usage.
@@ -216,13 +233,13 @@ Please use the following citation:
 
 ```
 @misc{afzal2025notnovelenoughenriching,
-      title={Beyond "Not Novel Enough": Enriching Scholarly Critique with LLM-Assisted Feedback}, 
+      title={Beyond "Not Novel Enough": Enriching Scholarly Critique with LLM-Assisted Feedback},
       author={Osama Mohammed Afzal and Preslav Nakov and Tom Hope and Iryna Gurevych},
       year={2025},
       eprint={2508.10795},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2508.10795}, 
+      url={https://arxiv.org/abs/2508.10795},
 }
 ```
 
