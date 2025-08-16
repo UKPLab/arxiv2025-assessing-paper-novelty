@@ -1,9 +1,0 @@
-Submission: 2ofVtMvRil
-OCR Method: Nougat
-PDFs Processed: 16
-MMD Files Created: 14
-Processing Date: Fri Jun  6 22:31:54 CEST 2025
-Input Directory: results/2ofVtMvRil/pdfs
-Output Directory: results/2ofVtMvRil/nougat_output
-Model: 0.1.0-base
-Batch Size: 4
