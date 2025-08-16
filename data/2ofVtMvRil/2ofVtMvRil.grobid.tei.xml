@@ -1,0 +1,1748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main" xml:id="_EjUgs7q">Under review as a conference paper at ICLR 2025 LEARNING GRID CELLS BY PREDICTIVE CODING</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<title level="a" type="main" xml:id="_Y6juHp7">Under review as a conference paper at ICLR 2025 LEARNING GRID CELLS BY PREDICTIVE CODING</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">07DFC5BEA03FD11B7252ED99A137E051</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.3-SNAPSHOT" ident="GROBID" when="2025-06-05T10:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">0.8.2-3-g65968aec5</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=true, generateTeiCoordinates=[ref, biblStruct], flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_eAKD2BS"><p xml:id="_PNAbpFT"><s xml:id="_h6aeBfd">Grid cells in the medial entorhinal cortex (MEC) of the mammalian brain exhibit a strikingly regular hexagonal firing field over space.</s><s xml:id="_FUZCx9Z">These cells are learned after birth and are thought to support spatial navigation but also more abstract computations.</s><s xml:id="_4DxUzzK">Although various computational models, including those based on artificial neural networks, have been proposed to explain the formation of grid cells, the process through which the MEC circuit learns to develop grid cells remains unclear.</s><s xml:id="_gFuCtkT">In this study, we argue that predictive coding, a biologically plausible plasticity rule known to learn visual representations, can also train neural networks to develop hexagonal grid representations from spatial inputs.</s><s xml:id="_sV3pBpR">We demonstrate that grid cells emerge robustly through predictive coding in both static and dynamic environments, and we develop an understanding of this grid cell learning capability by analytically comparing predictive coding with existing models.</s><s xml:id="_vu7k8By">Our work therefore offers a novel and biologically plausible perspective on the learning mechanisms underlying grid cells.</s><s xml:id="_xrt6kg9">Moreover, it extends the predictive coding theory to the hippocampal formation, suggesting a unified learning algorithm for diverse cortical representations.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="14" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="15" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="16" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="17" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="18" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="19" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1" xml:id="_PJS5Y9H">INTRODUCTION</head><p xml:id="_hqZWUck"><s xml:id="_qe6C5v8">Our brain contains a rich set of neural representations of space that help us navigate in an everchanging world.</s><s xml:id="_GpUGXnx">These include hippocampal place cells <ref type="bibr" coords="1,336.37,421.51,64.26,8.64" target="#b33">(O'Keefe, 1976)</ref>, which fire when an animal is at a specific spatial position, and grid cells observed in the medial entorhinal cortex (MEC) <ref type="bibr" coords="1,108.00,443.43,85.28,8.64" target="#b18">(Hafting et al., 2005)</ref>, which fire when an animal occupies multiple positions on a hexagonal or triangular grid.</s><s xml:id="_N9RfXhW">Grid cells have been observed across various species <ref type="bibr" coords="1,394.61,454.38,76.20,8.64" target="#b15">(Fyhn et al., 2008;</ref><ref type="bibr" coords="1,474.27,454.38,29.74,8.64;1,108.00,465.34,48.93,8.64" target="#b60">Yartsev et al., 2011;</ref><ref type="bibr" coords="1,160.35,465.34,80.98,8.64" target="#b9">Doeller et al., 2010)</ref>, and their remarkable regularity has raised extensive interest in the computational mechanism underlying their emergence.</s><s xml:id="_Qme5T59">Earlier models have focused on how mechanisms, such as membrane potential oscillation <ref type="bibr" coords="1,324.02,487.26,111.77,8.64" target="#b34">(O'Keefe &amp; Burgess, 2005;</ref><ref type="bibr" coords="1,438.97,487.26,65.04,8.64;1,108.00,498.22,23.24,8.64" target="#b19">Hasselmo et al., 2007)</ref> and specialized recurrent connectivity, can generate grid-like firing patterns <ref type="bibr" coords="1,439.01,498.22,60.84,8.64;1,108.00,509.18,42.36,8.64" target="#b14">(Fuhs &amp; Touretzky, 2006;</ref><ref type="bibr" coords="1,153.30,509.18,84.78,8.64" target="#b5">Burak &amp; Fiete, 2009)</ref>.</s><s xml:id="_6JgPPE3">More recently, research has shown that grid cells can emerge in recurrent neural networks (RNNs) trained using backpropagation through time (BPTT) for path integration tasks.</s><s xml:id="_xjuGvYJ">The models are trained to predict their current location by integrating velocity inputs <ref type="bibr" coords="1,108.00,542.06,86.14,8.64" target="#b8">(Cueva &amp; Wei, 2018;</ref><ref type="bibr" coords="1,197.18,542.06,79.96,8.64" target="#b0">Banino et al., 2018;</ref><ref type="bibr" coords="1,280.17,542.06,99.35,8.64" target="#b53">Whittington et al., 2020;</ref><ref type="bibr" coords="1,382.56,542.06,84.80,8.64" target="#b47">Sorscher et al., 2023)</ref>, providing a normative, task-driven account of the computational problem that the MEC grid cells address.</s><s xml:id="_52ewVFr">However, the process by which the MEC circuit acquires, or learns the grid cells in a biologically plausible way has been largely neglected, despite the fact that grid cells are known to be learned, rather than hardwired at birth <ref type="bibr" coords="1,231.84,585.89,92.68,8.64" target="#b24">(Langston et al., 2010;</ref><ref type="bibr" coords="1,327.92,585.89,72.23,8.64" target="#b56">Wills et al., 2010)</ref>.</s><s xml:id="_ykMC38V">Existing learning models (e.g.</s><s xml:id="_jKhheUN"><ref type="bibr" coords="1,143.90,596.85,105.82,8.64" target="#b51">Weber &amp; Sprekeler (2018)</ref>) are highly specialized for grid cells, and it is unclear whether plasticity rules for only one specific cell type exist in the brain.</s></p><p xml:id="_s2efjMk"><s xml:id="_W3UBUwS">In this paper, we directly tackle the learning problem underlying the emergence of grid cells using predictive coding, an algorithm modeling the plasticity rules for a variety of cortical functions and representations <ref type="bibr" coords="1,170.31,646.66,87.60,8.64" target="#b38">(Rao &amp; Ballard, 1999;</ref><ref type="bibr" coords="1,259.89,646.66,54.16,8.64" target="#b13">Friston, 2005)</ref>.</s><s xml:id="_J44PztP">Our approach to modeling grid cell emergence through predictive coding is motivated by three key factors: Firstly, the predictive coding algorithm can be implemented in predictive coding networks (PCNs) with local computations and Hebbian plasticity <ref type="bibr" coords="1,147.65,679.54,60.21,8.64" target="#b3">(Bogacz, 2017)</ref>, making it more biologically plausible than learning rules such as backpropagation.</s><s xml:id="_tJ7cYvK">Secondly, PCNs have been successful in replicating representations in other regions of the brain, such as the visual cortex <ref type="bibr" coords="1,248.27,701.46,89.27,8.64" target="#b38">(Rao &amp; Ballard, 1999;</ref><ref type="bibr" coords="1,340.10,701.46,102.56,8.64" target="#b35">Olshausen &amp; Field, 1996;</ref><ref type="bibr" coords="1,445.21,701.46,58.79,8.64;1,108.00,712.42,21.44,8.64" target="#b30">Millidge et al., 2024)</ref>.</s><s xml:id="_GV3AbF2">Thirdly, PCNs have demonstrated the ability to perform hippocampus-related functions, such as associative and sequential memories <ref type="bibr" coords="1,266.15,723.38,88.58,8.64" target="#b39">(Salvatori et al., 2021;</ref><ref type="bibr" coords="1,357.21,723.38,69.21,8.64" target="#b49">Tang et al., 2023;</ref><ref type="bibr" coords="1,428.92,723.38,21.44,8.64">2024)</ref>.</s></p><p xml:id="_SvnKaYp"><s xml:id="_BtHRrY5">Under review as a conference paper at ICLR 2025 The primary contribution of this work is to demonstrate for the first time that grid cells naturally emerge in PCNs trained to represent spatial inputs with biologically plausible plasticity rules.</s><s xml:id="_mGh3RyT">In this work we:</s></p><p xml:id="_zeGENSF"><s xml:id="_TrH9CPn">• show that hexagonal grid cells develop as the latent representations of place cells in classical PCNs <ref type="bibr" coords="2,116.47,139.54,89.10,8.64" target="#b38">(Rao &amp; Ballard, 1999;</ref><ref type="bibr" coords="2,208.06,139.54,102.94,8.64" target="#b35">Olshausen &amp; Field, 1996)</ref> with sparse and non-negative constraints; • train a dynamical extension of classical PCNs, called temporal predictive coding network (tPCN) <ref type="bibr" coords="2,116.47,165.21,86.71,8.64" target="#b30">(Millidge et al., 2024)</ref>, in path integration tasks and observe that the latent activities of the tPCN develop hexagonal, grid-like representations, similar to what has been discovered in RNNs; • develop an understanding of grid cell emergence in tPCN, by showing analytically that the Hebbian learning rule of tPCN implicitly approximates truncated <ref type="bibr" coords="2,361.64,201.84,121.28,8.64">BPTT (Williams &amp; Peng, 1990</ref>); • show that tPCN can robustly develop grid cells under different architectural choices, and even without velocity inputs in path integration.</s></p><p xml:id="_d4SMDgw"><s xml:id="_Sxbsnrs">Overall, our results present an effective and plausible learning rule for hexagonal grid cells in the MEC based on predictive coding.</s><s xml:id="_BPbjxNE">We offer a novel extension of predictive coding theory, which has traditionally been used to model visual representations <ref type="bibr" coords="2,354.16,270.75,93.01,8.64" target="#b38">(Rao &amp; Ballard, 1999;</ref><ref type="bibr" coords="2,450.95,270.75,53.05,8.64;2,108.00,281.71,47.03,8.64" target="#b35">Olshausen &amp; Field, 1996)</ref>, to encompass spatial representations in the MEC.</s><s xml:id="_Z7Puruv">Our findings therefore offer a novel understanding of how a single, unified learning algorithm can be employed by different brain regions to represent inputs of various levels of abstraction.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2" xml:id="_pvC2qA8">RELATED WORK</head><p xml:id="_wW4b8aR"><s xml:id="_Aas8psf">Computational Models of Grid Cells The periodicity of grid cells inspired early models of grid cells based on membrane potential oscillations, where the periodic firing of grid cells results naturally from the interference between somatic and dendritic oscillators in MEC pyramidal neurons <ref type="bibr" coords="2,108.00,388.63,111.47,8.64" target="#b34">(O'Keefe &amp; Burgess, 2005;</ref><ref type="bibr" coords="2,222.55,388.63,89.36,8.64" target="#b19">Hasselmo et al., 2007)</ref>.</s><s xml:id="_ce5j2Cn">These models were subsequently extended to incorporate multiple networks of oscillatory neurons <ref type="bibr" coords="2,327.52,399.59,102.76,8.64" target="#b61">(Zilli &amp; Hasselmo, 2010)</ref>.</s><s xml:id="_PT5mbvF">However, these models lack biological plausibility as they require an unrealistically large number of networks <ref type="bibr" coords="2,482.42,410.55,17.26,8.64;2,108.00,421.51,71.37,8.64" target="#b17">(Giocomo et al., 2011)</ref>.</s><s xml:id="_f7BUct8">Another major family of models leverages the recurrent attractor networks and obtains grid firing patterns <ref type="bibr" coords="2,218.74,432.47,105.22,8.64" target="#b14">(Fuhs &amp; Touretzky, 2006;</ref><ref type="bibr" coords="2,327.17,432.47,86.79,8.64" target="#b5">Burak &amp; Fiete, 2009;</ref><ref type="bibr" coords="2,417.16,432.47,73.68,8.64" target="#b32">Ocko et al., 2018)</ref> by hand-tuning the recurrent connectivity to form a center-surround structure.</s><s xml:id="_pby3Vyh">These networks perform robust and accurate path integration <ref type="bibr" coords="2,255.52,454.38,90.11,8.64" target="#b5">(Burak &amp; Fiete, 2009)</ref> and can explain experimental observations such as the deformation of grid cells in irregular environments <ref type="bibr" coords="2,383.80,465.34,73.98,8.64" target="#b32">(Ocko et al., 2018)</ref>.</s><s xml:id="_ccXkZWA">However, as pointed out by <ref type="bibr" coords="2,178.82,476.30,84.09,8.64" target="#b47">Sorscher et al. (2023)</ref>, these models lack an explanation for the underlying spatial task that gives rise to the specific recurrent connectivity.</s></p><p xml:id="_cwFxxyc"><s xml:id="_4sNHAWe">To address this gap, recent studies have explored the question 'If grid cell is the answer, what is the question?'.</s><s xml:id="_VWEEbGa"><ref type="bibr" coords="2,173.96,515.16,83.53,8.64" target="#b10">Dordek et al. (2016)</ref> showed that grid cells emerge as the non-negative principal components of place cells, while <ref type="bibr" coords="2,242.18,526.12,98.72,8.64" target="#b48">Stachenfeld et al. (2017)</ref> proposed that grid cells form a basis for predicting future observations.</s><s xml:id="_XNS2HrH">Other studies have focused on the multi-modularity of grid cells by optimizing biologically constrained objective functions <ref type="bibr" coords="2,329.96,548.03,81.38,8.64" target="#b11">(Dorrell et al., 2022;</ref><ref type="bibr" coords="2,413.75,548.03,85.96,8.64" target="#b44">Schaeffer et al., 2024)</ref>.</s><s xml:id="_XKwqWQC">Notably, multiple research tracks have found that RNNs trained to perform path integration tasks will develop hexagonal grid representations in their latent states <ref type="bibr" coords="2,364.14,569.95,84.36,8.64" target="#b8">(Cueva &amp; Wei, 2018;</ref><ref type="bibr" coords="2,450.95,569.95,53.05,8.64;2,108.00,580.91,22.69,8.64" target="#b0">Banino et al., 2018;</ref><ref type="bibr" coords="2,132.73,580.91,95.08,8.64" target="#b53">Whittington et al., 2020)</ref>, suggesting that grid cells emerge as a result of successful navigation.</s><s xml:id="_84YYgAC">These findings were further reinforced by <ref type="bibr" coords="2,274.94,591.87,83.48,8.64" target="#b47">Sorscher et al. (2023)</ref>, who analytically demonstrated that path integration with certain implementation choices, such as non-negativity, is a sufficient condition for the emergence of grid cells, clarifying earlier controversies <ref type="bibr" coords="2,365.26,613.79,91.46,8.64" target="#b43">(Schaeffer et al., 2022)</ref>.</s><s xml:id="_jDArK7H">However, none of these works have addressed how the MEC/hippocampal network learns the grid cells.</s><s xml:id="_Zymbjek">The RNN models are trained by BPTT, a learning rule unlikely to be employed by the brain <ref type="bibr" coords="2,466.37,635.70,37.63,8.64;2,108.00,646.66,69.99,8.64" target="#b25">(Lillicrap &amp; Santoro, 2019)</ref>.</s><s xml:id="_y4C9sKs">Even though the principal component model by <ref type="bibr" coords="2,389.17,646.66,84.28,8.64" target="#b10">Dordek et al. (2016)</ref> can be learned with the plausible Sanger's rule <ref type="bibr" coords="2,267.45,657.62,57.34,8.64" target="#b41">(Sanger, 1989)</ref>, it has been shown that principal component analysis (PCA) cannot be applied to other brain regions such as the visual areas <ref type="bibr" coords="2,447.49,668.58,56.52,8.64;2,108.00,679.54,47.47,8.64" target="#b35">(Olshausen &amp; Field, 1996)</ref>, and Sanger's rule cannot be generalized to dynamical tasks such as path integration.</s><s xml:id="_Jr4FMud">Earlier models of the learning process of grid cells have explored plausible learning rules such as spike time-dependent plasticity <ref type="bibr" coords="2,238.43,701.46,103.85,8.64" target="#b54">(Widloski &amp; Fiete, 2014)</ref> and variants of Hebbian learning rules <ref type="bibr" coords="2,108.00,712.42,97.75,8.64" target="#b21">(Kropff &amp; Treves, 2008)</ref> within networks of excitatory and inhibitory neurons <ref type="bibr" coords="2,421.46,712.42,82.54,8.64;2,108.00,723.38,21.44,8.64" target="#b51">(Weber &amp; Sprekeler, 2018)</ref>.</s><s xml:id="_hpJRynK">However, these learning rules are highly specialized, and have not been shown to reproduce representations from other brain regions with non-spatial tasks.</s><s xml:id="_8SHCz2t">Recent works have also modeled the hippocampal formation using generative models with plausible learning rules similar to predictive coding <ref type="bibr" coords="3,137.21,339.29,80.81,8.64" target="#b16">(George et al., 2024;</ref><ref type="bibr" coords="3,220.12,339.29,93.39,8.64" target="#b4">Bredenberg et al., 2021)</ref>, though these studies did not address 2D spatial learning.</s></p><p xml:id="_zqs43ry"><s xml:id="_hgzefPj">Predictive Coding Predictive coding has been an influential theory in understanding cortical computations <ref type="bibr" coords="3,147.94,384.22,60.13,8.64" target="#b13">(Friston, 2005;</ref><ref type="bibr" coords="3,211.48,384.22,88.53,8.64" target="#b38">Rao &amp; Ballard, 1999;</ref><ref type="bibr" coords="3,303.42,384.22,58.97,8.64" target="#b3">Bogacz, 2017)</ref> and has been applied to modeling various cortical functions (see <ref type="bibr" coords="3,232.66,395.18,87.19,8.64" target="#b28">Millidge et al. (2021)</ref> for a review).</s><s xml:id="_udY25Qk">Specifically, in the visual cortex, PCNs develop realistic visual representations such as Gabor-like receptive fields in response to both static <ref type="bibr" coords="3,153.52,417.10,91.78,8.64" target="#b38">(Rao &amp; Ballard, 1999;</ref><ref type="bibr" coords="3,248.69,417.10,105.62,8.64" target="#b35">Olshausen &amp; Field, 1996)</ref> and moving stimuli <ref type="bibr" coords="3,440.22,417.10,63.78,8.64;3,108.00,428.05,21.44,8.64" target="#b30">(Millidge et al., 2024)</ref>.</s><s xml:id="_DAZh9AH">Recently, theories have been developed to describe hippocampo-neocortical interactions using predictive coding <ref type="bibr" coords="3,197.03,439.01,81.53,8.64" target="#b1">(Barron et al., 2020)</ref>, and PCNs have demonstrated the ability to memorize and retrieve static and dynamic visual patterns, a key function of the hippocampus <ref type="bibr" coords="3,440.23,449.97,63.77,8.64;3,108.00,460.93,22.69,8.64" target="#b39">(Salvatori et al., 2021;</ref><ref type="bibr" coords="3,133.71,460.93,70.81,8.64" target="#b49">Tang et al., 2023;</ref><ref type="bibr" coords="3,207.55,460.93,21.44,8.64">2024)</ref>.</s><s xml:id="_xrTy5fb">Our work explores whether the representational learning capabilities of predictive coding can be extended to the hippocampal formation, which has so far only been functionally modeled by PCNs.</s></p><p xml:id="_5QDtXyF"><s xml:id="_ykPZcg6">The computations of PCNs use only local neural dynamics and Hebbian plasticity, making it biologically more plausible than backpropagation <ref type="bibr" coords="3,305.33,510.74,123.51,8.64" target="#b52">(Whittington &amp; Bogacz, 2017)</ref>.</s><s xml:id="_9zjy6hD">It has also been shown that predictive coding approximates backpropagation both in theory and practice <ref type="bibr" coords="3,461.94,521.70,37.86,8.64;3,108.00,532.66,83.15,8.64" target="#b52">(Whittington &amp; Bogacz, 2017;</ref><ref type="bibr" coords="3,193.71,532.66,70.20,8.64" target="#b46">Song et al., 2024;</ref><ref type="bibr" coords="3,266.46,532.66,83.90,8.64" target="#b37">Pinchetti et al., 2024)</ref>.</s><s xml:id="_gdujkHT">Unlike many other Hebbian learning rules, predictive coding can be extended to temporal predictive coding networks (tPCNs), which use recurrent connections to process dynamic stimuli <ref type="bibr" coords="3,324.66,554.58,87.10,8.64" target="#b30">(Millidge et al., 2024)</ref>.</s><s xml:id="_fpTyFvW">However, while <ref type="bibr" coords="3,486.29,554.58,13.29,8.64;3,108.00,565.54,69.93,8.64" target="#b30">Millidge et al. (2024)</ref> demonstrated that tPCNs approximate Kalman filtering, the relationships between tPCNs and RNNs remain unclear.</s><s xml:id="_M73tRK3">In this work, we train tPCNs for path integration and compare their performance with RNNs both analytically and experimentally in this context.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3" xml:id="_dcjaSDx">MODELS</head><p xml:id="_PUuhbVP"><s xml:id="_8mJjZUA">Non-negative Sparse PCN We first investigate the classical PCN <ref type="bibr" coords="3,385.05,638.70,91.63,8.64" target="#b38">(Rao &amp; Ballard, 1999)</ref> for its ability to form grid representations.</s><s xml:id="_YJxjpf5">Assuming a place cell input p ∈ R Np that represents a location in 2D space as an N p -dimensional vector, a simple 2-layer PCN generates predictions of p using its latent activities g ∈ R Ng (which will develop grid-like representations) and a weight matrix W (Fig <ref type="figure" coords="3,127.10,683.81,8.99,8.64" target="#fig_0">1A</ref>).</s><s xml:id="_d2dk2t8">The generative model minimizes the following loss function subject to two constraints:</s></p><formula xml:id="formula_0">L PCN = ∥p -Wg∥ 2 2 + ∥g∥ 2 2 + 2λ∥g∥ 1</formula><p xml:id="_FhkTMfW"><s xml:id="_ScSWmkY">(1) where ∥g∥ 2 2 constrains the l2 norm of the latent g and λ∥g∥ 1 enforces sparsity, similar to the sparse coding model <ref type="bibr" coords="3,168.12,723.38,109.14,8.64" target="#b35">(Olshausen &amp; Field, 1996)</ref>.</s><s xml:id="_mHe9CKT">This loss function is minimized via an expectation-maximization (EM) algorithm, alternating between the optimization over g (inference) and W (learning) (see Appendix A.1 for the training algorithm):</s></p><formula xml:id="formula_1">∆g ∝ -∇ g L PCN = -g -λsgn(g) + W ⊤ ϵ ϵ ϵ p ; g ← ReLU(g + ∆g)</formula><p xml:id="_wcdUV2D"><s xml:id="_ZtPWWRt">(2)</s></p><formula xml:id="formula_2">∆W ∝ -∇ W L PCN = ϵ ϵ ϵ p g ⊤ (3</formula><p xml:id="_GYcYPXE"><s xml:id="_4u2ybqz">) where ϵ ϵ ϵ p := p -Wg and we apply a ReLU to the inference dynamics to constrain the latent activities to be non-negative.</s><s xml:id="_GJXAXGT">The inference and learning dynamics can be implemented in a plausible circuit <ref type="bibr" coords="4,135.95,170.02,59.57,8.64" target="#b3">(Bogacz, 2017)</ref>.</s><s xml:id="_E6uVmyT">After convergence, we examine the firing fields of the latent activities g.</s></p><p xml:id="_NsvenR8"><s xml:id="_kfcMwEd">Path Integrating tPCN To account for the learning of spatial representations in moving animals, we also investigate tPCN that extends the classical PCNs to the temporal domain <ref type="bibr" coords="4,440.73,204.50,63.27,8.64;4,108.00,215.46,22.69,8.64" target="#b30">(Millidge et al., 2024;</ref><ref type="bibr" coords="4,133.10,215.46,69.48,8.64" target="#b50">Tang et al., 2024)</ref> in path integration tasks (Fig. <ref type="figure" coords="4,323.92,215.46,8.72,8.64" target="#fig_0">1B</ref>).</s><s xml:id="_pY836MW">The model receives a series of place cell activities p 1 , ..., p T and velocity inputs v 1 , ..., v T that represent the trajectory of an agent moving in a 2D space, and minimizes the following loss function at each time step t:</s></p><formula xml:id="formula_3">L tPCN,t = ∥p t -f (W out g t )∥ 2 2 + ∥g t -h(W r ĝt-1 + W in v t )∥ 2 2 (4)</formula><p xml:id="_3Ydutfu"><s xml:id="_dYW63YA">where f and h are both nonlinear activation functions, and W in , W r and W out are weight matrices projecting the predictions.</s><s xml:id="_hFAcRP6">We define ϵ ϵ ϵ p</s></p><formula xml:id="formula_4">t := p t -f (W out g t ), ϵ ϵ ϵ g t := g t -h(W r ĝt-1 + W in v t ).</formula><p xml:id="_MZNWty8"><s xml:id="_a9eEjp8">The model learns by first optimizing the loss function with respect to g t via gradient descent:</s></p><formula xml:id="formula_5">∆g t ∝ -∇ gt L tPCN,t = -ϵ ϵ ϵ g t + W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t (5)</formula><p xml:id="_ffeJtGb"><s xml:id="_Z2fN2wB">and then optimizing weights by:</s></p><formula xml:id="formula_6">{∆W out , ∆W r , ∆W in } ∝ -∇ {Wout,Wr,Win} L tPCN,t = {f ′ (W out g t )ϵ ϵ ϵ p t g ⊤ t , h ′ (g t )ϵ ϵ ϵ g t ĝ⊤ t-1 , h ′ (g t )ϵ ϵ ϵ g t v ⊤ t }<label>(6)</label></formula><p xml:id="_sgPNyqP"><s xml:id="_hAFZ9Uk">where f ′ and h ′ are Jacobians of the nonlinear functions f and h, and</s></p><formula xml:id="formula_7">gt := W r ĝt-1 + W in v t .</formula><p xml:id="_hJcJYY3"><s xml:id="_NJ8bhqX">After the inference (Equation <ref type="formula" coords="4,229.89,391.55,4.15,8.64">5</ref>) converges, we set ĝt to the converged value of g t , which will be used for optimizing the objective function at the next time step i.e., L tPCN,t+1 .</s><s xml:id="_UPJbK3e">The model is trained on a large number of trajectories {v t , p t } and after training, a set of velocity inputs from unseen trajectories is presented to the model.</s><s xml:id="_YywAJJ4">The model then performs a forward pass through time and layers to predict the positions encoded by place cells (see Appendix A.1 for the training and testing algorithms of tPCN):</s></p><formula xml:id="formula_8">g t = h(W r g t-1 + W in v t ), pt = f (W out g t )<label>(7)</label></formula><p xml:id="_YQe2Q32"><s xml:id="_6TJ4w95">The model is evaluated on 1) the accuracy of path integration position prediction pt and 2) the firing fields of the latent g.</s><s xml:id="_G6EARyu">When both f and h are linear, these computations can be plausibly implemented in a neural circuit shown in Figure <ref type="figure" coords="4,281.08,502.59,9.41,8.64" target="#fig_0">1C</ref>, with local inference computations (Equation <ref type="formula" coords="4,478.60,502.59,4.15,8.64">5</ref>) and Hebbian learning rules (Equation <ref type="formula" coords="4,244.61,513.55,4.15,8.64" target="#formula_6">6</ref>) <ref type="bibr" coords="4,255.80,513.55,87.11,8.64" target="#b30">(Millidge et al., 2024)</ref>.</s><s xml:id="_mXjVDc2">When the activation functions involve only local nonlinearity, such as tanh or ReLU, the Jacobians are diagonal and the inference and learning rules remain local and Hebbian <ref type="bibr" coords="4,268.99,535.47,85.35,8.64" target="#b29">(Millidge et al., 2022)</ref>, and additional circuitry components can be included to plausibly implement the nonlinearities <ref type="bibr" coords="4,335.82,546.43,119.35,8.64" target="#b52">(Whittington &amp; Bogacz, 2017)</ref>.</s><s xml:id="_HWE8CJT">Within the context of spatial representation learning, this circuit implementation can be naturally mapped to the circuitry of the hippocampal formation.</s><s xml:id="_Ue2APPn">We discuss the relationship of this circuit implementation to existing and potential experimental evidence in the Discussion section.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_ueRwvpv">Input of the Model</head><p xml:id="_FAkvWpN"><s xml:id="_pGPK8nq">In models discussed in this work, we assume that grid cells are inferred as latent representations of place cells.</s><s xml:id="_Q4cn2kD">Although previous models have followed the opposite direction of the relationship, several strands of experimental evidence have suggested the emergence of grid cells as a result of place cells, including the earlier development of place cells <ref type="bibr" coords="4,428.81,635.71,75.20,8.64" target="#b6">(Bush et al., 2014;</ref><ref type="bibr" coords="4,108.00,646.66,87.78,8.64" target="#b24">Langston et al., 2010;</ref><ref type="bibr" coords="4,198.65,646.66,70.64,8.64" target="#b56">Wills et al., 2010)</ref>.</s><s xml:id="_dWvFucm">In both PCN and tPCN models, the place cell inputs are constructed as 2D difference-of-softmaxed-Gaussian (DoS) curves flattened into 1D vectors, which have been shown to yield hexagonal grid representations in RNNs <ref type="bibr" coords="4,375.18,668.58,91.30,8.64" target="#b43">(Schaeffer et al., 2022;</ref><ref type="bibr" coords="4,469.14,668.58,34.86,8.64;4,108.00,679.54,45.40,8.64" target="#b47">Sorscher et al., 2023)</ref>.</s><s xml:id="_cGAsPQF">The firing centers of the place cells are uniformly distributed across a 2D environment.</s></p><p xml:id="_3yHEKqM"><s xml:id="_kFyMcGv">For PCN, the inputs are N x evenly distributed locations in the environment (N x large enough to cover the whole environment) represented by the N p place cells.</s><s xml:id="_ybZ5bV5">For tPCN, the trajectories for the path integration task are obtained by simulating an agent performing a smooth random walk in the square environment.</s><s xml:id="_nZQ6Etu">At each point in time, the N p place cells will be uniquely activated, Under review as a conference paper at ICLR 2025 representing the agent's current location.</s><s xml:id="_STj3jK7">The velocity inputs v t are 2D vectors representing the speed of the simulated agent on the x and y coordinates at time step t.</s><s xml:id="_GMvkXGB">The effect of boundaries is simulated by slowing down the agent and reverting its moving direction near the borders of the environment.</s><s xml:id="_k7DBFdp">We sample a large number of trajectories to cover the whole simulated environment for training.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4" xml:id="_A6R7BVQ">RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1" xml:id="_Cs9mA45">SPARSE NON-NEGATIVE PCN DEVELOPS LATENT GRID CELLS</head><p xml:id="_psQXcRY"><s xml:id="_aFsAZSr">Here we examine whether the sparse non-negative PCN can develop hexagonal, grid-like latent representations of the space after training, by plotting each latent neuron's responses to the N x = 900 locations in the 2D space.</s><s xml:id="_ctpvePg">We use N p = 512 and N g = 256.</s><s xml:id="_M7eHGaw">The "gridness" of the 2D latent representations is evaluated using the grid score metric, commonly employed in both experimental and computational studies <ref type="bibr" coords="5,196.59,476.17,87.59,8.64" target="#b42">(Sargolini et al., 2006;</ref><ref type="bibr" coords="5,286.12,476.17,72.60,8.64" target="#b0">Banino et al., 2018</ref>) (see A.3 for grid score calculation).</s><s xml:id="_yqETZ7d">We found that this simple, 2-layer PCN can develop hexagonal grid cells similar to those observed in the MEC (Figure <ref type="figure" coords="5,190.77,498.08,8.99,8.64" target="#fig_1">2A</ref>).</s><s xml:id="_HWtWCbU">For comparison, we reproduce the results from <ref type="bibr" coords="5,404.38,498.08,82.25,8.64" target="#b10">Dordek et al. (2016)</ref> and <ref type="bibr" coords="5,108.00,509.04,83.52,8.64" target="#b47">Sorscher et al. (2023)</ref>, which show theoretically that performing non-negative PCA on the place cell inputs is guaranteed to produce hexagonal grid representations as the principal components of the N x × N p place cell input matrix.</s><s xml:id="_7npPrMR">The visual results of the reproduction are shown in Figure <ref type="figure" coords="5,473.16,530.96,9.41,8.64" target="#fig_1">2B</ref>, and we compare the distribution of grid scores of the PCN's latent neuron firing fields with those of the non-negative principal components in Figure <ref type="figure" coords="5,291.11,552.88,9.04,8.64" target="#fig_1">2E</ref>.</s><s xml:id="_hW8kX4h">The grid scores between our sparse non-negative PCN and non-negative PCA are similarly distributed.</s></p><p xml:id="_fUz543v"><s xml:id="_tWVwDHw">Why does the sparse, non-negative PCN develop hexagonal grid cells?</s><s xml:id="_CHcfFmY">While a precise analytical explanation is left for future work, we offer an intuitive hypothesis here.</s><s xml:id="_YYtUGzE">When presented with a batch N x of place cell inputs, the objective of PCN (Equation <ref type="formula" coords="5,355.82,602.69,4.15,8.64">1</ref>) can be written compactly as:</s></p><formula xml:id="formula_9">L PCN = ∥P -GW ⊤ ∥ 2 F + Nx i=1 ∥g i ∥ 2 2 + 2λ∥g i ∥ 1 (<label>8</label></formula><formula xml:id="formula_10">)</formula><p xml:id="_pvtBCrv"><s xml:id="_aXrsUta">where P ∈ R Nx×Np is the place cell activities across N x locations, and G ∈ R Nx×Ng represents grid cell responses.</s><s xml:id="_ZUNeMtd">On the other hand, the objective function of PCA is:</s></p><formula xml:id="formula_11">L PCA = ∥P -GM∥ 2 F s.t. GG ⊤ = I Nx (<label>9</label></formula><formula xml:id="formula_12">)</formula><p xml:id="_hGJ9NgU"><s xml:id="_y43YQz7">where M is the N g × N p readout matrix.</s><s xml:id="_EmPCPds">The constraint GG ⊤ = I Nx in Equation 9 enforces orthonormality of the grid cell matrix G columns, meaning they are orthogonal and have unit norm.</s><s xml:id="_QdyP9xs">We hypothesize that the constraint ∥g i ∥ 2 2 + 2λ∥g i ∥ 1 for our sparse PCN achieves this orthonormality implicitly: while the constraints are imposed on the rows of G, the overall sparsity of entries in G could induce orthogonality among its columns, with the l 2 term constraining the norm of the columns to achieve normality implicitly.</s><s xml:id="_9ZBQ8em">Indeed, Figure <ref type="figure" coords="6,339.56,361.53,11.63,8.64" target="#fig_1">2C</ref> shows that if we remove the sparsity constraint, the latent neurons' firing fields will no longer be hexagonal.</s><s xml:id="_dbYrGzg">Similarly, without ReLU i.e., non-negativity applied to the inference dynamics, we also could not obtain hexagonal grid cells (Figure <ref type="figure" coords="6,139.33,394.41,8.99,8.64" target="#fig_1">2D</ref>).</s><s xml:id="_G3uJTKK">It is worth noting that although (non-negative) PCA can be learned with the biologically plausible Sanger's rule <ref type="bibr" coords="6,199.99,405.37,56.98,8.64" target="#b41">(Sanger, 1989)</ref>, it lacks PCN's generalizability to different architectures <ref type="bibr" coords="6,484.64,405.37,15.49,8.64;6,108.00,416.33,71.70,8.64" target="#b40">(Salvatori et al., 2022)</ref> and to other brain regions such as the visual cortex <ref type="bibr" coords="6,381.58,416.33,104.34,8.64" target="#b35">(Olshausen &amp; Field, 1996;</ref><ref type="bibr" coords="6,487.95,416.33,16.05,8.64;6,108.00,427.29,61.18,8.64" target="#b38">Rao &amp; Ballard, 1999</ref>).</s><s xml:id="_ezZKhj9">However, it can be noticed that the grid cells by PCN lack the multi-modularity of the grid cells by non-negative PCA i.e., grid cells with different firing periods.</s><s xml:id="_dM6Nu5n">We suspect that although sparse PCNs can approximate the orthonormality of latent variables, they lack PCA's ability to extract latent variables ordered by the amount of explained variance in data, with higher variance naturally corresponding to larger spatial scales and vice versa.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2" xml:id="_KVbCDd7">TPCN DEVELOPS GRID CELLS BY PATH INTEGRATION</head><p xml:id="_DZJ8bXJ"><s xml:id="_kZcZtZU">Although training a static PCN with a large number of place cell activations can already give rise to brain-like hexagonal grid cells, the emergence of grid cells is known to rely on dynamic motion of animals <ref type="bibr" coords="6,142.02,542.06,107.04,8.64">(McNaughton et al., 2006;</ref><ref type="bibr" coords="6,252.10,542.06,77.16,8.64" target="#b57">Winter et al., 2015)</ref>.</s><s xml:id="_Uv9TtEC">Therefore, we investigate tPCN in a path integration task, where the simulated agent uses dynamic velocity inputs to determine its current position.</s><s xml:id="_ak6g64N">As a reference, we compare tPCN with RNNs trained in path integration, which have been shown to develop hexagonal grid cells <ref type="bibr" coords="6,292.11,574.93,87.95,8.64" target="#b8">(Cueva &amp; Wei, 2018;</ref><ref type="bibr" coords="6,383.71,574.93,81.79,8.64" target="#b0">Banino et al., 2018;</ref><ref type="bibr" coords="6,469.14,574.93,34.86,8.64;6,108.00,585.89,47.26,8.64" target="#b47">Sorscher et al., 2023)</ref> and share the same graphical structure as tPCN (Figure <ref type="figure" coords="6,378.27,585.89,8.72,8.64" target="#fig_0">1B</ref>).</s><s xml:id="_U83ShRn">However, it is important to note that RNNs are trained with the biologically implausible backpropagation-though-time (BPTT) algorithm, which requires "unrolling" of the network through time, a process unlikely to occur in the brain <ref type="bibr" coords="6,145.63,618.77,107.78,8.64" target="#b25">(Lillicrap &amp; Santoro, 2019)</ref>.</s></p><p xml:id="_2xTzkup"><s xml:id="_KRseAun">We first evaluate whether tPCN can learn to perform the path integration task using local and Hebbian learning rules.</s><s xml:id="_R8nenQV">We trained a tPCN model with N g = 2048 latent neurons on trajectories within a 1.4m × 1.4m environment represented by N p = 512 place cells.</s><s xml:id="_AZK6dku">After training, we tested the model on a set of unseen trajectories with velocity input v t , and assessed whether the tPCN and RNN models could predict the correct positions using Equation <ref type="formula" coords="6,364.83,679.54,3.74,8.64" target="#formula_8">7</ref>. As the output of the networks is the N p -dimensional population activity of the place cells, we calculate the predicted 2D positions by averaging the center positions of the 3 most active place cells in the output pt , and calculate the root mean square error (RMSE) between the decoded and ground-truth 2D positions.</s><s xml:id="_4TEbxt2">The visual and numerical results are shown in Figure <ref type="figure" coords="6,277.13,723.38,12.17,8.64" target="#fig_2">3A</ref>  simulated agent's speed, sampled from a Rayleigh distribution with mean 1, to test the robustness of the results.</s><s xml:id="_bKJVPbB">Note that we do not intend to model physiologically realistic speed of animals with these values.</s><s xml:id="_pzz8YKA">The performance of tPCN is comparable to that of the RNN, though it slightly deteriorates when the agent moves at higher speeds.</s></p><p xml:id="_pBBB2n9"><s xml:id="_tBzDsVk">Next, we examine whether the tPCN model develops grid-like representations in its latent layer during path integration.</s><s xml:id="_fTdvRey">We plot the firing fields of the 2048 latent neurons given an unseen set of trajectories covering the entire space.</s><s xml:id="_QpqVTHb">The neurons with the highest grid scores are shown in Figure <ref type="figure" coords="7,136.67,454.55,9.41,8.64" target="#fig_2">3C</ref>, which reveals a grid-like, hexagonal firing pattern with high grid scores.</s><s xml:id="_n4kAj4X">Visually, these grid cells are similar to those in a trained RNN with the same architecture shown in Figure <ref type="figure" coords="7,490.44,465.51,9.04,8.64" target="#fig_2">3E</ref>, replicating the results from <ref type="bibr" coords="7,217.19,476.47,85.75,8.64" target="#b47">(Sorscher et al., 2023)</ref>.</s><s xml:id="_9UQMV5M">To systematically compare the grid cells in tPCN and RNN, we plot the distribution of grid scores in both models as a function of the movement speed of the agent in the environment in Figure <ref type="figure" coords="7,307.74,498.39,9.41,8.64" target="#fig_2">3C</ref>.</s><s xml:id="_dSPKTYC">When the movement is slow, the grid score distributions are similar between tPCN and RNN.</s><s xml:id="_UBXmP3d">However, as the dt increases to 0.05 and 0.1, tPCN tends to have higher grid scores than RNN.</s><s xml:id="_amgv88e">This is visually reflected in Figure <ref type="figure" coords="7,445.38,520.31,10.52,8.64" target="#fig_2">3F</ref> (tPCN) and G (RNN), which shows the latent representations developed by tPCN largely retain the grid-like pattern whereas firing centers of many of the RNN neurons no longer form a grid when dt = 0.1.</s><s xml:id="_Wbk9KHy">Interestingly, the band-like representations present in both models in this case are observed in MEC <ref type="bibr" coords="7,108.00,564.14,79.27,8.64" target="#b22">(Krupic et al., 2012)</ref>, although their existence is controversial <ref type="bibr" coords="7,354.91,564.14,98.04,8.64" target="#b31">(Navratilova et al., 2016)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3" xml:id="_4aTBH4n">TPCN APPROXIMATES TRUNCATED BPTT</head><p xml:id="_cKHUTQ6"><s xml:id="_DugNrGP">Next, we asked why hexagonal grid representations emerge both when training a tPCN using a BPTT-free Hebbian learning rule and when training an RNN using BPTT.</s><s xml:id="_wxhaBhn">We provide an analytical comparison between the learning rules of tPCN and RNN.</s><s xml:id="_qdJ3b6R">Assuming a vanilla, sequenceto-sequence RNN with exactly the same graphical structure as in Figure <ref type="figure" coords="7,405.45,647.40,9.78,8.64" target="#fig_0">1A</ref>, its dynamics can be recursively described as:</s></p><formula xml:id="formula_13">g t = h(W r g t-1 + W in v t ); pt = f (W out g t )<label>(10)</label></formula><p xml:id="_3ng5EAU"><s xml:id="_wjtYqpy">The loss that this RNN is trained to minimize is the cumulative prediction error:</s></p><formula xml:id="formula_14">L RNN = T t=1 L RNN,t = T t=1 ∥p t -pt ∥ 2 2 (11)</formula><p xml:id="_XAmaMxW"><s xml:id="_GYqRYQM">Under review as a conference paper at ICLR 2025 Suppose BPTT is performed at every step t to update weights in this RNN, the learning rule for W r at step t can be expressed as (see Appendix A.2 for derivations):</s></p><formula xml:id="formula_15">∆W RNN r = t k=1 ∂gt ∂g k h ′ (g t )W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t g ⊤ k-1 (12)</formula><p xml:id="_ey6eMFp"><s xml:id="_USGXvGQ">where ϵ ϵ ϵ p t denotes the prediction error p t -pt and the ∂gt ∂g k terms correspond to the unrolling in BPTT, which can be factorized into a chain of partial derivatives <ref type="bibr" coords="8,342.04,154.39,78.18,8.64" target="#b2">(Bellec et al., 2020)</ref>.</s><s xml:id="_jFPsVWN">On the other hand, for tPCN, if we assume that the inference dynamics in Equation 5 has fully converged (∆g t = 0) at the time of weight update, the learning rule of tPCN can be written as (see Appendix A.2 for derivations):</s></p><formula xml:id="formula_16">∆W tPCN r = h ′ (g t )W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t ĝ⊤ t-1<label>(13)</label></formula><p xml:id="_qmYh5Cd"><s xml:id="_jy7JVeV">Two key differences between these learning rules stand out.</s><s xml:id="_YRU96S9">First, tPCN does not involve the recursive unrolling term, thereby avoiding the need to maintain a perfect memory of all preceding hidden states.</s><s xml:id="_s7FxeUS">Second, instead of using the forward-propagated g t-1 as in Equation <ref type="formula" coords="8,415.51,241.97,8.30,8.64" target="#formula_13">10</ref>, tPCN employs the inferred ĝt-1 from Equation <ref type="formula" coords="8,226.54,252.93,4.98,8.64">5</ref>(underlined).</s><s xml:id="_sPFUCFg">The first difference suggests an equivalence between tPCN and RNN trained with truncated BPTT (tBPTT) with a truncation window of size 1 (1-step tBPTT) <ref type="bibr" coords="8,140.51,274.85,97.26,8.64" target="#b55">(Williams &amp; Peng, 1990)</ref>, where the RNN does not backpropagate any hidden states through time when updating the weights.</s><s xml:id="_9bXV7bC">This characteristic could potentially harm the RNN's performance as it cannot effectively perform temporal credit assignment.</s><s xml:id="_28z2wUq">However, the second difference partially solves this problem, as ĝt-1 is inferred following Equation <ref type="formula" coords="8,375.05,307.72,3.74,8.64">5</ref>, which includes the term ϵ ϵ ϵ p t-1</s></p><p xml:id="_VAuyxpT"><s xml:id="_XYtBN3c">that communicates the place cell prediction error at step t -1.</s><s xml:id="_Vy7ZH2h">Therefore, when W r is updated at step t, the ĝ⊤ t-1 term in ∆W tPCN r will effectively form an eligibility trace <ref type="bibr" coords="8,406.11,329.64,75.41,8.64" target="#b2">(Bellec et al., 2020</ref>) that allows the model to access historical prediction errors on the place cell level.</s><s xml:id="_FYHxSAE">Figure <ref type="figure" coords="8,450.28,340.60,12.17,8.64" target="#fig_3">4A</ref> illustrates this difference between tPCN and RNN trained by 1-step tBPTT, highlighting the dependency of tPCN hidden states on past place cell activations.</s><s xml:id="_tcgg5vM">In Appendix A.2 we also discuss the relationship between the update rules for W in and W out in these two models.</s></p><p xml:id="_49QWkYy"><s xml:id="_AXfkeRb">To verify this theoretical difference, we compare tPCN with RNNs trained by tBPTT in the path integration task.</s><s xml:id="_zDR5Hnh">Since ĝt in tPCN is initialized by a forward pass f (W r ĝt-1 ) and then updated by the iterative inference (Appendix A.1), the behavior of 1-step tBPTT, which computes its latent states via a forward pass at each time step, should be closer to tPCN with fewer inference iterations.</s><s xml:id="_SwXJTwq">Therefore, we evaluate tPCN with various inference iterations.</s><s xml:id="_bMXuDAy">Figure <ref type="figure" coords="8,366.46,434.25,11.63,8.64" target="#fig_3">4B</ref> shows the grid cells learned by an RNN trained with 1-step tBPTT, which still exhibit hexagonal grid firing fields, though with lower grid scores than those from full BPTT.</s><s xml:id="_tagpMmB">This suggests that backpropagating the error through all time steps is not entirely necessary for RNNs to generate grid cell-like representations.</s><s xml:id="_2mk5dAC">In Figure <ref type="figure" coords="8,478.11,467.12,11.63,8.64" target="#fig_3">4C</ref> we show the path integration performance of RNN by 1-step tBPTT and BPTT, as well as tPCNs with different inference iterations from 1 to 50.</s><s xml:id="_xcbMTyC">As can be seen, tPCN with a single inference iteration has identical performance to RNN trained by tBPTT, and its performance will improve as we increase the number of inference iterations but will saturate around 20 iterations.</s><s xml:id="_hQkvMWN">Overall, this graph suggests that tPCN with 5 or more inference iterations can effectively perform temporal credit assignment that improves upon tPCN1 or 1-step tBPTT, potentially due to the eligibility trace.</s><s xml:id="_AkUHYqU">However, this eligibility trace arises from local inference dynamics (Equation <ref type="formula" coords="8,369.87,543.84,4.15,8.64">5</ref>) rather than from unrolling the RNN graph as in <ref type="bibr" coords="8,180.59,554.80,76.85,8.64" target="#b2">Bellec et al. (2020)</ref>.</s><s xml:id="_HNeqJf3">This improvement is also reflected in the grid scores (Figure <ref type="figure" coords="8,123.45,565.75,8.99,8.64" target="#fig_3">4D</ref>), although increasing the inference iterations does not necessarily result in better grid score representations.</s><s xml:id="_MWRjGYJ">We suspect that although the gridness of latent representations is somewhat related to path integration performance, their relationship is not linear.</s><s xml:id="_V4ZVwCv">It is also worth noting that to fully evaluate the similarities and differences between BPTT and tPCN, an in-depth comparison is needed across different tasks and versions of tBPTT.</s><s xml:id="_eh5v9pK">We aim to investigate this question in future works as it is beyond the scope of this paper.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4" xml:id="_Gr8YAYQ">ROBUSTNESS OF GRID CELL REPRESENTATIONS IN TPCN</head><p xml:id="_jA24ttm"><s xml:id="_kkNSmF5">Inspired by <ref type="bibr" coords="8,155.57,668.58,87.15,8.64" target="#b43">Schaeffer et al. (2022)</ref>, we examine the robustness of our results against different architectural choices of the tPCN model, to understand what contributes to the emergence of grid cells within tPCN.</s><s xml:id="_hSJfwzt">Specifically, we vary the following components of the model: 1) Encoding of the place cell activities; 2) Output nonlinearity f ; 3) Recurrent nonlinearity h; 4) Environment sizes; 5) Latent sizes and 6) Velocity input to the model.</s><s xml:id="_WBrb6vZ">The baseline model has DoS place cell encodings, h = ReLU, f = softmax, 1.4m × 1.4m environment and latent size 2048 with velocity inputs.</s><s xml:id="_MkAkeFn">We first examine whether replacing the place encoding with Gaussian curves affects the model's performance.</s><s xml:id="_RpcREBk">As shown in Figure <ref type="figure" coords="9,252.72,415.53,9.78,8.64" target="#fig_4">5A</ref>, <ref type="figure" coords="9,271.06,415.53,6.65,8.64">B</ref> and <ref type="figure" coords="9,299.42,415.53,4.57,8.64">C</ref>, the Gaussian place cells do not affect the path integration performance, but the latent representations are no longer hexagonal.</s><s xml:id="_QPSwKHb">This is consistent with earlier findings that the DoS place cell encoding is necessary for hexagonal grid cells <ref type="bibr" coords="9,470.81,437.45,33.20,8.64;9,108.00,448.41,47.04,8.64" target="#b10">(Dordek et al., 2016;</ref><ref type="bibr" coords="9,157.53,448.41,84.39,8.64" target="#b47">Sorscher et al., 2023;</ref><ref type="bibr" coords="9,244.42,448.41,86.20,8.64" target="#b43">Schaeffer et al., 2022)</ref>.</s></p><p xml:id="_vQS8QCz"><s xml:id="_NS6R2hR">The choices of f and h are particularly interesting: as discovered by earlier works <ref type="bibr" coords="9,445.34,465.34,58.66,8.64;9,108.00,476.30,22.69,8.64" target="#b10">(Dordek et al., 2016;</ref><ref type="bibr" coords="9,134.67,476.30,87.61,8.64" target="#b47">Sorscher et al., 2023)</ref>, a choice of h that imposes non-negativity constraint on the latent activities, such as ReLU, is necessary for the emergence of hexagonal grid cells.</s><s xml:id="_3DCf92D">In our tPCN model, the activation functions are also important for biological plausibility: in both Equation <ref type="formula" coords="9,482.28,498.22,4.98,8.64">5</ref>and Equation 6, the multiplication with the Jacobians h ′ and f ′ can be reduced to local, element-wise multiplications if h and f are element-wise nonlinearities such as ReLU and tanh.</s><s xml:id="_2JP8GFJ">Although it is possible to design a circuit to perform the computations in softmax (Snow &amp; Orchard, 2022), it is unclear how the Jacobian matrix of softmax can be computed in a biological circuit.</s><s xml:id="_b8H3tBW">Therefore, we first replace f with a tanh function in our tPCN model and evaluate the model's performance in both path integration and its latent representations.</s><s xml:id="_vJ5U9S3">As shown in Figure <ref type="figure" coords="9,394.37,563.97,9.78,8.64" target="#fig_4">5A</ref>, replacing f with tanh results in slightly worse path integration performance and lower grid scores than the softmax baseline.</s><s xml:id="_AayZ4BA">However, visually, the latent representations are hexagonal and grid-like (Figure <ref type="figure" coords="9,486.02,585.89,8.99,8.64" target="#fig_4">5D</ref>), suggesting that using a biologically more plausible f would not significantly affect the emergence of grid cells within tPCN.</s><s xml:id="_2sJu9wp">On the other hand, replacing the non-negative constraint (ReLU) on the latent activities with h = tanh results in the amorphous latent representations (Figure <ref type="figure" coords="9,460.00,618.77,8.44,8.64" target="#fig_4">5E</ref>), which is consistent with <ref type="bibr" coords="9,179.68,629.73,84.11,8.64" target="#b47">Sorscher et al. (2023)</ref>.</s></p><p xml:id="_fk7Nj7G"><s xml:id="_wU25CwT">We next investigate the impact of the size of the environment, by training tPCN within a square environment of size 1.8m × 1.8m (big) and an environment of size 1.2m × 1.2m (small).</s><s xml:id="_F9h58nY">Changing environment sizes does not affect the path integration performance, and does not affect tPCN's capability of developing grid cells either (Figure <ref type="figure" coords="9,286.71,679.54,10.52,8.64" target="#fig_4">5F</ref> for big environment and G for small environment).</s><s xml:id="_sfFN9Sb">We also vary the number of latent neurons in the model from 256 to 512 and 1024, which does not affect the grid cell representations (Figure <ref type="figure" coords="9,281.54,701.46,12.17,8.64" target="#fig_4">5H</ref> shows the latent representations learned by a tPCN with 256 latent neurons).</s><s xml:id="_ncFq4gu">However, with fewer latent neurons, the performance in path integration becomes worse as the model has fewer number of parameters to perform the task (Figure <ref type="figure" coords="9,464.83,723.38,8.99,8.64" target="#fig_4">5A</ref>).</s></p><p xml:id="_hQZgtjy"><s xml:id="_YZ6F2kf">Under review as a conference paper at ICLR 2025 Earlier studies using PCNs to model visual representations have mostly used unsupervised PCNs <ref type="bibr" coords="10,108.00,96.30,88.49,8.64" target="#b38">(Rao &amp; Ballard, 1999;</ref><ref type="bibr" coords="10,198.78,96.30,101.78,8.64" target="#b35">Olshausen &amp; Field, 1996;</ref><ref type="bibr" coords="10,302.85,96.30,81.99,8.64" target="#b30">Millidge et al., 2024)</ref>, which corresponds to blocking the velocity input v t into tPCN in Figure <ref type="figure" coords="10,286.34,107.26,9.41,8.64" target="#fig_0">1B</ref>.</s><s xml:id="_aWKqMs4">Here we asked how removing velocity input would affect the path integration performance and grid cell emergence of tPCN.</s><s xml:id="_yev4UUH">Mathematically, this is achieved simply by re-defining gt := W r ĝt-1 without changing any inference or learning dynamics.</s><s xml:id="_ztWYnub">It can be seen from Figure <ref type="figure" coords="10,239.69,140.13,12.17,8.64" target="#fig_4">5A</ref> that the path integration performance is significantly affected by the absence of velocity input, with an RMSE even higher than the stationary baseline, where the model does not predict any movement at all.</s><s xml:id="_KRPvZfE">Intriguingly, the latent representations developed by this unsupervised tPCN are still grid cell-like (Figure <ref type="figure" coords="10,328.74,173.01,7.74,8.64" target="#fig_4">5I</ref>) with a similar grid score distribution to the baseline model.</s><s xml:id="_g7vaSrF">This result demonstrates that grid cells can still emerge even in a model unable to perform path integration at all.</s><s xml:id="_tNbby8g">Therefore, our model predicts that path integration is not a sufficient condition for the emergence of grid cells, which resonates with <ref type="bibr" coords="10,397.00,205.89,89.32,8.64" target="#b43">Schaeffer et al. (2022)</ref>.</s><s xml:id="_X6nTjUr">In other words, it predicts that animals unable to navigate due to impaired velocity encoding may still develop grid cells as a result of self-motion.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5" xml:id="_kAuNAcU">DISCUSSION</head><p xml:id="_xRpJ6Et"><s xml:id="_Jv9c7pZ">Relationship to Experimental Observations Here, we highlight properties of the biologically plausible circuit in Figure <ref type="figure" coords="10,213.37,291.32,9.41,8.64" target="#fig_0">1C</ref>, including those consistent with experimental observations, and those generating prediction about the hippocampal formation.</s><s xml:id="_WaNdc4b">This circuit can be naturally divided into a MEC layer and a hippocampal layer.</s><s xml:id="_4uFRBmW">The MEC layer contains velocity-encoding neurons (v) and grid cells (g), which aligns with experimental findings of the conjunctive representations of velocity and grids in the entorhinal cortex <ref type="bibr" coords="10,281.77,335.15,90.10,8.64" target="#b42">(Sargolini et al., 2006)</ref>.</s><s xml:id="_uEQHVnV">In our model, grid cells in the MEC layer are recurrently connected through a specialized circuit involving interneurons ĝt-1 that inhibit the output signal from the grid cells, allowing the error neurons ϵ ϵ ϵ g t to compute the temporal prediction errors.</s><s xml:id="_5QyGUpH">Experimental evidence suggests that lateral interactions in layer II of the MEC are predominantly inhibitory <ref type="bibr" coords="10,211.03,378.99,95.74,8.64">(Witter &amp; Moser, 2006)</ref> and are mediated by interneurons such as basket cells <ref type="bibr" coords="10,129.50,389.95,86.22,8.64" target="#b20">(Jones &amp; Bühl, 1993)</ref>.</s><s xml:id="_n8D4XP8">Our model also predicts that these interneurons encode an eligibility trace ĝt-1 from the immediate past.</s><s xml:id="_EQAPktg">While recent studies have reported grid cells representing prospective locations <ref type="bibr" coords="10,196.28,411.86,105.23,8.64" target="#b36">(Ouchi &amp; Fujisawa, 2024)</ref>, it remains to be verified whether these cells are mechanistically supported by such "past" cells.</s><s xml:id="_pdFqMtZ">Additionally, neurons in the entorhinal cortex are known to encode errors <ref type="bibr" coords="10,207.61,433.78,66.32,8.64" target="#b23">(Ku et al., 2021)</ref>, suggesting a possible error-driven learning mechanism similar to that in tPCN.</s></p><p xml:id="_vanNyK6"><s xml:id="_YR7TDy8">In our model, the MEC and hippocampus are bidirectionally connected, a well-documented characteristic of entorhinal-hippocampal connectivity <ref type="bibr" coords="10,296.79,472.64,74.81,8.64" target="#b7">(Canto et al., 2008)</ref>.</s><s xml:id="_3kvXXyD">Crucially, the circuit also posits the existence of error neurons ϵ ϵ ϵ p t in the hippocampus, which encode the discrepancy between place cell activities and inputs from MEC grid cells.</s><s xml:id="_cAm39Ja">The CA1 sub-region of the hippocampus has been shown to serve as a mismatch detector between the hippocampus and cortex <ref type="bibr" coords="10,410.19,505.51,60.61,8.64" target="#b26">(Lisman, 1999;</ref><ref type="bibr" coords="10,473.02,505.51,30.98,8.64;10,108.00,516.47,45.44,8.64" target="#b12">Duncan et al., 2012)</ref>.</s><s xml:id="_Swcv25R">Our model predicts that in spatial navigation, the error neurons ϵ ϵ ϵ p t in the hippocampus, whose existence has been supported by <ref type="bibr" coords="10,266.89,527.43,73.86,8.64" target="#b58">Wirth et al. (2009)</ref> and <ref type="bibr" coords="10,360.20,527.43,61.38,8.64" target="#b23">Ku et al. (2021)</ref>, can encode exactly this mismatch signal between the two regions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_SHvZMeZ">Conclusion</head><p xml:id="_JtEr8pm"><s xml:id="_Nrcm7eu">In this work, we have demonstrated a biologically plausible learning rule for grid cells based on predictive coding.</s><s xml:id="_wtbFwQg">We have shown that with sparsity and non-negative constraints, classical PCNs can develop grid cell-like representations of batched place cell inputs.</s><s xml:id="_cUCjvX8">With inputs representing trajectories of moving agents, tPCN can also develop grid cell activations while performing path integration.</s><s xml:id="_kMj5zzk">We have developed a theoretical understanding of this property of tPCN by deriving and comparing its learning dynamics with that of BPTT, showing that unrolling a recurrent network is unnecessary for it to learn grid cells, and a more plausible approach with recursive inference dynamics should suffice.</s><s xml:id="_Q8dG8zD">Furthermore, we have examined the robustness of our results by varying hyper-parameters of the model, and found that grid cells can be learned even without velocity inputs.</s><s xml:id="_kujvVDf">Overall, our work demonstrates that predictive coding can serve as an effective and biologically plausible plasticity rule for neural networks to learn grid cells observed in the MEC.</s><s xml:id="_wj48Vwc">Importantly, compared with earlier learning rules specialized for grid cells, predictive coding is a general learning rule able to reproduce many other cortical functions and representations.</s><s xml:id="_kdZpKWh">Thus, our findings suggest that a single, unified plausible learning rule can be employed by the brain to find the most appropriate representation of cortical inputs in different regions.</s></p><p xml:id="_DE3Tn79"><s xml:id="_Phr4SkK">Under review as a conference paper at ICLR 2025</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_t7QZrTN">REPRODUCIBILITY STATEMENT</head><p xml:id="_XkDRCtG"><s xml:id="_CKYH3aR">The code used for the experiments in this paper is provided as a zip file in the supplementary materials to facilitate reproducibility of our results.</s><s xml:id="_sF6UJgb">All hyperparameters for training are detailed in the appendix.</s><s xml:id="_Kg4WMNC">Additionally, proofs for the theoretical results discussed in the paper are also included in the appendix for verification.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_RbP6me6">A APPENDIX</head><p xml:id="_dFgTu7d"><s xml:id="_DsJ6UsC">A.1 ALGORITHMS Below is the training algorithm for a sparse, non-negative PCN given spatial inputs p.</s><s xml:id="_utbBxna">We obtain the grid cells shown in the main text directly by taking the converged latent activities g after training.</s></p><p xml:id="_kXuBPCT"><s xml:id="_9B2CbEK">Algorithm 1 Learning latent representations of space with a PCN 1: ▷ Training 2: while W not converged do 3:</s></p><p xml:id="_ytKfyXQ"><s xml:id="_wwCvy9p">Initialize g randomly;</s></p><p xml:id="_G6sfDfn"><s xml:id="_2kpnfs6">4:</s></p><p xml:id="_c6SKmcQ"><s xml:id="_xMvHtNu">Input: p 5:</s></p><p xml:id="_9v9gjfQ"><s xml:id="_sUQEmCP">while g not converged do 6:</s></p><p xml:id="_2ngrgbN"><s xml:id="_eQyMZkn">g ← ReLU(g t + ∆g t ) (Eq. 2)</s></p><p xml:id="_maAKTAf"><s xml:id="_tDquSf2">7:</s></p><p xml:id="_ZKvdEvF"><s xml:id="_TNSfv6Q">end while 8:</s></p><p xml:id="_Nw8btrU"><s xml:id="_5z8nUYM">Update W (Eqs. 3) 9: end while Below is the training algorithm for tPCN in path integration tasks.</s><s xml:id="_jDuar2r">The testing performance and grid cells shown in the main text are obtained by performing a forward pass through the model after training, given an unseen trajectory {v t , p t }.</s></p><p xml:id="_yXP7S4G"><s xml:id="_GZYnhQ8">Algorithm 2 Path integration with tPCN 1: ▷ Training 2: while W out , W r , W in not converged do  <ref type="formula" coords="16,399.13,105.86,8.85,8.64">12</ref>) and W tPCN r (Equation <ref type="formula" coords="16,108.00,116.82,7.89,8.64" target="#formula_16">13</ref>).</s><s xml:id="_mdGYfVy">For RNN, we assume that the weights are updated at each time step and therefore W RNN r is updated following the chain rule:</s></p><formula xml:id="formula_17">∆W RNN r = -</formula><p xml:id="_evsrDNp"><s xml:id="_C6FRNrH">dL RNN,t dW r = -dL RNN,t dg t dg t dW r (14) We first look at the term dgt dWr , which, following the rule of partial derivatives, can be written as: dg t dW r = ∂g t ∂W r + ∂g t ∂g t-1 dg t-1 dW r = ∂g t ∂W r + ∂g t ∂g t-1 ∂g t-1 ∂W r + ∂g t-1 ∂g t-2 dg t-2 dW r = ... = t k=1 ∂g t ∂g k ∂g k ∂W r (15) due to the recursive and implicit dependency of g t on g t-1 and g t-1 on W RNN r for all t.</s><s xml:id="_be4NUqP">Thus, the update rule can be written as: ∆W RNN r = -t k=1 dL RNN,t dg t ∂g t ∂g k ∂g k ∂W r (16) Since g k = h(g k ) = h(W r g k-1 + W in v k ), and L RNN,t = ∥p t -f (W out g t )∥ 2 2 the update rule can be written as: ∆W RNN r = t k=1 ∂gt ∂g k h ′ (g t )W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t g ⊤ k-1 , (17) concluding our proof for Equation 12.</s><s xml:id="_d4QfG7d">The derivation for W RNN in is similar: ∆W RNN in = -dL RNN,t dW in = -dL RNN,t dg t dg t dW in , (18) and dg t dW in = ∂g t ∂W in + ∂g t ∂g t-1 dg t-1 dW in = ∂g t ∂W in + ∂g t ∂g t-1 ∂g t-1 ∂W in + ∂g t-1 ∂g t-2 dg t-2 dW in = ... = t k=1 ∂g t ∂g k ∂g k ∂W in (19) Therefore, the update rule for W in in an RNN can be written as: ∆W RNN in = t k=1 ∂gt ∂g k h ′ (g t )W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t v ⊤ k (20) Finally, the update rule for W RNN out can be straightforwardly expressed as: ∆W RNN out = -dL RNN,t dW out = -dL RNN,t dp t dp t dW out = f ′ (W out g t )ϵ ϵ ϵ p t g ⊤ t (21)</s></p><p xml:id="_eAnZrgA"><s xml:id="_jFzDtRn">Under review as a conference paper at ICLR 2025 as there is no recursive dependency.</s></p><p xml:id="_qMTdwMY"><s xml:id="_zkUYUVc">For tPCN, at each time step t the following loss is minimized with respect to W r :</s></p><formula xml:id="formula_18">L tPCN,t = ∥p t -f (W out g t )∥ 2 2 + ∥g t -h(W r ĝt-1 + W in v t )∥ 2 2 (22)</formula><p xml:id="_kvmf6Jn"><s xml:id="_Ve7JfPn">Since ĝt-1 is inferred through Equation <ref type="formula" coords="17,276.18,144.12,3.74,8.64">5</ref>, rather than forward-propagated by W r , the recursive dependency on W r disappears, and thus the update rule for W r can be locally derived as:</s></p><formula xml:id="formula_19">∆W tPCN r = - dL tPCN,t dW r = h ′ (g t )ϵ ϵ ϵ g t ĝ⊤ t-1<label>(23)</label></formula><p xml:id="_dyYpJw5"><s xml:id="_bCESMUW">If we also assume that the inference dynamics in Equation 5 have converged when the weights are updated, namely:</s></p><formula xml:id="formula_20">∆g t = 0 ⇒ ϵ ϵ ϵ g t = W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t ,<label>(24)</label></formula><p xml:id="_nbDsuPz"><s xml:id="_TuTw7ak">the update rule can be written as:</s></p><formula xml:id="formula_21">∆W tPCN r = h ′ (g t )W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t ĝ⊤ t-1 ,<label>(25)</label></formula><p xml:id="_A27bY8B"><s xml:id="_Jj6sm92">which concludes our proof for Equation <ref type="formula" coords="17,269.28,282.96,8.30,8.64" target="#formula_16">13</ref>.</s><s xml:id="_g9jsWV5">Similarly, following the same assumption of converged inference and Equation <ref type="formula" coords="17,202.89,293.92,3.74,8.64" target="#formula_6">6</ref>, the update rule ∆W tPCN in can be written as:</s></p><formula xml:id="formula_22">∆W tPCN in = h ′ (g t )W ⊤ out f ′ (W out g t )ϵ ϵ ϵ p t v ⊤ t (<label>26</label></formula><formula xml:id="formula_23">)</formula><p xml:id="_nPyfXPm"><s xml:id="_ZVEvgud">It can be seen that it differs from ∆W RNN in only in the absence of the unrolling term ∂gt ∂g k .</s><s xml:id="_pZSa98k">On the other hand, the update rules ∆W RNN out and ∆W tPCN out are exactly the same.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc><div><p xml:id="_TRZupXb"><s xml:id="_WPT9PAG">Figure 1: Architecture and circuit implementation of PCNs.</s><s xml:id="_eY9wSFj">A: Sparse, non-negative PCN as a generative model.</s><s xml:id="_wJV7Uv4">During learning, p is given and the latent g and W are inferred and learned through a type of EM algorithm.</s><s xml:id="_t6JjZ5K">B: Simlar to A, but with dynamic inputs p t and recurrent weights W r .</s><s xml:id="_ywKDjXG">The dashed velocity inputs are optional (see Section 4.4).</s><s xml:id="_7dUhsnD">C: Circuit implementation of tPCN, adapted from Tang et al. (2024) with a mapping to MEC and hippocampus.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc><div><p xml:id="_yZDNz7Z"><s xml:id="_BxVuUtU">Figure 2: Grid cells developed in PCN.</s><s xml:id="_KJYHbSA">A: Latent representations of a sparse, non-negative PCN, resembling hexagonal grid cells in the MEC.</s><s xml:id="_HrujgDQ">Numbers in the title reflect the grid scores.</s><s xml:id="_Ftc764y">B: Grid cells obtained via the pattern formation theory/non-negative PCA discussed in Sorscher et al. (2023); Dordek et al. (2016).</s><s xml:id="_H33z8aA">C, D: Latent representations without sparsity or non-negativity, respectively.</s><s xml:id="_a33emPN">E: Distribution of grid scores of the representations in A and B.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc><div><p xml:id="_sPyk486"><s xml:id="_VfpH68B">Figure 3: tPCN in path integration.</s><s xml:id="_SvSyJMR">A: Visual demonstration of the performance of tPCN and RNN in path integration.</s><s xml:id="_8DvSd9r">B: RMSEs between the decoded and ground-truth 2D positions by tPCN and RNN with different agent moving speed.</s><s xml:id="_uXJHcdD">C: Grid score distributions of tPCN and RNN with different agent moving speed.</s><s xml:id="_H38MQCs">D, E: Firing fields of latent neurons in a tPCN and an RNN respectively, when dt = 0.02.</s><s xml:id="_TMVTcNZ">F, G: Firing fields of latent neurons in a tPCN and an RNN respectively, when dt = 0.1.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 :</head><label>4</label><figDesc><div><p xml:id="_TakHaDC"><s xml:id="_93wd3wu">Figure 4: Comparing tPCN and tBPTT.</s><s xml:id="_cjjncpr">A: Dependencies of latent grid cells in tPCN and RNN trained with 1-step tBPTT.</s><s xml:id="_rPZTX37">Black arrows indicate the flow of computations during a forward pass and red arrows indicate the dependency of latent variables.</s><s xml:id="_wAhQxWr">B: Firing fields of the latent neurons of an RNN trained by 1-step tBPTT.</s><s xml:id="_bFR8U72">C, D: Path integration RMSE and grid score distributions of 1-step tBPTT, BPTT and tPCNs with different inference iterations.</s><s xml:id="_RQ4GY8F">"tPCNk" indicates tPCN trained with k inference iterations.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 :</head><label>5</label><figDesc><div><p xml:id="_cuZsGT3"><s xml:id="_B8vV96X">Figure 5: Robust emergence of grid cells in tPCN.</s><s xml:id="_6WWtGVc">A, B: Path integration RMSE and grid scores of tPCN in different setups.</s><s xml:id="_KSkW4Nr">"Stationary baseline" refers to a model that always predicts the initial position regardless of movement.</s><s xml:id="_fXhF87v">C-I: Firing fields of latent neurons in tPCNs with C: Gaussian place cells; D: f =tanh; E: h =tanh; F: 1.8m×1.8m</s><s xml:id="_GK6uM6s">environment; G: 1.2m×1.2m</s><s xml:id="_eT6gecr">environment; H: 256 latent neurons; I: tPCN without velocity input.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><figDesc><div><p xml:id="_WXzs2tg"><s xml:id="_kxxECd7">t , ĝt-1 and optionally v t 6:Initialize g t = f (W r ĝt-1 ) 7: for k = 1, ..., K do 8: g t ← g t + ∆g t (Eq.</s><s xml:id="_PPmuFeg">5W out , W r , W in (Eqs.</s><s xml:id="_fdDCP36">6Testing 15: Initialize g 0 randomly or from p 0 via a PCN; 16: for t = 1, ..., T do 17: Input: g t-1 and optionally v t 18: Obtain g t , pt via Eq.</s><s xml:id="_ynRW3s4">7 19: end for Under review as a conference paper at ICLR 2025 A.2 DERIVATIONS OF LEARNING DYNAMICS Here we derive the recurrent weight update rules for W RNN r (Equation</s></p></div></figDesc></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_BqjwJQd"><p xml:id="_KamfZqD"><s xml:id="_4y9HZMP">Under review as a conference paper at ICLR 2025</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_PpNX7zD">A.3 EXPERIMENTAL SETUPS AND HYPERPARAMETERS</head><p xml:id="_9VuYEtp"><s xml:id="_hzZS9Su">Place cell and trajectory parameters We use DoS place cell encodings throughout most of our experiments.</s><s xml:id="_zWbycAm">Formally, the activity of the ith place cell with this encoding, given a particular location x can be written as:</s></p><p xml:id="_4eFpp6f"><s xml:id="_sPqHYck">where C i is the center of the place cell's firing field, and τ and ξ define the width of the firing field's center and surround.</s><s xml:id="_8wZbRpN">The</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head xml:id="_nCNvuSs">Calculation of grid scores</head><p xml:id="_BbysFNh"><s xml:id="_g7t83Rc">The following grid score calculation process is adapted from <ref type="bibr" coords="18,467.65,633.43,36.35,8.64;18,108.00,644.39,49.46,8.64" target="#b42">Sargolini et al. (2006)</ref> and the code of <ref type="bibr" coords="18,226.21,644.39,85.68,8.64" target="#b47">Sorscher et al. (2023)</ref>.</s><s xml:id="_w6BMx43">It is summarized below for completeness and clarity:</s></p><p xml:id="_twed4Bm"><s xml:id="_ukF6rUd">• Get the rate map of latent neurons (potentially hexagonal grid cells);</s></p><p xml:id="_s6V7QJM"><s xml:id="_trawk6c">• Place one copy of the rate map on top of the other, and start moving the top copy by δ ∈ R 2 .</s><s xml:id="_UVMrhmN">If the rate maps are hexagonal grids, for particular δ's that make the firing peaks overlap, the autocorrelation between the stationary and moved maps will be 1; otherwise, the autocorrelation will be 0. We will then have a hexagonal autocorrelation map if the rate map itself is hexagonal;</s></p><p xml:id="_cyU9dvb"><s xml:id="_Bukzaq2">Under review as a conference paper at ICLR 2025</s></p><p xml:id="_RFmthwP"><s xml:id="_Rq5Ssdy">• We then rotate the autocorrelation map and compute the correlation between each rotated map and the original map.</s><s xml:id="_ngd6z4h">If the rate maps are hexagonal, the correlation as a function of rotated degrees will be sinusoidal, with 60 and 120 degrees as peaks and 30, 90 and 150 degrees as troughs.</s></p><p xml:id="_bqmReAv"><s xml:id="_2r9kHnV">• Grid score is calculated as the minimum difference between the peak and trough correlation, which in theory is a real value in range <ref type="bibr" coords="19,246.81,132.84,26.75,8.74">[-2, 2]</ref>.</s></p><p xml:id="_Sf5A7u5"><s xml:id="_EEdMttY">All experiments were performed on a single Tesla V100 GPU.</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="11,108.00,186.22,396.00,8.64;11,117.96,197.18,386.04,8.64;11,117.96,207.96,384.18,8.82" xml:id="b0">
+	<analytic>
+		<title level="a" type="main" xml:id="_cM9NnxZ">Vector-based navigation using grid-like representations in artificial agents</title>
+		<author>
+			<persName><forename type="first">Andrea</forename><surname>Banino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caswell</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benigno</forename><surname>Uria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Blundell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothy</forename><surname>Lillicrap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Mirowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Pritzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><forename type="middle">J</forename><surname>Chadwick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Degris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><surname>Modayil</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_RgCrP59">Nature</title>
+		<imprint>
+			<biblScope unit="volume">557</biblScope>
+			<biblScope unit="issue">7705</biblScope>
+			<biblScope unit="page" from="429" to="433" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,227.88,396.00,8.64;11,117.96,238.66,247.02,8.82" xml:id="b1">
+	<analytic>
+		<title level="a" type="main" xml:id="_E9bMkcV">Prediction and memory: A predictive coding account</title>
+		<author>
+			<persName><forename type="first">Ryszard</forename><surname>Helen C Barron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karl</forename><surname>Auksztulewicz</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Friston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_ER4vX8m">Progress in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">192</biblScope>
+			<biblScope unit="page">101821</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,258.57,396.00,8.64;11,117.96,269.53,386.04,8.64;11,117.96,280.31,194.99,8.82" xml:id="b2">
+	<analytic>
+		<title level="a" type="main" xml:id="_c7uXvvy">A solution to the learning dilemma for recurrent networks of spiking neurons</title>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Bellec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Franz</forename><surname>Scherr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anand</forename><surname>Subramoney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elias</forename><surname>Hajek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Darjan</forename><surname>Salaj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Legenstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wolfgang</forename><surname>Maass</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_FNmtkuR">Nature communications</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">3625</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,300.23,396.00,8.64;11,117.96,311.01,224.75,8.82" xml:id="b3">
+	<analytic>
+		<title level="a" type="main" xml:id="_ByYNYSe">A tutorial on the free-energy framework for modelling perception and learning</title>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_XqXZc9f">Journal of mathematical psychology</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="198" to="211" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,330.93,396.00,8.64;11,117.96,341.70,386.03,8.82;11,117.96,352.66,131.45,8.82" xml:id="b4">
+	<analytic>
+		<title level="a" type="main" xml:id="_XRHSYK4">Impression learning: Online representation learning with synaptic plasticity</title>
+		<author>
+			<persName><forename type="first">Colin</forename><surname>Bredenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Lyo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eero</forename><surname>Simoncelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristina</forename><surname>Savin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_XFqdY88">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="11717" to="11729" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,372.58,396.00,8.64;11,117.96,383.36,247.84,8.82" xml:id="b5">
+	<analytic>
+		<title level="a" type="main" xml:id="_f2JYwmd">Accurate path integration in continuous attractor network models of grid cells</title>
+		<author>
+			<persName><forename type="first">Yoram</forename><surname>Burak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ila</forename><forename type="middle">R</forename><surname>Fiete</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_7bns8vp">PLoS computational biology</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">1000291</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,403.28,396.00,8.64;11,117.96,414.06,187.08,8.82" xml:id="b6">
+	<analytic>
+		<title level="a" type="main" xml:id="_mjs2fSS">What do grid cells contribute to place cell firing?</title>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Bush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caswell</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Burgess</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_6Vu8grw">Trends in neurosciences</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="136" to="145" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,433.97,396.00,8.64;11,117.96,444.75,291.39,8.82" xml:id="b7">
+	<analytic>
+		<title level="a" type="main" xml:id="_Jeh33Xv">What does the anatomical organization of the entorhinal cortex tell us?</title>
+		<author>
+			<persName><forename type="first">Cathrin</forename><forename type="middle">B</forename><surname>Canto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Floris</forename><forename type="middle">G</forename><surname>Wouterlood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Menno</forename><forename type="middle">P</forename><surname>Witter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_6uj8QJ7">Neural plasticity</title>
+		<imprint>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">381243</biblScope>
+			<date type="published" when="2008">2008. 2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,464.67,396.00,8.64;11,117.96,475.45,351.77,8.82" xml:id="b8">
+	<monogr>
+		<title level="m" type="main" xml:id="_UVNuM6q">Emergence of grid-like representations by training recurrent neural networks to perform spatial localization</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Christopher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xue-Xin</forename><surname>Cueva</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1803.07770</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="11,108.00,495.36,396.00,8.64;11,117.96,506.14,177.45,8.82" xml:id="b9">
+	<analytic>
+		<title level="a" type="main" xml:id="_Veqj3k8">Evidence for grid cells in a human memory network</title>
+		<author>
+			<persName><forename type="first">Caswell</forename><surname>Christian F Doeller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Burgess</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_tnU9Zy6">Nature</title>
+		<imprint>
+			<biblScope unit="volume">463</biblScope>
+			<biblScope unit="issue">7281</biblScope>
+			<biblScope unit="page" from="657" to="661" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,526.06,396.00,8.64;11,117.96,536.84,386.04,8.82;11,117.96,547.98,22.42,8.64" xml:id="b10">
+	<analytic>
+		<title level="a" type="main" xml:id="_JTV6m49">Extracting grid cell characteristics from place cell inputs using non-negative principal component analysis</title>
+		<author>
+			<persName><forename type="first">Yedidyah</forename><surname>Dordek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Soudry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ron</forename><surname>Meir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dori</forename><surname>Derdikman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_weBa4dy">Elife</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<date type="published" when="2016">10094. 2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,567.72,396.00,8.64;11,117.96,578.50,386.04,8.82;11,117.96,589.63,22.42,8.64" xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">William</forename><surname>Dorrell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">E</forename><surname>Latham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothy</forename><forename type="middle">Ej</forename><surname>Behrens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James Cr</forename><surname>Whittington</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2209.15563</idno>
+		<title level="m" xml:id="_6yQtDJT">Actionable neural representations: Grid cells from minimal constraints</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="11,108.00,609.37,396.00,8.64;11,117.96,620.15,386.04,8.82;11,117.96,631.11,105.43,8.82" xml:id="b12">
+	<analytic>
+		<title level="a" type="main" xml:id="_9T4TVky">Evidence for area ca1 as a match/mismatch detector: A high-resolution fmri study of the human hippocampus</title>
+		<author>
+			<persName><forename type="first">Katherine</forename><surname>Duncan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><surname>Ketz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Souheil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lila</forename><surname>Inati</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Davachi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_HPGxJMg">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="389" to="398" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,650.85,396.00,8.82;11,117.96,661.81,188.62,8.82" xml:id="b13">
+	<analytic>
+		<title level="a" type="main" xml:id="_bfRepXA">A theory of cortical responses</title>
+		<author>
+			<persName><forename type="first">Karl</forename><surname>Friston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_MMcEy68">Philosophical transactions of the Royal Society B: Biological sciences</title>
+		<imprint>
+			<biblScope unit="volume">360</biblScope>
+			<biblScope unit="page" from="815" to="836" />
+			<date type="published" when="1456">1456. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,681.72,396.00,8.64;11,117.96,692.50,234.62,8.82" xml:id="b14">
+	<analytic>
+		<title level="a" type="main" xml:id="_JKued9u">A spin glass model of path integration in rat medial entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">S</forename><surname>Fuhs</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Touretzky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_YHPNCKX">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="4266" to="4276" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,108.00,712.42,396.00,8.64;11,117.96,723.20,197.57,8.82;12,108.00,28.88,199.79,8.64" xml:id="b15">
+	<analytic>
+		<title level="a" type="main" xml:id="_5934jEW">Grid cells in mice</title>
+		<author>
+			<persName><forename type="first">Marianne</forename><surname>Fyhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Torkel</forename><surname>Hafting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Menno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edvard</forename><forename type="middle">I</forename><surname>Witter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">May-Britt</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_NzVCwYT">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1230" to="1238" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note>Under review as a conference paper at ICLR 2025</note>
+</biblStruct>
+
+<biblStruct coords="12,108.00,85.34,396.00,8.64;12,117.96,96.30,386.04,8.64;12,117.96,107.08,251.21,8.82" xml:id="b16">
+	<analytic>
+		<title level="a" type="main" xml:id="_McCftGw">A generative model of the hippocampal formation trained with theta driven local learning rules</title>
+		<author>
+			<persName><forename type="first">Kimberly</forename><forename type="middle">L</forename><surname>Tom M George</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caswell</forename><surname>Stachenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Claudia</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tomoki</forename><surname>Clopath</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fukai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_3C7MQTu">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,125.84,396.00,8.64;12,117.96,136.62,121.03,8.82" xml:id="b17">
+	<analytic>
+		<title level="a" type="main" xml:id="_QNRcR7W">Computational models of grid cells</title>
+		<author>
+			<persName><forename type="first">Lisa</forename><forename type="middle">M</forename><surname>Giocomo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">May-Britt</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edvard I</forename><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_jzVDUZ8">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="589" to="603" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,155.38,396.00,8.64;12,117.96,166.16,321.28,8.82" xml:id="b18">
+	<analytic>
+		<title level="a" type="main" xml:id="_ThtRgjS">Microstructure of a spatial map in the entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">Torkel</forename><surname>Hafting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marianne</forename><surname>Fyhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sturla</forename><surname>Molden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">May-Britt</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edvard I</forename><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_KAmADzm">Nature</title>
+		<imprint>
+			<biblScope unit="volume">436</biblScope>
+			<biblScope unit="issue">7052</biblScope>
+			<biblScope unit="page" from="801" to="806" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,184.93,396.00,8.64;12,117.96,195.71,386.04,8.82;12,117.96,206.85,72.23,8.64" xml:id="b19">
+	<analytic>
+		<title level="a" type="main" xml:id="_UcKyStB">Grid cell firing may arise from interference of theta frequency membrane potential oscillations in single neurons</title>
+		<author>
+			<persName><forename type="first">Lisa</forename><forename type="middle">M</forename><surname>Michael E Hasselmo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">A</forename><surname>Giocomo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zilli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_XEvEzcw">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1252" to="1271" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,225.43,396.00,8.64;12,117.96,236.21,351.28,8.82" xml:id="b20">
+	<analytic>
+		<title level="a" type="main" xml:id="_H3tKbFR">Basket-like interneurones in layer ii of the entorhinal cortex exhibit a powerful nmda-mediated synaptic excitation</title>
+		<author>
+			<persName><forename type="first">Rsg</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bühl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_me9Mtfe">Neuroscience letters</title>
+		<imprint>
+			<biblScope unit="volume">149</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="35" to="39" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,254.97,396.00,8.64;12,117.96,265.75,193.18,8.82" xml:id="b21">
+	<analytic>
+		<title level="a" type="main" xml:id="_g4QctNF">The emergence of grid cells: Intelligent design or just adaptation?</title>
+		<author>
+			<persName><forename type="first">Emilio</forename><surname>Kropff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alessandro</forename><surname>Treves</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_VZHDtRr">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1256" to="1269" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,284.52,396.00,8.64;12,117.96,295.30,242.66,8.82" xml:id="b22">
+	<analytic>
+		<title level="a" type="main" xml:id="_xb4Uesf">Neural representations of location composed of spatially periodic bands</title>
+		<author>
+			<persName><forename type="first">Julija</forename><surname>Krupic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John O'</forename><surname>Keefe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_2fmHpmH">Science</title>
+		<imprint>
+			<biblScope unit="volume">337</biblScope>
+			<biblScope unit="issue">6096</biblScope>
+			<biblScope unit="page" from="853" to="857" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,314.06,396.00,8.64;12,117.96,324.84,364.59,8.82" xml:id="b23">
+	<analytic>
+		<title level="a" type="main" xml:id="_mhcV2B5">The contributions of entorhinal cortex and hippocampus to error driven learning</title>
+		<author>
+			<persName><forename type="first">Shih-Pi</forename><surname>Ku</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">L</forename><surname>Hargreaves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sylvia</forename><surname>Wirth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wendy</forename><forename type="middle">A</forename><surname>Suzuki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_HSse8mx">Communications biology</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">618</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,343.60,396.00,8.64;12,117.96,354.56,386.04,8.64;12,117.96,365.34,248.75,8.82" xml:id="b24">
+	<analytic>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">A</forename><surname>Rosamund F Langston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">J</forename><surname>Ainge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cathrin</forename><forename type="middle">B</forename><surname>Couey</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Canto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tale</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bjerknes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Menno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edvard</forename><forename type="middle">I</forename><surname>Witter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">May-Britt</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_sABaZnZ">Development of the spatial representation system in the rat</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="volume">328</biblScope>
+			<biblScope unit="page" from="1576" to="1580" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,383.93,396.00,8.82;12,117.96,394.89,165.78,8.82" xml:id="b25">
+	<analytic>
+		<title level="a" type="main" xml:id="_hPqwhev">Backpropagation through time and the brain</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Timothy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Lillicrap</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Santoro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_mpDgfEq">Current opinion in neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="82" to="89" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,413.65,396.00,8.64;12,117.96,424.43,246.07,8.82" xml:id="b26">
+	<analytic>
+		<title level="a" type="main" xml:id="_YrC8mAz">Relating hippocampal circuitry to function: recall of memory sequences by reciprocal dentate-ca3 interactions</title>
+		<author>
+			<persName><surname>John E Lisman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_xrNhjBp">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="233" to="242" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,443.19,396.00,8.64;12,117.96,453.97,386.04,8.82;12,117.96,465.11,62.27,8.64" xml:id="b27">
+	<analytic>
+		<title level="a" type="main" xml:id="_VHQMxHC">Path integration and the neural basis of the&apos;cognitive map&apos;</title>
+		<author>
+			<persName><forename type="first">Francesco</forename><forename type="middle">P</forename><surname>Bruce L Mcnaughton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ole</forename><surname>Battaglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edvard</forename><forename type="middle">I</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">May-Britt</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_4J2Btgv">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="663" to="678" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,483.70,396.00,8.64;12,117.96,494.48,221.23,8.82" xml:id="b28">
+	<monogr>
+		<title level="m" type="main" xml:id="_VpbQWtF">Predictive coding: a theoretical and experimental review</title>
+		<author>
+			<persName><forename type="first">Beren</forename><surname>Millidge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anil</forename><surname>Seth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">L</forename><surname>Buckley</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2107.12979</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="12,108.00,513.24,396.00,8.64;12,117.96,524.02,369.53,8.82" xml:id="b29">
+	<analytic>
+		<title level="a" type="main" xml:id="_vBcakyU">Predictive coding approximates backprop along arbitrary computation graphs</title>
+		<author>
+			<persName><forename type="first">Beren</forename><surname>Millidge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Tschantz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">L</forename><surname>Buckley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_VwCKCbP">Neural Computation</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1329" to="1368" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,542.78,396.00,8.64;12,117.96,553.56,382.49,8.82" xml:id="b30">
+	<analytic>
+		<title level="a" type="main" xml:id="_qtkJ274">Predictive coding networks for temporal prediction</title>
+		<author>
+			<persName><forename type="first">Beren</forename><surname>Millidge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mufeng</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mahyar</forename><surname>Osanlouy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicol</forename><forename type="middle">S</forename><surname>Harper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_qaUdW3G">PLOS Computational Biology</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">1011183</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,572.33,396.00,8.64;12,117.96,583.11,386.04,8.82;12,117.96,594.06,177.66,8.82" xml:id="b31">
+	<analytic>
+		<title level="a" type="main" xml:id="_TzF84cY">Grids from bands, or bands from grids? an examination of the effects of single unit contamination on grid cell firing fields</title>
+		<author>
+			<persName><forename type="first">Zaneta</forename><surname>Navratilova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keith</forename><forename type="middle">B</forename><surname>Godfrey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bruce</forename><forename type="middle">L</forename><surname>Mcnaughton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_QSDxsNh">Journal of neurophysiology</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="992" to="1002" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,612.83,396.00,8.64;12,117.96,623.61,386.04,8.82;12,117.96,634.75,58.39,8.64" xml:id="b32">
+	<analytic>
+		<title level="a" type="main" xml:id="_Cq9hDFt">Emergent elasticity in the neural code for space</title>
+		<author>
+			<persName><forename type="first">Kiah</forename><surname>Samuel A Ocko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lisa</forename><forename type="middle">M</forename><surname>Hardcastle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Surya</forename><surname>Giocomo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ganguli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_VC8E4jt">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>50):E11798-E11806</note>
+</biblStruct>
+
+<biblStruct coords="12,108.00,653.15,396.00,8.82;12,117.96,664.29,71.67,8.64" xml:id="b33">
+	<analytic>
+		<title level="a" type="main" xml:id="_faZZrqt">Place units in the hippocampus of the freely moving rat</title>
+		<author>
+			<persName><forename type="first">O'</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Keefe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_9T9ZRSK">Experimental neurology</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="78" to="109" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,682.87,396.00,8.64;12,117.96,693.65,359.44,8.82" xml:id="b34">
+	<analytic>
+		<title level="a" type="main" xml:id="_j2hun8k">Dual phase and rate coding in hippocampal place cells: theoretical significance and relationship to entorhinal grid cells</title>
+		<author>
+			<persName><forename type="first">O'</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Keefe</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Burgess</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_d6QZEN4">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="853" to="866" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,108.00,712.42,396.00,8.64;12,117.96,723.20,308.13,8.82;13,108.00,28.88,199.79,8.64" xml:id="b35">
+	<analytic>
+		<title level="a" type="main" xml:id="_THUtPBV">Emergence of simple-cell receptive field properties by learning a sparse code for natural images</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bruno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">J</forename><surname>Olshausen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Field</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_ECYy2A2">Nature</title>
+		<imprint>
+			<biblScope unit="volume">381</biblScope>
+			<biblScope unit="issue">6583</biblScope>
+			<biblScope unit="page" from="607" to="609" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>Under review as a conference paper at ICLR 2025</note>
+</biblStruct>
+
+<biblStruct coords="13,108.00,85.34,396.00,8.64;13,117.96,96.12,141.95,8.82" xml:id="b36">
+	<analytic>
+		<title level="a" type="main" xml:id="_tYATjQP">Predictive grid coding in the medial entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">Ayako</forename><surname>Ouchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shigeyoshi</forename><surname>Fujisawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_qa4FTcd">Science</title>
+		<imprint>
+			<biblScope unit="volume">385</biblScope>
+			<biblScope unit="issue">6710</biblScope>
+			<biblScope unit="page" from="776" to="784" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,115.63,396.00,8.64;13,117.96,126.59,386.04,8.64;13,117.96,137.37,257.70,8.82" xml:id="b37">
+	<monogr>
+		<author>
+			<persName><forename type="first">Luca</forename><surname>Pinchetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oleh</forename><surname>Lokshyn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gaspard</forename><surname>Olivers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cornelius</forename><surname>Emde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mufeng</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M'</forename><surname>Amine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Charrak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bayar</forename><surname>Frieder</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Menzat</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2407.01163</idno>
+		<title level="m" xml:id="_S83xaMp">Rafal Bogacz, et al. Benchmarking predictive coding networks-made simple</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,108.00,156.87,396.00,8.64;13,117.96,167.65,386.03,8.82;13,117.96,179.73,247.57,7.01" xml:id="b38">
+	<analytic>
+		<title level="a" type="main" xml:id="_NcK9zER">Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Rajesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dana</forename><forename type="middle">H</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ballard</surname></persName>
+		</author>
+		<ptr target="https://www.nature.com/articles/nn0199_79" />
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_9AhC3pp">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="79" to="87" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,198.12,396.00,8.64;13,117.96,208.90,386.03,8.82;13,117.96,219.86,217.89,8.82" xml:id="b39">
+	<analytic>
+		<title level="a" type="main" xml:id="_Z3MW4Q7">Associative memories via predictive coding</title>
+		<author>
+			<persName><forename type="first">Tommaso</forename><surname>Salvatori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuhang</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yujian</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Sha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Frieder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenghua</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Lukasiewicz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_Nkna93K">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="3874" to="3886" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,239.37,396.00,8.64;13,117.96,250.15,386.03,8.82;13,117.96,261.11,253.45,8.82" xml:id="b40">
+	<analytic>
+		<title level="a" type="main" xml:id="_ahr97Kn">Learning on arbitrary graph topologies via predictive coding</title>
+		<author>
+			<persName><forename type="first">Tommaso</forename><surname>Salvatori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luca</forename><surname>Pinchetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beren</forename><surname>Millidge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuhang</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianyi</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Lukasiewicz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_726Rq6g">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="38232" to="38244" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,280.62,396.00,8.64;13,117.96,291.40,386.03,8.82;13,117.96,302.53,386.04,8.64;13,117.96,314.43,169.86,7.01" xml:id="b41">
+	<analytic>
+		<title level="a" type="main" xml:id="_4WUVdWd">Optimal unsupervised learning in a single-layer linear feedforward neural network</title>
+		<author>
+			<persName><forename type="first">Terence</forename><forename type="middle">D</forename><surname>Sanger</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0893-6080(89)90044-0</idno>
+		<ptr target="https://www.sciencedirect.com/science/article/pii/0893608089900440" />
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_SVR8CtF">Neural Networks</title>
+		<idno type="ISSN">0893-6080</idno>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="459" to="473" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,332.82,396.00,8.64;13,117.96,343.78,386.04,8.64;13,117.96,354.56,225.90,8.82" xml:id="b42">
+	<analytic>
+		<title level="a" type="main" xml:id="_Xk9Ar92">Conjunctive representation of position, direction, and velocity in entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">Francesca</forename><surname>Sargolini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marianne</forename><surname>Fyhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Torkel</forename><surname>Hafting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Menno</forename><forename type="middle">P</forename><surname>Bruce L Mcnaughton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">May-Britt</forename><surname>Witter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edvard I</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_gmHqSY5">Science</title>
+		<imprint>
+			<biblScope unit="issue">5774</biblScope>
+			<biblScope unit="page" from="758" to="762" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,374.07,396.00,8.64;13,117.96,384.85,386.04,8.82;13,117.96,395.81,175.55,8.82" xml:id="b43">
+	<analytic>
+		<title level="a" type="main" xml:id="_UCzS6V2">No free lunch from deep learning in neuroscience: A case study through models of the entorhinal-hippocampal circuit</title>
+		<author>
+			<persName><forename type="first">Rylan</forename><surname>Schaeffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mikail</forename><surname>Khona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ila</forename><surname>Fiete</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_sgEqrwh">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="16052" to="16067" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,415.32,396.00,8.64;13,117.96,426.28,386.04,8.64;13,117.96,437.06,251.21,8.82" xml:id="b44">
+	<analytic>
+		<title level="a" type="main" xml:id="_nQDqMnY">Self-supervised learning of representations for space generates multi-modular grid cells</title>
+		<author>
+			<persName><forename type="first">Rylan</forename><surname>Schaeffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mikail</forename><surname>Khona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tzuhsuan</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristobal</forename><surname>Eyzaguirre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanmi</forename><surname>Koyejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ila</forename><surname>Fiete</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_k4AuKt6">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,456.56,396.00,8.64;13,117.96,467.34,356.20,8.82" xml:id="b45">
+	<analytic>
+		<title level="a" type="main" xml:id="_HYrsvJx">Biological softmax: Demonstrated in modern hopfield networks</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mallory</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Snow</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Orchard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_WTd7BWA">Proceedings of the Annual Meeting of the Cognitive Science Society</title>
+		<meeting>the Annual Meeting of the Cognitive Science Society</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="volume">44</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,486.85,396.00,8.64;13,117.96,497.81,386.04,8.64;13,117.96,508.59,208.86,8.82" xml:id="b46">
+	<analytic>
+		<title level="a" type="main" xml:id="_tnPZVqA">Inferring neural activity before plasticity as a foundation for learning beyond backpropagation</title>
+		<author>
+			<persName><forename type="first">Yuhang</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beren</forename><surname>Millidge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tommaso</forename><surname>Salvatori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Lukasiewicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenghua</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_JxCbfR7">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="348" to="358" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,528.10,396.00,8.64;13,117.96,538.88,386.04,8.82;13,117.96,550.02,22.42,8.64" xml:id="b47">
+	<analytic>
+		<title level="a" type="main" xml:id="_RtwxMjP">A unified theory for the computational and mechanistic origins of grid cells</title>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Sorscher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gabriel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">A</forename><surname>Mel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lisa</forename><forename type="middle">M</forename><surname>Ocko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Surya</forename><surname>Giocomo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ganguli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_Xhu27Hc">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="121" to="137" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,569.35,396.00,8.64;13,117.96,580.13,253.62,8.82" xml:id="b48">
+	<analytic>
+		<title level="a" type="main" xml:id="_yEGmxcr">The hippocampus as a predictive map</title>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">M</forename><surname>Kimberly L Stachenfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samuel</forename><forename type="middle">J</forename><surname>Botvinick</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gershman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_XQgPUjm">Nature neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1643" to="1653" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,599.63,396.00,8.64;13,117.96,610.59,386.04,8.64;13,117.96,621.37,228.75,8.82" xml:id="b49">
+	<analytic>
+		<title level="a" type="main" xml:id="_UYqzHTE">Recurrent predictive coding models for associative memory employing covariance learning</title>
+		<author>
+			<persName><forename type="first">Mufeng</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tommaso</forename><surname>Salvatori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beren</forename><surname>Millidge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuhang</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Lukasiewicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_NChW6kz">PLoS computational biology</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">1010719</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,640.88,396.00,8.64;13,117.96,651.66,270.02,8.82" xml:id="b50">
+	<analytic>
+		<title level="a" type="main" xml:id="_qaNCKcm">Sequential memory with temporal predictive coding</title>
+		<author>
+			<persName><forename type="first">Mufeng</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Helen</forename><surname>Barron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Bogacz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_YG6Ra7c">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,671.17,396.00,8.64;13,117.96,681.95,231.09,8.82" xml:id="b51">
+	<analytic>
+		<title level="a" type="main" xml:id="_KrqVPaY">Learning place cells, grid cells and invariances with excitatory and inhibitory plasticity</title>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Nikolaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weber</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Henning</forename><surname>Sprekeler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_ZbTgses">Elife</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">34560</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,108.00,701.46,396.00,8.64;13,117.96,712.24,386.03,8.82;13,117.96,723.38,72.23,8.64;14,108.00,28.88,199.79,8.64" xml:id="b52">
+	<analytic>
+		<title level="a" type="main" xml:id="_9YpFGjf">An approximation of the error backpropagation algorithm in a predictive coding network with local hebbian synaptic plasticity</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Whittington</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bogacz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_jasrV3t">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1229" to="1262" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>Under review as a conference paper at ICLR 2025</note>
+</biblStruct>
+
+<biblStruct coords="14,108.00,85.34,396.00,8.64;14,117.96,96.30,386.04,8.64;14,117.96,107.08,355.56,8.82" xml:id="b53">
+	<analytic>
+		<title level="a" type="main" xml:id="_dVjzzQB">The tolman-eichenbaum machine: unifying space and relational memory through generalization in the hippocampal formation</title>
+		<author>
+			<persName><forename type="first">Timothy</forename><forename type="middle">H</forename><surname>James Cr Whittington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shirley</forename><surname>Muller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guifen</forename><surname>Mark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caswell</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothy</forename><forename type="middle">Ej</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Behrens</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_tXWcNTd">Cell</title>
+		<imprint>
+			<biblScope unit="volume">183</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1249" to="1263" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,126.19,396.00,8.64;14,117.96,136.97,250.89,8.82" xml:id="b54">
+	<analytic>
+		<title level="a" type="main" xml:id="_xneajSg">A model of grid cell development through spatial exploration and spike time-dependent plasticity</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Widloski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ila</forename><forename type="middle">R</forename><surname>Fiete</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_YMC9tDA">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="481" to="495" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,156.07,396.00,8.64;14,117.96,166.85,290.27,8.82" xml:id="b55">
+	<analytic>
+		<title level="a" type="main" xml:id="_AUgtDRD">An efficient gradient-based algorithm for on-line training of recurrent network trajectories</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ronald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Peng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_DeqQszA">Neural computation</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="490" to="501" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,185.96,396.00,8.64;14,117.96,196.74,291.81,8.82" xml:id="b56">
+	<analytic>
+		<title level="a" type="main" xml:id="_YunM82A">Development of the hippocampal cognitive map in preweanling rats</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francesca</forename><surname>Wills</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neil</forename><surname>Cacucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John O'</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Keefe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_BjsJtuv">science</title>
+		<imprint>
+			<biblScope unit="volume">328</biblScope>
+			<biblScope unit="issue">5985</biblScope>
+			<biblScope unit="page" from="1573" to="1576" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,215.85,396.00,8.64;14,117.96,226.63,346.65,8.82" xml:id="b57">
+	<analytic>
+		<title level="a" type="main" xml:id="_jv37t2y">Passive transport disrupts grid signals in the parahippocampal cortex</title>
+		<author>
+			<persName><forename type="first">Shawn S</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><forename type="middle">L</forename><surname>Mehlman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><forename type="middle">J</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><forename type="middle">S</forename><surname>Taube</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_3aRrDG2">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">19</biblScope>
+			<biblScope unit="page" from="2493" to="2502" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,245.74,396.00,8.64;14,117.96,256.70,386.04,8.64;14,117.96,267.48,121.03,8.82" xml:id="b58">
+	<analytic>
+		<title level="a" type="main" xml:id="_YrhtMu6">Trial outcome and associative learning signals in the monkey hippocampus</title>
+		<author>
+			<persName><forename type="first">Sylvia</forename><surname>Wirth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emin</forename><surname>Avsar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cindy</forename><forename type="middle">C</forename><surname>Chiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Varun</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anne</forename><forename type="middle">C</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emery</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wendy</forename><forename type="middle">A</forename><surname>Suzuki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_Kc9vvCk">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="930" to="940" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,286.58,396.00,8.64;14,117.96,297.36,222.88,8.82" xml:id="b59">
+	<analytic>
+		<title level="a" type="main" xml:id="_XAuPTMy">Spatial representation and the architecture of the entorhinal cortex</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Menno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edvard I</forename><surname>Witter</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_JyHy6Bd">Trends in neurosciences</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="671" to="678" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,316.47,396.00,8.64;14,117.96,327.25,266.78,8.82" xml:id="b60">
+	<analytic>
+		<title level="a" type="main" xml:id="_tJKnERv">Grid cells without theta oscillations in the entorhinal cortex of bats</title>
+		<author>
+			<persName><forename type="first">Menno</forename><forename type="middle">P</forename><surname>Michael M Yartsev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nachum</forename><surname>Witter</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ulanovsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_hnY4xXs">Nature</title>
+		<imprint>
+			<biblScope unit="volume">479</biblScope>
+			<biblScope unit="issue">7371</biblScope>
+			<biblScope unit="page" from="103" to="107" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,108.00,346.36,396.00,8.64;14,117.96,357.14,386.04,8.82;14,117.96,368.28,22.42,8.64" xml:id="b61">
+	<analytic>
+		<title level="a" type="main" xml:id="_x9nKynj">Coupled noisy spiking neurons as velocity-controlled oscillators in a model of grid cell spatial firing</title>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">A</forename><surname>Zilli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">E</forename><surname>Hasselmo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_H4eB3p3">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">41</biblScope>
+			<biblScope unit="page" from="13850" to="13860" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

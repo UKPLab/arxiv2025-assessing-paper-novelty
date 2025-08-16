@@ -1,0 +1,20 @@
+{
+  "submission_id": "2ofVtMvRil",
+  "queries_used": [
+    "predictive coding",
+    "grid cells learning",
+    "hexagonal firing",
+    "MEC circuit"
+  ],
+  "total_cost": 0.047852,
+  "num_cited_papers": 60,
+  "num_query_papers": 80,
+  "num_final_ranked": 21,
+  "num_all_retrieved": 123,
+  "pdf_download": {
+    "total_papers": 21,
+    "pdfs_downloaded": 17,
+    "download_success_rate": 80.95238095238095,
+    "download_timestamp": "2025-06-06 04:14:24"
+  }
+}

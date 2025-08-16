@@ -1,0 +1,373 @@
+{
+    "structured_representation": {
+        "main_paper": {
+            "raw": "methods=['predictive coding', 'temporal predictive coding network (tPCN)'] problems=['learning mechanisms underlying grid cells', 'biologically plausible learning of grid cells'] datasets=[] metrics=[] results=[ResultEntry(metric='emergence of hexagonal grid cells', value='demonstrated in PCNs'), ResultEntry(metric='robustness of grid cell development', value='observed under different architectural choices'), ResultEntry(metric='latent activities resembling grid-like representations', value='similar to RNNs')] novelty_claims=['demonstrates for the first time that grid cells emerge in PCNs trained with biologically plausible plasticity rules', 'extends predictive coding theory to encompass spatial representations in the MEC', 'provides a unified learning algorithm for diverse cortical representations']",
+            "parsed": {
+                "methods": [
+                    "predictive coding",
+                    "temporal predictive coding network (tPCN)"
+                ],
+                "problems": [
+                    "learning mechanisms underlying grid cells",
+                    "biologically plausible learning of grid cells"
+                ],
+                "datasets": [],
+                "metrics": [],
+                "results": [
+                    {
+                        "metric": "emergence of hexagonal grid cells",
+                        "value": "demonstrated in PCNs"
+                    },
+                    {
+                        "metric": "robustness of grid cell development",
+                        "value": "observed under different architectural choices"
+                    },
+                    {
+                        "metric": "latent activities resembling grid-like representations",
+                        "value": "similar to RNNs"
+                    }
+                ],
+                "novelty_claims": [
+                    "demonstrates for the first time that grid cells emerge in PCNs trained with biologically plausible plasticity rules",
+                    "extends predictive coding theory to encompass spatial representations in the MEC",
+                    "provides a unified learning algorithm for diverse cortical representations"
+                ]
+            }
+        },
+        "selected_papers": [
+            {
+                "paper_id": "cd98854d3482e276b7124712c02e20ed48f56a0f",
+                "raw": "methods=['biologically plausible model of the hippocampal formation', 'Helmholtz machine', 'theta-band oscillations for information flow', 'wake-sleep algorithm for training', 'local learning rule'] problems=['understanding biological mechanisms of generative models', 'path integration in the hippocampal formation', 'generalization of learning across environments', 'biological plausibility in computational models'] datasets=['biologically relevant spatial exploration task'] metrics=['prediction error', 'path integration accuracy', 'transfer learning capability'] results=[ResultEntry(metric='prediction error', value='minimized through local learning rule'), ResultEntry(metric='path integration accuracy', value='demonstrated in new environments without relearning'), ResultEntry(metric='transfer learning capability', value='successful transfer of path integration structure between environments')] novelty_claims=['introduces a biologically plausible model of sequence learning in the hippocampus', 'unifies generative modeling and path integration under one schema', 'utilizes theta oscillations to control information flow', 'applies local learning rules that align with biological processes']",
+                "parsed": {
+                    "methods": [
+                        "biologically plausible model of the hippocampal formation",
+                        "Helmholtz machine",
+                        "theta-band oscillations for information flow",
+                        "wake-sleep algorithm for training",
+                        "local learning rule"
+                    ],
+                    "problems": [
+                        "understanding biological mechanisms of generative models",
+                        "path integration in the hippocampal formation",
+                        "generalization of learning across environments",
+                        "biological plausibility in computational models"
+                    ],
+                    "datasets": [
+                        "biologically relevant spatial exploration task"
+                    ],
+                    "metrics": [
+                        "prediction error",
+                        "path integration accuracy",
+                        "transfer learning capability"
+                    ],
+                    "results": [
+                        {
+                            "metric": "prediction error",
+                            "value": "minimized through local learning rule"
+                        },
+                        {
+                            "metric": "path integration accuracy",
+                            "value": "demonstrated in new environments without relearning"
+                        },
+                        {
+                            "metric": "transfer learning capability",
+                            "value": "successful transfer of path integration structure between environments"
+                        }
+                    ],
+                    "novelty_claims": [
+                        "introduces a biologically plausible model of sequence learning in the hippocampus",
+                        "unifies generative modeling and path integration under one schema",
+                        "utilizes theta oscillations to control information flow",
+                        "applies local learning rules that align with biological processes"
+                    ]
+                }
+            },
+            {
+                "paper_id": "791686d4fa91082e225797a13060adeeb0fddf13",
+                "raw": "methods=['neural networks trained to path integrate', 'analysis of connectome and activity maps'] problems=['mechanistic emergence of hexagonal firing fields', 'computational significance of grid cells', 'path integration in neural circuits'] datasets=[] metrics=[] results=[] novelty_claims=['forging a link between computational problems and the emergence of hexagonal grids', 'development of a unifying theory for the ubiquity of hexagonal grids in path-integrator circuits', 'mechanistic hypotheses exhibiting biological variability not captured by hand-designed models', 'methods providing a roadmap from connectomic measurements to conceptual understanding']",
+                "parsed": {
+                    "methods": [
+                        "neural networks trained to path integrate",
+                        "analysis of connectome and activity maps"
+                    ],
+                    "problems": [
+                        "mechanistic emergence of hexagonal firing fields",
+                        "computational significance of grid cells",
+                        "path integration in neural circuits"
+                    ],
+                    "datasets": [],
+                    "metrics": [],
+                    "results": [],
+                    "novelty_claims": [
+                        "forging a link between computational problems and the emergence of hexagonal grids",
+                        "development of a unifying theory for the ubiquity of hexagonal grids in path-integrator circuits",
+                        "mechanistic hypotheses exhibiting biological variability not captured by hand-designed models",
+                        "methods providing a roadmap from connectomic measurements to conceptual understanding"
+                    ]
+                }
+            },
+            {
+                "paper_id": "2510c7bcbd6278b50dc73e02d127546ef70141bd",
+                "raw": "methods=['non-negative sparse coding'] problems=['describing the spatial tuning properties of hippocampal place cells and dentate gyrus granule cells', 'emergence of place cells with multiple firing locations due to lack of diversity in grid parameters or network cells'] datasets=[] metrics=[] results=[] novelty_claims=['proposes a unified learning model for spatial tuning properties of place cells and granule cells', 'demonstrates that place cells can emerge from weakly-tuned MEC cells using non-negative sparse coding', \"suggests sparse coding as an organizing principle for the brain's navigational system\"]",
+                "parsed": {
+                    "methods": [
+                        "non-negative sparse coding"
+                    ],
+                    "problems": [
+                        "describing the spatial tuning properties of hippocampal place cells and dentate gyrus granule cells",
+                        "emergence of place cells with multiple firing locations due to lack of diversity in grid parameters or network cells"
+                    ],
+                    "datasets": [],
+                    "metrics": [],
+                    "results": [],
+                    "novelty_claims": [
+                        "proposes a unified learning model for spatial tuning properties of place cells and granule cells",
+                        "demonstrates that place cells can emerge from weakly-tuned MEC cells using non-negative sparse coding",
+                        "suggests sparse coding as an organizing principle for the brain's navigational system"
+                    ]
+                }
+            },
+            {
+                "paper_id": "c1585013b1dbb7341a8a6821159d8d7681e81503",
+                "raw": "methods=['High-density neuronal recordings in the entorhinal cortex and hippocampal area CA1 of rats'] problems=['Understanding the role of the entorhinal cortex in predicting future locations during spatial navigation'] datasets=['Open field environment with rats during goal-directed behavior'] metrics=['Grid field representation accuracy', 'Theta oscillation phase alignment'] results=[ResultEntry(metric='Grid field representation accuracy', value='Explicit encoding of future projected location'), ResultEntry(metric='Theta oscillation phase alignment', value='Discharge at trough phases of CA1 theta oscillation')] novelty_claims=['Discovery of predictive grid cells that represent future locations during goal-directed behavior', 'Demonstration that the medial entorhinal cortex organizes a predictive cognitive map']",
+                "parsed": {
+                    "methods": [
+                        "High-density neuronal recordings in the entorhinal cortex and hippocampal area CA1 of rats"
+                    ],
+                    "problems": [
+                        "Understanding the role of the entorhinal cortex in predicting future locations during spatial navigation"
+                    ],
+                    "datasets": [
+                        "Open field environment with rats during goal-directed behavior"
+                    ],
+                    "metrics": [
+                        "Grid field representation accuracy",
+                        "Theta oscillation phase alignment"
+                    ],
+                    "results": [
+                        {
+                            "metric": "Grid field representation accuracy",
+                            "value": "Explicit encoding of future projected location"
+                        },
+                        {
+                            "metric": "Theta oscillation phase alignment",
+                            "value": "Discharge at trough phases of CA1 theta oscillation"
+                        }
+                    ],
+                    "novelty_claims": [
+                        "Discovery of predictive grid cells that represent future locations during goal-directed behavior",
+                        "Demonstration that the medial entorhinal cortex organizes a predictive cognitive map"
+                    ]
+                }
+            },
+            {
+                "paper_id": "a538579ac50d659ac0bca9824d6446e741c586b3",
+                "raw": "methods=['Training recurrent neural networks (RNNs) for spatial navigation tasks'] problems=['Understanding the mechanisms and functional significance of spatial representations in the brain', 'Explaining the emergence of grid-like and other spatial response patterns in neural networks'] datasets=[] metrics=[\"Accuracy of RNN output in tracking animal's location\"] results=[ResultEntry(metric='Accuracy of RNN output', value='Not specified in the text')] novelty_claims=['This is the first study to show that grid-like responses could emerge from training a RNN to perform navigation tasks.']",
+                "parsed": {
+                    "methods": [
+                        "Training recurrent neural networks (RNNs) for spatial navigation tasks"
+                    ],
+                    "problems": [
+                        "Understanding the mechanisms and functional significance of spatial representations in the brain",
+                        "Explaining the emergence of grid-like and other spatial response patterns in neural networks"
+                    ],
+                    "datasets": [],
+                    "metrics": [
+                        "Accuracy of RNN output in tracking animal's location"
+                    ],
+                    "results": [
+                        {
+                            "metric": "Accuracy of RNN output",
+                            "value": "Not specified in the text"
+                        }
+                    ],
+                    "novelty_claims": [
+                        "This is the first study to show that grid-like responses could emerge from training a RNN to perform navigation tasks."
+                    ]
+                }
+            },
+            {
+                "paper_id": "27bc20a95969cffa29065fcc1beb63ee2386b852",
+                "raw": "methods=['self-supervised learning (SSL) framework', 'data augmentations', 'loss functions', 'network architecture'] problems=['mapping', 'localization', 'navigation', 'understanding the emergence of grid cells in neural networks'] datasets=[] metrics=[] results=[] novelty_claims=['Proposes a new self-supervised learning framework for spatial representations without hand-engineered inputs.', 'Demonstrates that multi-modular grid cells can emerge as optimal solutions to the SSL framework.', 'Closes the loop from biological grid cells discovery to their artificial genesis.']",
+                "parsed": {
+                    "methods": [
+                        "self-supervised learning (SSL) framework",
+                        "data augmentations",
+                        "loss functions",
+                        "network architecture"
+                    ],
+                    "problems": [
+                        "mapping",
+                        "localization",
+                        "navigation",
+                        "understanding the emergence of grid cells in neural networks"
+                    ],
+                    "datasets": [],
+                    "metrics": [],
+                    "results": [],
+                    "novelty_claims": [
+                        "Proposes a new self-supervised learning framework for spatial representations without hand-engineered inputs.",
+                        "Demonstrates that multi-modular grid cells can emerge as optimal solutions to the SSL framework.",
+                        "Closes the loop from biological grid cells discovery to their artificial genesis."
+                    ]
+                }
+            },
+            {
+                "paper_id": "2bf3295a0cec7163c063c0d3967cc0935396bb3e",
+                "raw": "methods=['single-layer neural network', 'generalized Hebbian rule'] problems=['understanding the feedback projection from place cells to grid cells', 'investigating how grid cells are affected by place cell inputs'] datasets=[] metrics=['grid spacing ratio'] results=[ResultEntry(metric='grid spacing ratio', value='\u22121.4')] novelty_claims=['proposes a novel architecture resembling PCA for understanding grid cell characteristics', 'demonstrates the effect of non-negativity constraint on the output lattice structure']",
+                "parsed": {
+                    "methods": [
+                        "single-layer neural network",
+                        "generalized Hebbian rule"
+                    ],
+                    "problems": [
+                        "understanding the feedback projection from place cells to grid cells",
+                        "investigating how grid cells are affected by place cell inputs"
+                    ],
+                    "datasets": [],
+                    "metrics": [
+                        "grid spacing ratio"
+                    ],
+                    "results": [
+                        {
+                            "metric": "grid spacing ratio",
+                            "value": "\u22121.4"
+                        }
+                    ],
+                    "novelty_claims": [
+                        "proposes a novel architecture resembling PCA for understanding grid cell characteristics",
+                        "demonstrates the effect of non-negativity constraint on the output lattice structure"
+                    ]
+                }
+            },
+            {
+                "paper_id": "cbeb0b647964650757d5e25aa711916e12a896dc",
+                "raw": "methods=['compute the population autocorrelation', 'analyze the spatial stability by computing the population autocorrelation on the linearized track'] problems=['understanding grid cell behavior on a circular track', 'determining the underlying spatial activity pattern of grid cells in undersampled environments'] datasets=['data recorded in Jacob et al. (2019)'] metrics=['population autocorrelation', 'spacing and orientation of the population lattice'] results=[ResultEntry(metric='underlying hexagonal lattice recovery', value='observed in populations of grid cells'), ResultEntry(metric='allocentric code', value='demonstrated at the level of the population')] novelty_claims=['the novel approach of computing the 2D population autocorrelation reveals an underlying hexagonal lattice that was not observable in individual autocorrelations', 'the method can analyze grid cell activity in undersampled environments and with limited data']",
+                "parsed": {
+                    "methods": [
+                        "compute the population autocorrelation",
+                        "analyze the spatial stability by computing the population autocorrelation on the linearized track"
+                    ],
+                    "problems": [
+                        "understanding grid cell behavior on a circular track",
+                        "determining the underlying spatial activity pattern of grid cells in undersampled environments"
+                    ],
+                    "datasets": [
+                        "data recorded in Jacob et al. (2019)"
+                    ],
+                    "metrics": [
+                        "population autocorrelation",
+                        "spacing and orientation of the population lattice"
+                    ],
+                    "results": [
+                        {
+                            "metric": "underlying hexagonal lattice recovery",
+                            "value": "observed in populations of grid cells"
+                        },
+                        {
+                            "metric": "allocentric code",
+                            "value": "demonstrated at the level of the population"
+                        }
+                    ],
+                    "novelty_claims": [
+                        "the novel approach of computing the 2D population autocorrelation reveals an underlying hexagonal lattice that was not observable in individual autocorrelations",
+                        "the method can analyze grid cell activity in undersampled environments and with limited data"
+                    ]
+                }
+            },
+            {
+                "paper_id": "1fe70364ca7c7cf3b5008969518fd3257e62a232",
+                "raw": "methods=['Predictive representation', 'Successor representation (SR)', 'Temporal difference learning algorithm', 'Spectral regularization'] problems=['Understanding the computational function of hippocampal place cells', 'Explaining the predictive coding in place cells', 'Addressing the inefficiency of model-based and model-free reinforcement learning approaches'] datasets=[] metrics=['Firing rate of place cells', 'Spatial similarity', 'Correlation of place fields', 'Discounted expected number of visits'] results=[ResultEntry(metric='Firing rate of place cells', value='Proportional to the discounted expected number of visits to other states under the current policy'), ResultEntry(metric='Spatial similarity', value='Higher within-community similarity than between-community similarity'), ResultEntry(metric='Correlation of place fields', value='Measured using Fisher z-transform'), ResultEntry(metric='Discounted expected number of visits', value='Calculated using the successor representation (SR) matrix')] novelty_claims=['Introduces the concept of a predictive map in the hippocampus that encodes expectations about future states rather than just spatial locations.', 'Demonstrates that entorhinal grid cells provide a low-dimensional basis for the predictive representation, aiding in noise suppression and hierarchical planning.', 'Formalizes the predictive function of the hippocampus within a reinforcement learning framework, bridging gaps between model-free and model-based approaches.']",
+                "parsed": {
+                    "methods": [
+                        "Predictive representation",
+                        "Successor representation (SR)",
+                        "Temporal difference learning algorithm",
+                        "Spectral regularization"
+                    ],
+                    "problems": [
+                        "Understanding the computational function of hippocampal place cells",
+                        "Explaining the predictive coding in place cells",
+                        "Addressing the inefficiency of model-based and model-free reinforcement learning approaches"
+                    ],
+                    "datasets": [],
+                    "metrics": [
+                        "Firing rate of place cells",
+                        "Spatial similarity",
+                        "Correlation of place fields",
+                        "Discounted expected number of visits"
+                    ],
+                    "results": [
+                        {
+                            "metric": "Firing rate of place cells",
+                            "value": "Proportional to the discounted expected number of visits to other states under the current policy"
+                        },
+                        {
+                            "metric": "Spatial similarity",
+                            "value": "Higher within-community similarity than between-community similarity"
+                        },
+                        {
+                            "metric": "Correlation of place fields",
+                            "value": "Measured using Fisher z-transform"
+                        },
+                        {
+                            "metric": "Discounted expected number of visits",
+                            "value": "Calculated using the successor representation (SR) matrix"
+                        }
+                    ],
+                    "novelty_claims": [
+                        "Introduces the concept of a predictive map in the hippocampus that encodes expectations about future states rather than just spatial locations.",
+                        "Demonstrates that entorhinal grid cells provide a low-dimensional basis for the predictive representation, aiding in noise suppression and hierarchical planning.",
+                        "Formalizes the predictive function of the hippocampus within a reinforcement learning framework, bridging gaps between model-free and model-based approaches."
+                    ]
+                }
+            },
+            {
+                "paper_id": "26fc224a118e20e5d6bc98b57711001abc20ec00",
+                "raw": "methods=['covariance-learning predictive coding networks (covPCNs)', 'explicit covPCN', 'implicit covPCN', 'dendritic covPCN', 'hybrid PCN'] problems=['dichotomy between predictive coding and covariance learning in associative memory', 'numerical instability in earlier covariance-learning predictive coding models', 'lack of recurrent connections in hierarchical predictive coding models for associative memory'] datasets=['natural scenes'] metrics=['stability of convergence during learning and inference', 'biological plausibility', 'performance in associative memory tasks'] results=[ResultEntry(metric='stability of convergence', value='stable'), ResultEntry(metric='biological plausibility', value='meets local computation and local plasticity criteria'), ResultEntry(metric='performance in associative memory tasks', value='efficient in complex AM tasks')] novelty_claims=['proposes a family of predictive coding models that learn statistical information for associative memory', 'introduces implicit covPCN that performs AM via covariance learning with local Hebbian plasticity', 'demonstrates that implicit and dendritic models can perform complex AM tasks where explicit covPCN fails', 'provides a biologically plausible implementation of recurrent predictive coding in the hippocampus']",
+                "parsed": {
+                    "methods": [
+                        "covariance-learning predictive coding networks (covPCNs)",
+                        "explicit covPCN",
+                        "implicit covPCN",
+                        "dendritic covPCN",
+                        "hybrid PCN"
+                    ],
+                    "problems": [
+                        "dichotomy between predictive coding and covariance learning in associative memory",
+                        "numerical instability in earlier covariance-learning predictive coding models",
+                        "lack of recurrent connections in hierarchical predictive coding models for associative memory"
+                    ],
+                    "datasets": [
+                        "natural scenes"
+                    ],
+                    "metrics": [
+                        "stability of convergence during learning and inference",
+                        "biological plausibility",
+                        "performance in associative memory tasks"
+                    ],
+                    "results": [
+                        {
+                            "metric": "stability of convergence",
+                            "value": "stable"
+                        },
+                        {
+                            "metric": "biological plausibility",
+                            "value": "meets local computation and local plasticity criteria"
+                        },
+                        {
+                            "metric": "performance in associative memory tasks",
+                            "value": "efficient in complex AM tasks"
+                        }
+                    ],
+                    "novelty_claims": [
+                        "proposes a family of predictive coding models that learn statistical information for associative memory",
+                        "introduces implicit covPCN that performs AM via covariance learning with local Hebbian plasticity",
+                        "demonstrates that implicit and dendritic models can perform complex AM tasks where explicit covPCN fails",
+                        "provides a biologically plausible implementation of recurrent predictive coding in the hippocampus"
+                    ]
+                }
+            }
+        ]
+    }
+}

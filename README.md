@@ -1,116 +1,231 @@
-<p  align="center">
+<!-- <p  align="center">
   <img src='logo.png' width='200'>
-</p>
+</p> -->
 
-# arxiv2025_assessing_paper_novelty
-[![Arxiv](https://img.shields.io/badge/Arxiv-YYMM.NNNNN-red?style=flat-square&logo=arxiv&logoColor=white)](https://put-here-your-paper.com)
-[![License](https://img.shields.io/github/license/UKPLab/arxiv2025-assessing-paper-novelty)](https://opensource.org/licenses/Apache-2.0)
-[![Python Versions](https://img.shields.io/badge/Python-3.9-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![CI](https://github.com/UKPLab/arxiv2025-assessing-paper-novelty/actions/workflows/main.yml/badge.svg)](https://github.com/UKPLab/arxiv2025-assessing-paper-novelty/actions/workflows/main.yml)
+# Beyond "Not Novel Enough": Enriching Scholarly Critique with LLM-Assisted Feedback
 
-This is the official template for new Python projects at UKP Lab. It was adapted for the needs of UKP Lab from the excellent [python-project-template](https://github.com/rochacbruno/python-project-template/) by [rochacbruno](https://github.com/rochacbruno).
+<!-- [![Arxiv](https://img.shields.io/badge/Arxiv-YYMM.NNNNN-red?style=flat-square&logo=arxiv&logoColor=white)](https://put-here-your-paper.com) -->
+<!-- [![License](https://img.shields.io/github/license/UKPLab/arxiv2025-assessing-paper-novelty)](https://opensource.org/licenses/Apache-2.0) -->
+<!-- [![Python Versions](https://img.shields.io/badge/Python-3.9-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/) -->
+<!-- [![CI](https://github.com/UKPLab/arxiv2025-assessing-paper-novelty/actions/workflows/main.yml/badge.svg)](https://github.com/UKPLab/arxiv2025-assessing-paper-novelty/actions/workflows/main.yml) -->
 
-It should help you start your project and give you continuous status updates on the development through [GitHub Actions](https://docs.github.com/en/actions).
+Novelty assessment is a central yet understudied aspect of peer review, particularly in high-volume fields like NLP where reviewer capacity is strained. We present a structured approach for automated novelty evaluation that models expert reviewer behavior through three stages: content extraction from submissions, retrieval and synthesis of related work, and structured comparison for evidence-based assessment. Informed by a large-scale analysis of human-written novelty reviews, our method captures key patterns such as independent claim verification and contextual reasoning. Evaluated on 182 ICLR 2025 submissions with human-annotated reviewer novelty assessments, it achieves 86.5% alignment with human reasoning and 75.3% agreement on novelty conclusions, substantially outperforming existing LLM-based baselines. The method produces detailed, literature-aware analyses, improves consistency over ad hoc judgments, and demonstrates the potential of structured LLM-assisted approaches to support more rigorous and transparent peer review without displacing human expertise. Data and code are made available.
 
-> **Abstract:** The study of natural language processing (NLP) has gained increasing importance in recent years, with applications ranging from machine translation to sentiment analysis. Properly managing Python projects in this domain is of paramount importance to ensure reproducibility and facilitate collaboration. The template provides a structured starting point for projects and offers continuous status updates on development through GitHub Actions. Key features include a basic setup.py file for installation, packaging, and distribution, documentation structure using mkdocs, testing structure using pytest, code linting with pylint, and entry points for executing the program with basic CLI argument parsing. Additionally, the template incorporates continuous integration using GitHub Actions with jobs to check, lint, and test the project, ensuring robustness and reliability throughout the development process.
+This repo contains the code and data used to produce the experiments in this paper.
 
-Contact person: [Federico Tiblias](mailto:federico.tiblias@tu-darmstadt.de) 
+Contact person: [Osama Mohammed Afzal](mailto:osama.afzal@tu-darmstadt.de)
 
-[UKP Lab](https://www.ukp.tu-darmstadt.de/) | [TU Darmstadt](https://www.tu-darmstadt.de/
-)
-
-Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions.
-
+[UKP Lab](https://www.ukp.tu-darmstadt.de/) | [TU Darmstadt](https://www.tu-darmstadt.de/)
 
 ## Getting Started
 
-> **DO NOT CLONE OR FORK**
-
-If you want to set up this template:
-
-1. Request a repository on UKP Lab's GitHub by following the standard procedure on the wiki. It will install the template directly. Alternatively, set it up in your personal GitHub account by clicking **[Use this template](https://github.com/rochacbruno/python-project-template/generate)**.
-2. Wait until the first run of CI finishes. Github Actions will commit to your new repo with a "✅ Ready to clone and code" message.
-3. Delete optional files: 
-    - If you don't need automatic documentation generation, you can delete folder `docs`, file `.github\workflows\docs.yml` and `mkdocs.yml`
-    - If you don't want automatic testing, you can delete folder `tests` and file `.github\workflows\tests.yml`
-    - If you do not wish to have a project page, delete folder `static` and files `.nojekyll`, `index.html`
-4. Prepare a virtual environment:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install .
 pip install -r requirements-dev.txt # Only needed for development
 ```
-5. Adapt anything else (for example this file) to your project. 
 
-6. Read the file [ABOUT_THIS_TEMPLATE.md](ABOUT_THIS_TEMPLATE.md)  for more information about development.
+### Prerequisites
+
+1. **API Keys**: Copy `.env.example` to `.env` and add your API keys:
+   - `OPENAI_API_KEY`: Required for structured extraction and novelty assessment
+   - `SEMANTIC_SCHOLAR_API_KEY`: Optional, improves rate limits for paper retrieval
+
+2. **GROBID Setup**: The pipeline requires GROBID for extracting structured metadata from PDFs:
+   - **Installation**: Follow the installation instructions at [GROBID repository](https://github.com/kermitt2/grobid)
+   - **Usage**: Process your PDF papers to generate TEI XML files:
+     ```bash
+     # Example GROBID processing (refer to GROBID docs for detailed instructions)
+     curl -X POST -F "input=@paper.pdf" localhost:8070/api/processFulltextDocument
+     ```
+   - **Expected Output**: The pipeline expects GROBID TEI XML files in this structure:
+     ```
+     data/{submission_id}/{submission_id}.grobid.tei.xml
+     ```
+
+3. **OCR Processing**: The pipeline requires OCR processing of PDF papers to extract introductions. You can use either:
+   - **Nougat OCR**: Follow installation instructions at [Nougat repository](https://github.com/facebookresearch/nougat)
+   - **MinerU OCR**: Follow installation instructions at [MinerU repository](https://github.com/opendatalab/MinerU)
+   
+   The pipeline expects OCR output in these specific directory structures:
+   
+   **For Main Paper** (any one of these):
+   ```
+   data/{submission_id}/ocr_output/{submission_id}/auto/{submission_id}.md
+   data/{submission_id}/nougat_output/{submission_id}.mmd
+   data/{submission_id}/mineru_output/{submission_id}.md
+   ```
+   
+   **For Related Papers** (any one of these):
+   ```
+   data/{submission_id}/related_work_data/ocr_output/{paper_id}/auto/{paper_id}.md
+   data/{submission_id}/related_work_data/nougat_output/{paper_id}.mmd
+   ```
+   
+   **Generated Introduction Files** (created by pipeline):
+   ```
+   data/{submission_id}/ours/{submission_id}_intro.txt              # main paper
+   data/{submission_id}/ours/related_papers/{paper_id}_intro.txt    # related papers
+   ```
 
 ## Usage
 
-### Using the classes
+### Complete Pipeline
 
-To import classes/methods of `arxiv2025_assessing_paper_novelty` from inside the package itself you can use relative imports: 
+The novelty assessment pipeline consists of several stages. For a single submission:
 
-```py
-from .base import BaseClass # Notice how I omit the package name
+0. **GROBID Processing**: Process submission PDF with GROBID (external step)
+   ```bash
+   # Start GROBID service (refer to GROBID documentation)
+   # Process PDF to generate TEI XML file
+   # Save as: data/{submission_id}/{submission_id}.grobid.tei.xml
+   ```
 
-BaseClass().something()
-```
+1. **Preprocess**: Extract metadata from GROBID TEI XML
+   ```bash
+   cd src/preprocess
+   python extract_metadata.py --data-dir /path/to/data --submission-id SUBMISSION_ID
+   ```
 
-To import classes/methods from outside the package (e.g. when you want to use the package in some other project) you can instead refer to the package name:
+2. **Enrich Citations**: Add Semantic Scholar data to citations
+   ```bash
+   cd src/retrieval
+   python match_papers_to_s2.py --input /path/to/data --submission-id SUBMISSION_ID
+   ```
 
-```py
-from arxiv2025_assessing_paper_novelty import BaseClass # Notice how I omit the file name
-from arxiv2025_assessing_paper_novelty.subpackage import SubPackageClass # Here it's necessary because it's a subpackage
+3. **Retrieve Related Papers**: Find and rank related papers
+   ```bash
+   cd src/retrieval
+   python retrieval.py --input /path/to/data --submission-id SUBMISSION_ID
+   ```
 
-BaseClass().something()
-SubPackageClass().something()
-```
+4. **Download PDFs**: Download PDFs of ranked papers
+   ```bash
+   cd src/retrieval
+   python get_cited_pdfs.py --data-dir /path/to/data --submission-id SUBMISSION_ID
+   ```
 
-### Using scripts
+5. **OCR Processing**: Process PDFs with Nougat or MinerU (external step)
+   ```bash
+   # Process main paper PDF and related paper PDFs with OCR tool of choice
+   # Save outputs in expected directory structure (see Prerequisites)
+   ```
 
-This is how you can use `arxiv2025_assessing_paper_novelty` from command line:
+6. **Extract Introductions**: Extract introductions from OCR output
+   ```bash
+   cd src/retrieval
+   python extract_introductions.py --data-dir /path/to/data --submission-id SUBMISSION_ID
+   ```
 
-```bash
-$ python -m arxiv2025_assessing_paper_novelty
-```
+7. **Run Analysis**: Complete novelty assessment pipeline
+   ```bash
+   cd src/novelty_assessment
+   python pipeline.py --data-dir /path/to/data --submission-id SUBMISSION_ID
+   ```
+
+### Individual Components
+
+Each stage can also be run independently using the CLI interfaces provided:
+
+- **`extract_metadata.py`**: Extracts structured metadata (title, abstract, citations, citation contexts) from GROBID TEI XML files
+- **`match_papers_to_s2.py`**: Enriches citations with Semantic Scholar data (abstracts, paper IDs, publication info)
+- **`retrieval.py`**: Generates search keywords, queries Semantic Scholar, ranks papers using SPECTER2 embeddings and RankGPT
+- **`get_cited_pdfs.py`**: Downloads PDFs of ranked papers from ArXiv, ACL Anthology, and Semantic Scholar
+- **`extract_introductions.py`**: Extracts introduction sections from OCR-processed papers using pattern matching
+- **`structured_extraction.py`**: Uses LLMs to extract structured information (methods, problems, datasets, results, novelty claims)
+- **`research_landscape.py`**: Analyzes the research landscape and identifies methodological clusters and relationships
+- **`novelty_assessment.py`**: Performs detailed novelty analysis comparing submission against related work
+- **`generate_summary.py`**: Generates final reviewer guidance summarizing the novelty assessment
+- **`pipeline.py`**: Orchestrates the complete analysis pipeline with dependency checking
 
 ### Expected results
 
-After running the experiments, you should expect the following results:
+After running the complete pipeline, you should expect the following output structure and files:
 
-(Feel free to describe your expected results here...)
+```
+data/{submission_id}/
+├── {submission_id}.grobid.tei.xml           # Input: GROBID TEI XML file
+├── ours/
+│   ├── {submission_id}.json                 # Extracted metadata (title, abstract, citations)
+│   ├── {submission_id}_intro.txt            # Main paper introduction
+│   ├── related_papers/                      # Related papers introductions
+│   │   ├── {paper_id}_intro.txt
+│   │   └── ...
+│   ├── s2_enriched_{submission_id}.json     # Citations enriched with Semantic Scholar data
+│   ├── related_work_{submission_id}.json    # Retrieved and ranked related papers
+│   ├── structured_extraction_{submission_id}.json  # LLM-extracted structured information
+│   ├── research_landscape_{submission_id}.json     # Research landscape analysis
+│   ├── novelty_assessment_{submission_id}.json     # Detailed novelty assessment
+│   └── summary_{submission_id}.json         # **Final summary for reviewers**
+└── related_work_data/
+    ├── pdfs/                                # Downloaded related paper PDFs
+    └── ocr_output/                          # OCR processed papers
+```
 
-### Parameter description
+**Key Output Files:**
 
-* `x, --xxxx`: This parameter does something nice
+1. **`summary_{submission_id}.json`** - The main output containing:
+   - **Executive Summary**: High-level novelty assessment and recommendations
+   - **Detailed Analysis**: Evidence-based comparison with related work
+   - **Reviewer Guidance**: Structured feedback for peer reviewers
+   - **Supporting Evidence**: Citations and specific comparisons
 
-* ...
+2. **`novelty_assessment_{submission_id}.json`** - Detailed technical analysis including:
+   - Methodological comparisons with related work
+   - Innovation assessment across different dimensions
+   - Evidence-based novelty scoring
+   - Specific technical differentiators
 
-* `z, --zzzz`: This parameter does something even nicer
+3. **`structured_extraction_{submission_id}.json`** - Structured information extracted from paper:
+   - Methods and approaches used
+   - Problems addressed and datasets
+   - Key results and claims
+   - Novelty assertions by authors
+
+The pipeline produces comprehensive, literature-aware analyses that help reviewers assess novelty systematically rather than making ad hoc judgments. The final summary provides actionable guidance for peer review decisions.
+
+### Key Parameters
+
+The pipeline components accept these main parameters:
+
+- `--data-dir`: Base directory containing submission data (required for all components)
+- `--submission-id`: Unique identifier for the submission being processed (required for pipeline mode)
+- `--input`: Input directory path (used by some retrieval components)
+- `--verbose, -v`: Enable detailed logging output (optional)
 
 ## Development
 
-Read the FAQs in [ABOUT_THIS_TEMPLATE.md](ABOUT_THIS_TEMPLATE.md) to learn more about how this template works and where you should put your classes & methods. Make sure you've correctly installed `requirements-dev.txt` dependencies
+For development work:
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. The codebase is organized into three main stages:
+   - `src/preprocess/`: Metadata extraction from GROBID TEI files
+   - `src/retrieval/`: Paper retrieval, PDF download, and introduction extraction  
+   - `src/novelty_assessment/`: LLM-based analysis and summary generation
+
+3. Each component includes both CLI interface and pipeline integration methods for flexible usage.
 
 ## Cite
 
 Please use the following citation:
 
 ```
-@InProceedings{smith:20xx:CONFERENCE_TITLE,
-  author    = {Smith, John},
-  title     = {My Paper Title},
-  booktitle = {Proceedings of the 20XX Conference on XXXX},
-  month     = mmm,
-  year      = {20xx},
-  address   = {Gotham City, USA},
-  publisher = {Association for XXX},
-  pages     = {XXXX--XXXX},
-  url       = {http://xxxx.xxx}
+@misc{afzal2025notnovelenoughenriching,
+      title={Beyond "Not Novel Enough": Enriching Scholarly Critique with LLM-Assisted Feedback}, 
+      author={Osama Mohammed Afzal and Preslav Nakov and Tom Hope and Iryna Gurevych},
+      year={2025},
+      eprint={2508.10795},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2508.10795}, 
 }
 ```
 
 ## Disclaimer
 
-> This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication. 
+> This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication.

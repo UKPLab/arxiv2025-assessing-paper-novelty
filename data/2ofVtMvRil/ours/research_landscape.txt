@@ -1,0 +1,250 @@
+---
+# RESEARCH LANDSCAPE ANALYSIS
+
+## 1. METHODOLOGICAL LANDSCAPE
+
+### Main Methodological Approaches
+
+Across the collection, several methodological paradigms emerge, often blending computational neuroscience, machine learning, and theoretical analysis:
+
+- **Predictive Coding Networks (PCNs):**  
+  - *Submission Paper, Related Papers 10, 13, 20*: Use of predictive coding as a normative and mechanistic framework for learning, memory, and representation, with extensions to temporal/sequential domains (tPCN, tPC).
+- **Biologically Plausible Neural Networks:**  
+  - *Related Papers 1, 2, 5, 6, 10, 11, 14*: Emphasis on local learning rules (Hebbian, synaptic plasticity), oscillatory gating, and architectural constraints inspired by neurobiology.
+- **Sparse and Non-Negative Coding:**  
+  - *Submission Paper, Related Papers 3, 7, 16*: Use of sparse coding, non-negative constraints, and principal component analysis to model emergence of spatial representations.
+- **Recurrent Neural Networks (RNNs) and Attractor Models:**  
+  - *Related Papers 5, 6, 12, 10*: RNNs trained for path integration, attractor dynamics for spatial memory, and associative memory models.
+- **Self-Supervised and Unsupervised Learning:**  
+  - *Related Papers 6, 19*: Self-supervised learning (SSL) frameworks and clustering algorithms for spatial/conceptual representation without explicit supervision.
+- **Theoretical/Normative Analyses:**  
+  - *Related Papers 9, 12, 16*: Successor representation (SR), group theory, and elastic relaxation models to derive or explain grid cell properties from first principles.
+- **Experimental/Analytical Data Analysis:**  
+  - *Related Papers 4, 8, 17, 18, 21*: Analysis of neural recordings, population-level statistics, and model-data comparisons to validate computational models.
+
+### Methodological Clusters
+
+- **Cluster A: Predictive Coding and Biologically Plausible Learning**  
+  - *Submission Paper, 1, 10, 13, 20*: Focus on predictive coding, local learning rules, and biological plausibility. The submission paper extends predictive coding to spatial domains and grid cell emergence.
+- **Cluster B: Sparse/Non-Negative Coding and Dimensionality Reduction**  
+  - *Submission Paper, 3, 7, 16*: Use of sparse coding, non-negative constraints, and PCA to explain emergence of grid/place cells.
+- **Cluster C: Recurrent/Attractor Networks for Path Integration**  
+  - *1, 2, 5, 6, 12*: RNNs and attractor models trained for path integration, often with biological constraints.
+- **Cluster D: Theoretical/Normative Models**  
+  - *9, 12, 16, 19*: Normative derivations (SR, group theory, clustering) to explain grid/place cell properties and their computational roles.
+- **Cluster E: Experimental Data Analysis and Model Validation**  
+  - *4, 8, 17, 18, 21*: Empirical analysis of neural data, often to validate or challenge computational models.
+
+### Methodological Trends and Relationships
+
+- **Biological Plausibility:**  
+  There is a strong trend toward models that use local, Hebbian, or otherwise biologically plausible learning rules, moving away from backpropagation.
+- **Predictive Coding as a Unifying Principle:**  
+  Predictive coding is increasingly used not just for sensory processing but for spatial and sequential memory, bridging perception and navigation.
+- **From Supervised to Self-Supervised/Unsupervised Learning:**  
+  Recent models (e.g., SSL frameworks) emphasize learning representations from structure in the data itself, without explicit labels.
+- **Normative and Analytical Approaches:**  
+  There is a growing emphasis on deriving grid cell properties from first principles (e.g., group theory, SR, elastic models), providing theoretical justification for observed neural phenomena.
+- **Integration of Multiple Constraints:**  
+  Many models combine functional, biological, and computational constraints (e.g., non-negativity, sparsity, local learning, actionability) to explain neural representations.
+
+---
+
+## 2. PROBLEM SPACE MAPPING
+
+### Key Problems Addressed
+
+- **Emergence of Grid and Place Cells:**  
+  How do grid and place cells arise in the brain, and what learning rules or network architectures support their development? (*Submission, 1, 2, 3, 5, 6, 7, 11, 14, 16, 19*)
+- **Biological Plausibility of Learning:**  
+  Can the emergence of spatial representations be explained by biologically plausible mechanisms (local learning, Hebbian plasticity, oscillatory gating)? (*Submission, 1, 10, 13, 14, 15*)
+- **Path Integration and Navigation:**  
+  How do neural circuits support path integration and spatial memory, and what is the computational role of grid cells in these processes? (*Submission, 1, 2, 5, 6, 9, 12*)
+- **Predictive Coding Beyond Sensory Domains:**  
+  Can predictive coding explain not just sensory processing but also spatial and sequential memory? (*Submission, 10, 13, 20*)
+- **Generalization and Transfer:**  
+  How do learned spatial representations generalize across environments or tasks? (*1, 6, 9, 19*)
+- **Normative/Computational Principles:**  
+  What are the optimality principles (e.g., actionability, efficiency, predictive value) underlying grid/place cell representations? (*9, 12, 16, 19*)
+- **Empirical Validation and Model-Data Comparison:**  
+  How well do computational models match experimental data, and what new analyses can reveal hidden structure? (*4, 8, 17, 18, 21*)
+
+### Approaches to Similar Problems
+
+- **Grid Cell Emergence:**  
+  - *Submission, 1, 2, 5, 6, 7, 16*: Approached via predictive coding, generative models, RNNs, sparse coding, non-negative PCA, and group theory.
+  - *Submission* uniquely extends predictive coding to spatial domains and demonstrates grid cell emergence with biologically plausible learning.
+- **Biological Plausibility:**  
+  - *Submission, 1, 10, 13, 14, 15*: Use of local Hebbian rules, oscillatory gating, and avoidance of backpropagation.
+  - *Submission* analytically links Hebbian learning in tPCN to truncated BPTT, bridging biological and artificial learning.
+- **Path Integration:**  
+  - *1, 2, 5, 6, 9, 12*: RNNs, attractor models, and SR-based models trained for path integration, with varying degrees of biological realism.
+- **Predictive Coding in New Domains:**  
+  - *Submission, 10, 13, 20*: Predictive coding extended to spatial and sequential memory, and robotics.
+- **Generalization/Transfer:**  
+  - *1, 6, 9, 19*: Models tested for ability to generalize to new environments or tasks, with transfer learning and generalization as key metrics.
+
+### Patterns in Problem Formulation
+
+- **From Sensory to Cognitive Domains:**  
+  Predictive coding and sparse coding, originally developed for sensory processing, are now being applied to spatial navigation and memory.
+- **Emphasis on Biological Constraints:**  
+  Many problems are formulated with explicit reference to biological plausibility, seeking mechanisms that could operate in real neural circuits.
+- **Normative Framing:**  
+  Several works frame the problem as one of optimal representation or efficient coding, seeking to explain why the brain's representations have their observed properties.
+
+---
+
+## 3. EVALUATION LANDSCAPE
+
+### Common Datasets
+
+- **Simulated Spatial Environments:**  
+  Most computational papers use simulated 1D/2D/3D environments for navigation and spatial memory tasks (*Submission, 1, 3, 5, 6, 9*).
+- **Neural Recordings from Rodents:**  
+  Empirical studies and some model validation papers use rat grid cell recordings in open fields, linear tracks, circular tracks, or 3D mazes (*4, 8, 17, 18, 21*).
+- **Synthetic Sequential Memory Tasks:**  
+  Used for evaluating sequential memory models (*13*).
+- **Abstract/Non-Spatial Graphs:**  
+  Used to test generalization of models beyond spatial domains (*9, 19*).
+
+### Evaluation Metrics
+
+- **Emergence and Structure of Grid/Place Cells:**  
+  - Emergence of hexagonal grid-like firing patterns (qualitative/structural)
+  - Grid field spacing, orientation, regularity, and modularity
+  - Number of firing locations per cell
+- **Task Performance:**  
+  - Path integration accuracy (location tracking)
+  - Latent state inference accuracy
+  - Pattern completion (associative memory)
+  - Generalization to new environments/tasks
+- **Model-Data Similarity:**  
+  - Correlation between simulated and empirical fields
+  - Statistical indistinguishability of model and biological data
+  - Reproduction of behavioral effects (e.g., primacy/recency)
+- **Robustness and Stability:**  
+  - Robustness to architectural/input changes
+  - Stability of memory retrieval
+  - Convergence and computational stability
+
+### Patterns in Performance Measurement
+
+- **Structural Emergence as a Primary Metric:**  
+  Many works focus on whether grid/place cell-like patterns emerge, rather than on traditional accuracy metrics.
+- **Model-Data Comparisons:**  
+  Increasing use of direct quantitative and qualitative comparisons between model outputs and neural data.
+- **Robustness and Generalization:**  
+  Emphasis on robustness to changes in architecture, input statistics, and environment, as well as generalization outside the training distribution.
+- **Biological Plausibility as an Implicit Metric:**  
+  Models are often evaluated on the plausibility of their learning rules and architectures, not just on task performance.
+
+### Comparison of Evaluation Approaches
+
+- **Computational Models:**  
+  Rely on emergence of desired representations, task performance, and robustness.
+- **Empirical/Analytical Studies:**  
+  Use population-level analyses, autocorrelation, and direct comparison to experimental data.
+- **Normative/Theoretical Models:**  
+  Focus on analytic derivation and optimality, sometimes supported by simulation.
+
+---
+
+## 4. RESEARCH CLUSTERS
+
+### Cluster 1: Predictive Coding and Biologically Plausible Learning
+
+- **Papers:** Submission, 1, 10, 13, 20
+- **Characteristics:**  
+  - Predictive coding as a unifying framework
+  - Emphasis on local, biologically plausible learning rules (Hebbian, dendritic, oscillatory gating)
+  - Application to spatial, sequential, and associative memory
+  - Analytical links between biological and artificial learning (e.g., tPCN ≈ truncated BPTT)
+- **Relationships:**  
+  - Submission paper extends predictive coding to grid cell emergence, building on prior work in associative and sequential memory (10, 13).
+  - Related to robotics and world models (20).
+
+### Cluster 2: Sparse/Non-Negative Coding and Dimensionality Reduction
+
+- **Papers:** Submission, 3, 7, 16
+- **Characteristics:**  
+  - Use of sparse coding, non-negative constraints, and PCA to explain emergence of spatial representations
+  - Analytical and simulation-based demonstration of grid/place cell emergence from input statistics
+  - Normative derivations (group theory, actionability)
+- **Relationships:**  
+  - Submission paper uses sparse, non-negative constraints in predictive coding; 3 and 7 use similar constraints in feedforward models; 16 provides a normative justification.
+
+### Cluster 3: Recurrent/Attractor Networks for Path Integration
+
+- **Papers:** 1, 2, 5, 6, 12
+- **Characteristics:**  
+  - RNNs and attractor models trained for path integration and spatial memory
+  - Biologically inspired constraints (local learning, oscillations)
+  - Emergence of diverse spatial representations (grid, border, band-like cells)
+- **Relationships:**  
+  - 1 and 2 focus on generative and mechanistic models; 5 and 6 on deep learning and self-supervised frameworks; 12 on theoretical attractor models.
+
+### Cluster 4: Theoretical/Normative Models
+
+- **Papers:** 9, 12, 16, 19
+- **Characteristics:**  
+  - Normative derivations of grid/place cell properties (SR, group theory, clustering)
+  - Emphasis on optimality, efficiency, and generalization
+  - Application to both spatial and non-spatial domains
+- **Relationships:**  
+  - 9 and 19 unify spatial and non-spatial representations; 12 and 16 provide analytic derivations of grid cell properties.
+
+### Cluster 5: Experimental Data Analysis and Model Validation
+
+- **Papers:** 4, 8, 17, 18, 21
+- **Characteristics:**  
+  - Empirical analysis of rodent grid cell data
+  - Development of new analytical methods (population autocorrelation, model fitting)
+  - Validation and challenge of computational models
+- **Relationships:**  
+  - Provide empirical grounding and constraints for computational and theoretical models.
+
+---
+
+## 5. TECHNICAL EVOLUTION
+
+### Progression and Evolution of Ideas
+
+- **From Sensory to Spatial Predictive Coding:**  
+  Predictive coding, originally for sensory processing, is extended to spatial navigation and memory (Submission, 10, 13, 20).
+- **From Backpropagation to Local Learning:**  
+  Early models used backpropagation; recent work (Submission, 1, 10, 13, 14, 15) emphasizes local, biologically plausible learning rules, with analytical links to artificial learning (e.g., tPCN ≈ truncated BPTT).
+- **From Hand-Designed to Emergent Representations:**  
+  Shift from hand-designed connectivity to emergent representations via learning (5, 6, 9, 16).
+- **From Supervised to Self-Supervised/Unsupervised Learning:**  
+  Movement toward self-supervised and unsupervised frameworks for learning spatial representations (6, 19).
+- **From Descriptive to Normative/Theoretical Models:**  
+  Increasing use of normative principles (SR, group theory, actionability) to derive grid cell properties from first principles (9, 12, 16).
+- **From Individual to Population-Level Analysis:**  
+  Analytical methods evolve from single-cell to population-level analyses, revealing hidden structure (8, 21).
+
+### Building Blocks and Extensions
+
+- **Predictive Coding Networks:**  
+  Extended from sensory to spatial and sequential domains; tPCN builds on tPC (13) and PCN (10).
+- **Sparse Coding and Non-Negative Constraints:**  
+  Used in both feedforward and predictive coding models; extended by group-theoretic and actionability analyses (16).
+- **Recurrent/Attractor Models:**  
+  Evolve from simple RNNs to biologically constrained, self-supervised, and theoretically justified models (1, 2, 5, 6, 12).
+- **Successor Representation:**  
+  Bridges model-free and model-based RL, extended to explain both spatial and non-spatial representations (9, 19).
+
+### Competing and Complementary Approaches
+
+- **Predictive Coding vs. Attractor Models:**  
+  Predictive coding offers a normative, error-driven framework; attractor models emphasize dynamical stability and path integration. Some works (Submission, 1, 10) seek to unify these.
+- **Sparse Coding vs. Clustering/Normative Models:**  
+  Sparse coding and clustering offer different mechanistic explanations for emergence of spatial representations; normative models (16, 19) provide first-principles justification.
+- **Empirical vs. Theoretical Approaches:**  
+  Empirical analyses (4, 8, 17, 18, 21) provide constraints and validation for theoretical/computational models, sometimes challenging their assumptions (e.g., irregular grids in 3D, 18).
+
+---
+
+# SUMMARY
+
+The research landscape represented by these papers is characterized by a convergence of biologically plausible learning, predictive coding, and normative theoretical frameworks to explain the emergence and function of grid and place cells in the brain. The submission paper stands at the intersection of these trends, extending predictive coding to spatial domains and demonstrating grid cell emergence with local, Hebbian learning rules. Across the field, there is a clear progression from hand-designed, supervised, and backpropagation-based models toward self-organizing, self-supervised, and biologically grounded approaches, with increasing emphasis on analytical and normative justification. Empirical studies and new analytical methods provide essential validation and constraints, ensuring that computational models remain grounded in biological reality. The landscape is thus rich, dynamic, and increasingly unified, with predictive coding, sparse coding, and normative principles serving as central pillars.

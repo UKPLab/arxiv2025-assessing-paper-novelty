@@ -1,0 +1,877 @@
+[
+  {
+    "id": "2ofVtMvRil",
+    "cited_papers": [
+      {
+        "id": "b0",
+        "title": "Vector-based navigation using grid-like representations in artificial agents",
+        "authors": [
+          "Andrea Banino",
+          "Caswell Barry",
+          "Benigno Uria",
+          "Charles Blundell",
+          "Timothy Lillicrap",
+          "Piotr Mirowski",
+          "Alexander Pritzel",
+          "Martin Chadwick",
+          "Thomas Degris",
+          "Joseph Modayil"
+        ],
+        "year": "2018",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,186.22,396.00,8.64;11,117.96,197.18,386.04,8.64;11,117.96,207.96,384.18,8.82\" xml:id=\"b0\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_cM9NnxZ\">Vector-based navigation using grid-like representations in artificial agents</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Andrea</forename><surname>Banino</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Caswell</forename><surname>Barry</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Benigno</forename><surname>Uria</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Charles</forename><surname>Blundell</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Timothy</forename><surname>Lillicrap</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Piotr</forename><surname>Mirowski</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Alexander</forename><surname>Pritzel</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Martin</forename><forename type=\"middle\">J</forename><surname>Chadwick</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Thomas</forename><surname>Degris</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Joseph</forename><surname>Modayil</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_RgCrP59\">Nature</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">557</biblScope>\n\t\t\t<biblScope unit=\"issue\">7705</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"429\" to=\"433\"/>\n\t\t\t<date type=\"published\" when=\"2018\">2018</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b1",
+        "title": "Prediction and memory: A predictive coding account",
+        "authors": [
+          "Ryszard Helen C Barron",
+          "Karl Auksztulewicz",
+          "Friston"
+        ],
+        "year": "2020",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,227.88,396.00,8.64;11,117.96,238.66,247.02,8.82\" xml:id=\"b1\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_E9bMkcV\">Prediction and memory: A predictive coding account</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ryszard</forename><surname>Helen C Barron</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Karl</forename><surname>Auksztulewicz</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Friston</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_ER4vX8m\">Progress in neurobiology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">192</biblScope>\n\t\t\t<biblScope unit=\"page\">101821</biblScope>\n\t\t\t<date type=\"published\" when=\"2020\">2020</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b2",
+        "title": "A solution to the learning dilemma for recurrent networks of spiking neurons",
+        "authors": [
+          "Guillaume Bellec",
+          "Franz Scherr",
+          "Anand Subramoney",
+          "Elias Hajek",
+          "Darjan Salaj",
+          "Robert Legenstein",
+          "Wolfgang Maass"
+        ],
+        "year": "2020",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,258.57,396.00,8.64;11,117.96,269.53,386.04,8.64;11,117.96,280.31,194.99,8.82\" xml:id=\"b2\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_c7uXvvy\">A solution to the learning dilemma for recurrent networks of spiking neurons</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Guillaume</forename><surname>Bellec</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Franz</forename><surname>Scherr</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Anand</forename><surname>Subramoney</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Elias</forename><surname>Hajek</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Darjan</forename><surname>Salaj</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Robert</forename><surname>Legenstein</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Wolfgang</forename><surname>Maass</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_FNmtkuR\">Nature communications</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">11</biblScope>\n\t\t\t<biblScope unit=\"issue\">1</biblScope>\n\t\t\t<biblScope unit=\"page\">3625</biblScope>\n\t\t\t<date type=\"published\" when=\"2020\">2020</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b3",
+        "title": "A tutorial on the free-energy framework for modelling perception and learning",
+        "authors": [
+          "Rafal Bogacz"
+        ],
+        "year": "2017",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,300.23,396.00,8.64;11,117.96,311.01,224.75,8.82\" xml:id=\"b3\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_ByYNYSe\">A tutorial on the free-energy framework for modelling perception and learning</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Bogacz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_XqXZc9f\">Journal of mathematical psychology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">76</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"198\" to=\"211\"/>\n\t\t\t<date type=\"published\" when=\"2017\">2017</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b4",
+        "title": "Impression learning: Online representation learning with synaptic plasticity",
+        "authors": [
+          "Colin Bredenberg",
+          "Benjamin Lyo",
+          "Eero Simoncelli",
+          "Cristina Savin"
+        ],
+        "year": "2021",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,330.93,396.00,8.64;11,117.96,341.70,386.03,8.82;11,117.96,352.66,131.45,8.82\" xml:id=\"b4\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_XRHSYK4\">Impression learning: Online representation learning with synaptic plasticity</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Colin</forename><surname>Bredenberg</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Benjamin</forename><surname>Lyo</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Eero</forename><surname>Simoncelli</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Cristina</forename><surname>Savin</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_XFqdY88\">Advances in Neural Information Processing Systems</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">34</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"11717\" to=\"11729\"/>\n\t\t\t<date type=\"published\" when=\"2021\">2021</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b5",
+        "title": "Accurate path integration in continuous attractor network models of grid cells",
+        "authors": [
+          "Yoram Burak",
+          "Ila Fiete"
+        ],
+        "year": "2009",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,372.58,396.00,8.64;11,117.96,383.36,247.84,8.82\" xml:id=\"b5\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_f2JYwmd\">Accurate path integration in continuous attractor network models of grid cells</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Yoram</forename><surname>Burak</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ila</forename><forename type=\"middle\">R</forename><surname>Fiete</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_7bns8vp\">PLoS computational biology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">5</biblScope>\n\t\t\t<biblScope unit=\"issue\">2</biblScope>\n\t\t\t<biblScope unit=\"page\">1000291</biblScope>\n\t\t\t<date type=\"published\" when=\"2009\">2009</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b6",
+        "title": "What do grid cells contribute to place cell firing?",
+        "authors": [
+          "Daniel Bush",
+          "Caswell Barry",
+          "Neil Burgess"
+        ],
+        "year": "2014",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,403.28,396.00,8.64;11,117.96,414.06,187.08,8.82\" xml:id=\"b6\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_mjs2fSS\">What do grid cells contribute to place cell firing?</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Daniel</forename><surname>Bush</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Caswell</forename><surname>Barry</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Neil</forename><surname>Burgess</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_6Vu8grw\">Trends in neurosciences</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">37</biblScope>\n\t\t\t<biblScope unit=\"issue\">3</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"136\" to=\"145\"/>\n\t\t\t<date type=\"published\" when=\"2014\">2014</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b7",
+        "title": "What does the anatomical organization of the entorhinal cortex tell us?",
+        "authors": [
+          "Cathrin Canto",
+          "Floris Wouterlood",
+          "Menno Witter"
+        ],
+        "year": "2008",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,433.97,396.00,8.64;11,117.96,444.75,291.39,8.82\" xml:id=\"b7\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_Jeh33Xv\">What does the anatomical organization of the entorhinal cortex tell us?</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Cathrin</forename><forename type=\"middle\">B</forename><surname>Canto</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Floris</forename><forename type=\"middle\">G</forename><surname>Wouterlood</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Menno</forename><forename type=\"middle\">P</forename><surname>Witter</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_6uj8QJ7\">Neural plasticity</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"issue\">1</biblScope>\n\t\t\t<biblScope unit=\"page\">381243</biblScope>\n\t\t\t<date type=\"published\" when=\"2008\">2008. 2008</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b8",
+        "title": "Emergence of grid-like representations by training recurrent neural networks to perform spatial localization",
+        "authors": [
+          "J Christopher",
+          "Xue-Xin Cueva",
+          "Wei"
+        ],
+        "year": "2018",
+        "venue": "Emergence of grid-like representations by training recurrent neural networks to perform spatial localization",
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,464.67,396.00,8.64;11,117.96,475.45,351.77,8.82\" xml:id=\"b8\">\n\t<monogr>\n\t\t<title level=\"m\" type=\"main\" xml:id=\"_UVNuM6q\">Emergence of grid-like representations by training recurrent neural networks to perform spatial localization</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">J</forename><surname>Christopher</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Xue-Xin</forename><surname>Cueva</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Wei</surname></persName>\n\t\t</author>\n\t\t<idno type=\"arXiv\">arXiv:1803.07770</idno>\n\t\t<imprint>\n\t\t\t<date type=\"published\" when=\"2018\">2018</date>\n\t\t</imprint>\n\t</monogr>\n\t<note type=\"report_type\">arXiv preprint</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b9",
+        "title": "Evidence for grid cells in a human memory network",
+        "authors": [
+          "Caswell Christian F Doeller",
+          "Neil Barry",
+          "Burgess"
+        ],
+        "year": "2010",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,495.36,396.00,8.64;11,117.96,506.14,177.45,8.82\" xml:id=\"b9\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_Veqj3k8\">Evidence for grid cells in a human memory network</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Caswell</forename><surname>Christian F Doeller</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Neil</forename><surname>Barry</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Burgess</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_tnU9Zy6\">Nature</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">463</biblScope>\n\t\t\t<biblScope unit=\"issue\">7281</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"657\" to=\"661\"/>\n\t\t\t<date type=\"published\" when=\"2010\">2010</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b10",
+        "title": "Extracting grid cell characteristics from place cell inputs using non-negative principal component analysis",
+        "authors": [
+          "Yedidyah Dordek",
+          "Daniel Soudry",
+          "Ron Meir",
+          "Dori Derdikman"
+        ],
+        "year": "2016",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,526.06,396.00,8.64;11,117.96,536.84,386.04,8.82;11,117.96,547.98,22.42,8.64\" xml:id=\"b10\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_JTV6m49\">Extracting grid cell characteristics from place cell inputs using non-negative principal component analysis</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Yedidyah</forename><surname>Dordek</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Daniel</forename><surname>Soudry</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ron</forename><surname>Meir</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Dori</forename><surname>Derdikman</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_weBa4dy\">Elife</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">5</biblScope>\n\t\t\t<date type=\"published\" when=\"2016\">10094. 2016</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b11",
+        "title": "Actionable neural representations: Grid cells from minimal constraints",
+        "authors": [
+          "William Dorrell",
+          "Peter Latham",
+          "Timothy Behrens",
+          "James Cr Whittington"
+        ],
+        "year": "2022",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,567.72,396.00,8.64;11,117.96,578.50,386.04,8.82;11,117.96,589.63,22.42,8.64\" xml:id=\"b11\">\n\t<monogr>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">William</forename><surname>Dorrell</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Peter</forename><forename type=\"middle\">E</forename><surname>Latham</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Timothy</forename><forename type=\"middle\">Ej</forename><surname>Behrens</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">James Cr</forename><surname>Whittington</surname></persName>\n\t\t</author>\n\t\t<idno type=\"arXiv\">arXiv:2209.15563</idno>\n\t\t<title level=\"m\" xml:id=\"_6yQtDJT\">Actionable neural representations: Grid cells from minimal constraints</title>\n\t\t<imprint>\n\t\t\t<date type=\"published\" when=\"2022\">2022</date>\n\t\t</imprint>\n\t</monogr>\n\t<note type=\"report_type\">arXiv preprint</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b12",
+        "title": "Evidence for area ca1 as a match/mismatch detector: A high-resolution fmri study of the human hippocampus",
+        "authors": [
+          "Katherine Duncan",
+          "Nicholas Ketz",
+          "J Souheil",
+          "Lila Inati",
+          "Davachi"
+        ],
+        "year": "2012",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,609.37,396.00,8.64;11,117.96,620.15,386.04,8.82;11,117.96,631.11,105.43,8.82\" xml:id=\"b12\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_9T4TVky\">Evidence for area ca1 as a match/mismatch detector: A high-resolution fmri study of the human hippocampus</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Katherine</forename><surname>Duncan</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Nicholas</forename><surname>Ketz</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">J</forename><surname>Souheil</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Lila</forename><surname>Inati</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Davachi</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_HPGxJMg\">Hippocampus</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">22</biblScope>\n\t\t\t<biblScope unit=\"issue\">3</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"389\" to=\"398\"/>\n\t\t\t<date type=\"published\" when=\"2012\">2012</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b13",
+        "title": "A theory of cortical responses",
+        "authors": [
+          "Karl Friston"
+        ],
+        "year": "1456",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,650.85,396.00,8.82;11,117.96,661.81,188.62,8.82\" xml:id=\"b13\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_bfRepXA\">A theory of cortical responses</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Karl</forename><surname>Friston</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_MMcEy68\">Philosophical transactions of the Royal Society B: Biological sciences</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">360</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"815\" to=\"836\"/>\n\t\t\t<date type=\"published\" when=\"1456\">1456. 2005</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b14",
+        "title": "A spin glass model of path integration in rat medial entorhinal cortex",
+        "authors": [
+          "C Mark",
+          "David Fuhs",
+          "Touretzky"
+        ],
+        "year": "2006",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,681.72,396.00,8.64;11,117.96,692.50,234.62,8.82\" xml:id=\"b14\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_JKued9u\">A spin glass model of path integration in rat medial entorhinal cortex</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">C</forename><surname>Mark</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">David</forename><forename type=\"middle\">S</forename><surname>Fuhs</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Touretzky</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_YHPNCKX\">Journal of Neuroscience</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">26</biblScope>\n\t\t\t<biblScope unit=\"issue\">16</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"4266\" to=\"4276\"/>\n\t\t\t<date type=\"published\" when=\"2006\">2006</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b15",
+        "title": "Grid cells in mice",
+        "authors": [
+          "Marianne Fyhn",
+          "Torkel Hafting",
+          "P Menno",
+          "Edvard Witter",
+          "May-Britt Moser",
+          "Moser"
+        ],
+        "year": "2008",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"11,108.00,712.42,396.00,8.64;11,117.96,723.20,197.57,8.82;12,108.00,28.88,199.79,8.64\" xml:id=\"b15\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_5934jEW\">Grid cells in mice</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Marianne</forename><surname>Fyhn</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Torkel</forename><surname>Hafting</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">P</forename><surname>Menno</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Edvard</forename><forename type=\"middle\">I</forename><surname>Witter</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">May-Britt</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Moser</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_NzVCwYT\">Hippocampus</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">18</biblScope>\n\t\t\t<biblScope unit=\"issue\">12</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1230\" to=\"1238\"/>\n\t\t\t<date type=\"published\" when=\"2008\">2008</date>\n\t\t</imprint>\n\t</monogr>\n\t<note>Under review as a conference paper at ICLR 2025</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b16",
+        "title": "A generative model of the hippocampal formation trained with theta driven local learning rules",
+        "authors": [
+          "Kimberly Tom M George",
+          "Caswell Stachenfeld",
+          "Claudia Barry",
+          "Tomoki Clopath",
+          "Fukai"
+        ],
+        "year": "2024",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,85.34,396.00,8.64;12,117.96,96.30,386.04,8.64;12,117.96,107.08,251.21,8.82\" xml:id=\"b16\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_McCftGw\">A generative model of the hippocampal formation trained with theta driven local learning rules</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Kimberly</forename><forename type=\"middle\">L</forename><surname>Tom M George</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Caswell</forename><surname>Stachenfeld</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Claudia</forename><surname>Barry</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Tomoki</forename><surname>Clopath</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Fukai</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_3C7MQTu\">Advances in Neural Information Processing Systems</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">36</biblScope>\n\t\t\t<date type=\"published\" when=\"2024\">2024</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b17",
+        "title": "Computational models of grid cells",
+        "authors": [
+          "Lisa Giocomo",
+          "May-Britt Moser",
+          "Edvard I Moser"
+        ],
+        "year": "2011",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,125.84,396.00,8.64;12,117.96,136.62,121.03,8.82\" xml:id=\"b17\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_QNRcR7W\">Computational models of grid cells</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Lisa</forename><forename type=\"middle\">M</forename><surname>Giocomo</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">May-Britt</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Edvard I</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_jzVDUZ8\">Neuron</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">71</biblScope>\n\t\t\t<biblScope unit=\"issue\">4</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"589\" to=\"603\"/>\n\t\t\t<date type=\"published\" when=\"2011\">2011</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b18",
+        "title": "Microstructure of a spatial map in the entorhinal cortex",
+        "authors": [
+          "Torkel Hafting",
+          "Marianne Fyhn",
+          "Sturla Molden",
+          "May-Britt Moser",
+          "Edvard I Moser"
+        ],
+        "year": "2005",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,155.38,396.00,8.64;12,117.96,166.16,321.28,8.82\" xml:id=\"b18\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_ThtRgjS\">Microstructure of a spatial map in the entorhinal cortex</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Torkel</forename><surname>Hafting</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Marianne</forename><surname>Fyhn</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Sturla</forename><surname>Molden</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">May-Britt</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Edvard I</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_KAmADzm\">Nature</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">436</biblScope>\n\t\t\t<biblScope unit=\"issue\">7052</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"801\" to=\"806\"/>\n\t\t\t<date type=\"published\" when=\"2005\">2005</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b19",
+        "title": "Grid cell firing may arise from interference of theta frequency membrane potential oscillations in single neurons",
+        "authors": [
+          "Lisa Michael E Hasselmo",
+          "Eric Giocomo",
+          "Zilli"
+        ],
+        "year": "2007",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,184.93,396.00,8.64;12,117.96,195.71,386.04,8.82;12,117.96,206.85,72.23,8.64\" xml:id=\"b19\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_UcKyStB\">Grid cell firing may arise from interference of theta frequency membrane potential oscillations in single neurons</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Lisa</forename><forename type=\"middle\">M</forename><surname>Michael E Hasselmo</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Eric</forename><forename type=\"middle\">A</forename><surname>Giocomo</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Zilli</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_XEvEzcw\">Hippocampus</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">17</biblScope>\n\t\t\t<biblScope unit=\"issue\">12</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1252\" to=\"1271\"/>\n\t\t\t<date type=\"published\" when=\"2007\">2007</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b20",
+        "title": "Basket-like interneurones in layer ii of the entorhinal cortex exhibit a powerful nmda-mediated synaptic excitation",
+        "authors": [
+          "Rsg Jones",
+          "B\u00fchl"
+        ],
+        "year": "1993",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,225.43,396.00,8.64;12,117.96,236.21,351.28,8.82\" xml:id=\"b20\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_H3tKbFR\">Basket-like interneurones in layer ii of the entorhinal cortex exhibit a powerful nmda-mediated synaptic excitation</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rsg</forename><surname>Jones</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>B\u00fchl</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_me9Mtfe\">Neuroscience letters</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">149</biblScope>\n\t\t\t<biblScope unit=\"issue\">1</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"35\" to=\"39\"/>\n\t\t\t<date type=\"published\" when=\"1993\">1993</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b21",
+        "title": "The emergence of grid cells: Intelligent design or just adaptation?",
+        "authors": [
+          "Emilio Kropff",
+          "Alessandro Treves"
+        ],
+        "year": "2008",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,254.97,396.00,8.64;12,117.96,265.75,193.18,8.82\" xml:id=\"b21\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_g4QctNF\">The emergence of grid cells: Intelligent design or just adaptation?</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Emilio</forename><surname>Kropff</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Alessandro</forename><surname>Treves</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_VZHDtRr\">Hippocampus</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">18</biblScope>\n\t\t\t<biblScope unit=\"issue\">12</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1256\" to=\"1269\"/>\n\t\t\t<date type=\"published\" when=\"2008\">2008</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b22",
+        "title": "Neural representations of location composed of spatially periodic bands",
+        "authors": [
+          "Julija Krupic",
+          "Neil Burgess",
+          "John O' Keefe"
+        ],
+        "year": "2012",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,284.52,396.00,8.64;12,117.96,295.30,242.66,8.82\" xml:id=\"b22\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_xb4Uesf\">Neural representations of location composed of spatially periodic bands</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Julija</forename><surname>Krupic</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Neil</forename><surname>Burgess</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">John O'</forename><surname>Keefe</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_2fmHpmH\">Science</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">337</biblScope>\n\t\t\t<biblScope unit=\"issue\">6096</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"853\" to=\"857\"/>\n\t\t\t<date type=\"published\" when=\"2012\">2012</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b23",
+        "title": "The contributions of entorhinal cortex and hippocampus to error driven learning",
+        "authors": [
+          "Shih-Pi Ku",
+          "Eric Hargreaves",
+          "Sylvia Wirth",
+          "Wendy Suzuki"
+        ],
+        "year": "2021",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,314.06,396.00,8.64;12,117.96,324.84,364.59,8.82\" xml:id=\"b23\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_mhcV2B5\">The contributions of entorhinal cortex and hippocampus to error driven learning</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Shih-Pi</forename><surname>Ku</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Eric</forename><forename type=\"middle\">L</forename><surname>Hargreaves</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Sylvia</forename><surname>Wirth</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Wendy</forename><forename type=\"middle\">A</forename><surname>Suzuki</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_HSse8mx\">Communications biology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">4</biblScope>\n\t\t\t<biblScope unit=\"issue\">1</biblScope>\n\t\t\t<biblScope unit=\"page\">618</biblScope>\n\t\t\t<date type=\"published\" when=\"2021\">2021</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b24",
+        "title": "Development of the spatial representation system in the rat",
+        "authors": [
+          "James Rosamund F Langston",
+          "Jonathan Ainge",
+          "Cathrin Couey",
+          "Canto",
+          "L Tale",
+          "Bjerknes",
+          "P Menno",
+          "Edvard Witter",
+          "May-Britt Moser",
+          "Moser"
+        ],
+        "year": "2010",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,343.60,396.00,8.64;12,117.96,354.56,386.04,8.64;12,117.96,365.34,248.75,8.82\" xml:id=\"b24\">\n\t<analytic>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">James</forename><forename type=\"middle\">A</forename><surname>Rosamund F Langston</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Jonathan</forename><forename type=\"middle\">J</forename><surname>Ainge</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Cathrin</forename><forename type=\"middle\">B</forename><surname>Couey</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Canto</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">L</forename><surname>Tale</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Bjerknes</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">P</forename><surname>Menno</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Edvard</forename><forename type=\"middle\">I</forename><surname>Witter</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">May-Britt</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Moser</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"m\" xml:id=\"_sABaZnZ\">Development of the spatial representation system in the rat</title>\n\t\t<imprint>\n\t\t\t<date type=\"published\" when=\"2010\">2010</date>\n\t\t\t<biblScope unit=\"volume\">328</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1576\" to=\"1580\"/>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b25",
+        "title": "Backpropagation through time and the brain",
+        "authors": [
+          "P Timothy",
+          "Adam Lillicrap",
+          "Santoro"
+        ],
+        "year": "2019",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,383.93,396.00,8.82;12,117.96,394.89,165.78,8.82\" xml:id=\"b25\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_hPqwhev\">Backpropagation through time and the brain</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">P</forename><surname>Timothy</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Adam</forename><surname>Lillicrap</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Santoro</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_mpDgfEq\">Current opinion in neurobiology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">55</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"82\" to=\"89\"/>\n\t\t\t<date type=\"published\" when=\"2019\">2019</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b26",
+        "title": "Relating hippocampal circuitry to function: recall of memory sequences by reciprocal dentate-ca3 interactions",
+        "authors": [
+          "John E Lisman"
+        ],
+        "year": "1999",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,413.65,396.00,8.64;12,117.96,424.43,246.07,8.82\" xml:id=\"b26\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_YrC8mAz\">Relating hippocampal circuitry to function: recall of memory sequences by reciprocal dentate-ca3 interactions</title>\n\t\t<author>\n\t\t\t<persName><surname>John E Lisman</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_xrNhjBp\">Neuron</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">22</biblScope>\n\t\t\t<biblScope unit=\"issue\">2</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"233\" to=\"242\"/>\n\t\t\t<date type=\"published\" when=\"1999\">1999</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b27",
+        "title": "Path integration and the neural basis of the'cognitive map'",
+        "authors": [
+          "Francesco Bruce L Mcnaughton",
+          "Ole Battaglia",
+          "Edvard Jensen",
+          "May-Britt Moser",
+          "Moser"
+        ],
+        "year": "2006",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,443.19,396.00,8.64;12,117.96,453.97,386.04,8.82;12,117.96,465.11,62.27,8.64\" xml:id=\"b27\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_VHQMxHC\">Path integration and the neural basis of the'cognitive map'</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Francesco</forename><forename type=\"middle\">P</forename><surname>Bruce L Mcnaughton</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ole</forename><surname>Battaglia</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Edvard</forename><forename type=\"middle\">I</forename><surname>Jensen</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">May-Britt</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Moser</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_4J2Btgv\">Nature Reviews Neuroscience</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">7</biblScope>\n\t\t\t<biblScope unit=\"issue\">8</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"663\" to=\"678\"/>\n\t\t\t<date type=\"published\" when=\"2006\">2006</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b28",
+        "title": "Predictive coding: a theoretical and experimental review",
+        "authors": [
+          "Beren Millidge",
+          "Anil Seth",
+          "Christopher Buckley"
+        ],
+        "year": "2021",
+        "venue": "Predictive coding: a theoretical and experimental review",
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,483.70,396.00,8.64;12,117.96,494.48,221.23,8.82\" xml:id=\"b28\">\n\t<monogr>\n\t\t<title level=\"m\" type=\"main\" xml:id=\"_VpbQWtF\">Predictive coding: a theoretical and experimental review</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Beren</forename><surname>Millidge</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Anil</forename><surname>Seth</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Christopher</forename><forename type=\"middle\">L</forename><surname>Buckley</surname></persName>\n\t\t</author>\n\t\t<idno type=\"arXiv\">arXiv:2107.12979</idno>\n\t\t<imprint>\n\t\t\t<date type=\"published\" when=\"2021\">2021</date>\n\t\t</imprint>\n\t</monogr>\n\t<note type=\"report_type\">arXiv preprint</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b29",
+        "title": "Predictive coding approximates backprop along arbitrary computation graphs",
+        "authors": [
+          "Beren Millidge",
+          "Alexander Tschantz",
+          "Christopher Buckley"
+        ],
+        "year": "2022",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,513.24,396.00,8.64;12,117.96,524.02,369.53,8.82\" xml:id=\"b29\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_vBcakyU\">Predictive coding approximates backprop along arbitrary computation graphs</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Beren</forename><surname>Millidge</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Alexander</forename><surname>Tschantz</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Christopher</forename><forename type=\"middle\">L</forename><surname>Buckley</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_VwCKCbP\">Neural Computation</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">34</biblScope>\n\t\t\t<biblScope unit=\"issue\">6</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1329\" to=\"1368\"/>\n\t\t\t<date type=\"published\" when=\"2022\">2022</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b30",
+        "title": "Predictive coding networks for temporal prediction",
+        "authors": [
+          "Beren Millidge",
+          "Mufeng Tang",
+          "Mahyar Osanlouy",
+          "Nicol Harper",
+          "Rafal Bogacz"
+        ],
+        "year": "2024",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,542.78,396.00,8.64;12,117.96,553.56,382.49,8.82\" xml:id=\"b30\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_qtkJ274\">Predictive coding networks for temporal prediction</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Beren</forename><surname>Millidge</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Mufeng</forename><surname>Tang</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Mahyar</forename><surname>Osanlouy</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Nicol</forename><forename type=\"middle\">S</forename><surname>Harper</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Bogacz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_qaUdW3G\">PLOS Computational Biology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">20</biblScope>\n\t\t\t<biblScope unit=\"issue\">4</biblScope>\n\t\t\t<biblScope unit=\"page\">1011183</biblScope>\n\t\t\t<date type=\"published\" when=\"2024\">2024</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b31",
+        "title": "Grids from bands, or bands from grids? an examination of the effects of single unit contamination on grid cell firing fields",
+        "authors": [
+          "Zaneta Navratilova",
+          "Keith Godfrey",
+          "Bruce Mcnaughton"
+        ],
+        "year": "2016",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,572.33,396.00,8.64;12,117.96,583.11,386.04,8.82;12,117.96,594.06,177.66,8.82\" xml:id=\"b31\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_TzF84cY\">Grids from bands, or bands from grids? an examination of the effects of single unit contamination on grid cell firing fields</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Zaneta</forename><surname>Navratilova</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Keith</forename><forename type=\"middle\">B</forename><surname>Godfrey</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Bruce</forename><forename type=\"middle\">L</forename><surname>Mcnaughton</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_QSDxsNh\">Journal of neurophysiology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">115</biblScope>\n\t\t\t<biblScope unit=\"issue\">2</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"992\" to=\"1002\"/>\n\t\t\t<date type=\"published\" when=\"2016\">2016</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b32",
+        "title": "Emergent elasticity in the neural code for space",
+        "authors": [
+          "Kiah Samuel A Ocko",
+          "Lisa Hardcastle",
+          "Surya Giocomo",
+          "Ganguli"
+        ],
+        "year": "2018",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,612.83,396.00,8.64;12,117.96,623.61,386.04,8.82;12,117.96,634.75,58.39,8.64\" xml:id=\"b32\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_Cq9hDFt\">Emergent elasticity in the neural code for space</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Kiah</forename><surname>Samuel A Ocko</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Lisa</forename><forename type=\"middle\">M</forename><surname>Hardcastle</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Surya</forename><surname>Giocomo</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Ganguli</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_VC8E4jt\">Proceedings of the National Academy of Sciences</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">115</biblScope>\n\t\t\t<date type=\"published\" when=\"2018\">2018</date>\n\t\t</imprint>\n\t</monogr>\n\t<note>50):E11798-E11806</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b33",
+        "title": "Place units in the hippocampus of the freely moving rat",
+        "authors": [
+          "O' John",
+          "Keefe"
+        ],
+        "year": "1976",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,653.15,396.00,8.82;12,117.96,664.29,71.67,8.64\" xml:id=\"b33\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_faZZrqt\">Place units in the hippocampus of the freely moving rat</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">O'</forename><surname>John</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Keefe</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_9T9ZRSK\">Experimental neurology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">51</biblScope>\n\t\t\t<biblScope unit=\"issue\">1</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"78\" to=\"109\"/>\n\t\t\t<date type=\"published\" when=\"1976\">1976</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b34",
+        "title": "Dual phase and rate coding in hippocampal place cells: theoretical significance and relationship to entorhinal grid cells",
+        "authors": [
+          "O' John",
+          "Neil Keefe",
+          "Burgess"
+        ],
+        "year": "2005",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,682.87,396.00,8.64;12,117.96,693.65,359.44,8.82\" xml:id=\"b34\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_j2hun8k\">Dual phase and rate coding in hippocampal place cells: theoretical significance and relationship to entorhinal grid cells</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">O'</forename><surname>John</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Neil</forename><surname>Keefe</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Burgess</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_d6QZEN4\">Hippocampus</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">15</biblScope>\n\t\t\t<biblScope unit=\"issue\">7</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"853\" to=\"866\"/>\n\t\t\t<date type=\"published\" when=\"2005\">2005</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b35",
+        "title": "Emergence of simple-cell receptive field properties by learning a sparse code for natural images",
+        "authors": [
+          "A Bruno",
+          "David Olshausen",
+          "Field"
+        ],
+        "year": "1996",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"12,108.00,712.42,396.00,8.64;12,117.96,723.20,308.13,8.82;13,108.00,28.88,199.79,8.64\" xml:id=\"b35\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_THUtPBV\">Emergence of simple-cell receptive field properties by learning a sparse code for natural images</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">A</forename><surname>Bruno</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">David</forename><forename type=\"middle\">J</forename><surname>Olshausen</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Field</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_ECYy2A2\">Nature</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">381</biblScope>\n\t\t\t<biblScope unit=\"issue\">6583</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"607\" to=\"609\"/>\n\t\t\t<date type=\"published\" when=\"1996\">1996</date>\n\t\t</imprint>\n\t</monogr>\n\t<note>Under review as a conference paper at ICLR 2025</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b36",
+        "title": "Predictive grid coding in the medial entorhinal cortex",
+        "authors": [
+          "Ayako Ouchi",
+          "Shigeyoshi Fujisawa"
+        ],
+        "year": "2024",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,85.34,396.00,8.64;13,117.96,96.12,141.95,8.82\" xml:id=\"b36\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_tYATjQP\">Predictive grid coding in the medial entorhinal cortex</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ayako</forename><surname>Ouchi</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Shigeyoshi</forename><surname>Fujisawa</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_qa4FTcd\">Science</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">385</biblScope>\n\t\t\t<biblScope unit=\"issue\">6710</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"776\" to=\"784\"/>\n\t\t\t<date type=\"published\" when=\"2024\">2024</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b37",
+        "title": "Rafal Bogacz, et al. Benchmarking predictive coding networks-made simple",
+        "authors": [
+          "Luca Pinchetti",
+          "Chang Qi",
+          "Oleh Lokshyn",
+          "Gaspard Olivers",
+          "Cornelius Emde",
+          "Mufeng Tang",
+          "M' Amine",
+          "Simon Charrak",
+          "Bayar Frieder",
+          "Menzat"
+        ],
+        "year": "2024",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,115.63,396.00,8.64;13,117.96,126.59,386.04,8.64;13,117.96,137.37,257.70,8.82\" xml:id=\"b37\">\n\t<monogr>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Luca</forename><surname>Pinchetti</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Chang</forename><surname>Qi</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Oleh</forename><surname>Lokshyn</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Gaspard</forename><surname>Olivers</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Cornelius</forename><surname>Emde</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Mufeng</forename><surname>Tang</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">M'</forename><surname>Amine</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Simon</forename><surname>Charrak</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Bayar</forename><surname>Frieder</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Menzat</surname></persName>\n\t\t</author>\n\t\t<idno type=\"arXiv\">arXiv:2407.01163</idno>\n\t\t<title level=\"m\" xml:id=\"_S83xaMp\">Rafal Bogacz, et al. Benchmarking predictive coding networks-made simple</title>\n\t\t<imprint>\n\t\t\t<date type=\"published\" when=\"2024\">2024</date>\n\t\t</imprint>\n\t</monogr>\n\t<note type=\"report_type\">arXiv preprint</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b38",
+        "title": "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
+        "authors": [
+          "P Rajesh",
+          "Dana Rao",
+          "Ballard"
+        ],
+        "year": "1999",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,156.87,396.00,8.64;13,117.96,167.65,386.03,8.82;13,117.96,179.73,247.57,7.01\" xml:id=\"b38\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_NcK9zER\">Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">P</forename><forename type=\"middle\">N</forename><surname>Rajesh</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Dana</forename><forename type=\"middle\">H</forename><surname>Rao</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Ballard</surname></persName>\n\t\t</author>\n\t\t<ptr target=\"https://www.nature.com/articles/nn0199_79\"/>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_9AhC3pp\">Nature neuroscience</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">2</biblScope>\n\t\t\t<biblScope unit=\"issue\">1</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"79\" to=\"87\"/>\n\t\t\t<date type=\"published\" when=\"1999\">1999</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b39",
+        "title": "Associative memories via predictive coding",
+        "authors": [
+          "Tommaso Salvatori",
+          "Yuhang Song",
+          "Yujian Hong",
+          "Lei Sha",
+          "Simon Frieder",
+          "Zhenghua Xu",
+          "Rafal Bogacz",
+          "Thomas Lukasiewicz"
+        ],
+        "year": "2021",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,198.12,396.00,8.64;13,117.96,208.90,386.03,8.82;13,117.96,219.86,217.89,8.82\" xml:id=\"b39\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_Z3MW4Q7\">Associative memories via predictive coding</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Tommaso</forename><surname>Salvatori</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Yuhang</forename><surname>Song</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Yujian</forename><surname>Hong</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Lei</forename><surname>Sha</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Simon</forename><surname>Frieder</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Zhenghua</forename><surname>Xu</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Bogacz</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Thomas</forename><surname>Lukasiewicz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_Nkna93K\">Advances in Neural Information Processing Systems</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">34</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"3874\" to=\"3886\"/>\n\t\t\t<date type=\"published\" when=\"2021\">2021</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b40",
+        "title": "Learning on arbitrary graph topologies via predictive coding",
+        "authors": [
+          "Tommaso Salvatori",
+          "Luca Pinchetti",
+          "Beren Millidge",
+          "Yuhang Song",
+          "Tianyi Bao",
+          "Rafal Bogacz",
+          "Thomas Lukasiewicz"
+        ],
+        "year": "2022",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,239.37,396.00,8.64;13,117.96,250.15,386.03,8.82;13,117.96,261.11,253.45,8.82\" xml:id=\"b40\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_ahr97Kn\">Learning on arbitrary graph topologies via predictive coding</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Tommaso</forename><surname>Salvatori</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Luca</forename><surname>Pinchetti</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Beren</forename><surname>Millidge</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Yuhang</forename><surname>Song</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Tianyi</forename><surname>Bao</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Bogacz</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Thomas</forename><surname>Lukasiewicz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_726Rq6g\">Advances in neural information processing systems</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">35</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"38232\" to=\"38244\"/>\n\t\t\t<date type=\"published\" when=\"2022\">2022</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b41",
+        "title": "Optimal unsupervised learning in a single-layer linear feedforward neural network",
+        "authors": [
+          "Terence Sanger"
+        ],
+        "year": "1989",
+        "venue": null,
+        "doi": "10.1016/0893-6080(89)90044-0",
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,280.62,396.00,8.64;13,117.96,291.40,386.03,8.82;13,117.96,302.53,386.04,8.64;13,117.96,314.43,169.86,7.01\" xml:id=\"b41\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_4WUVdWd\">Optimal unsupervised learning in a single-layer linear feedforward neural network</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Terence</forename><forename type=\"middle\">D</forename><surname>Sanger</surname></persName>\n\t\t</author>\n\t\t<idno type=\"DOI\">10.1016/0893-6080(89)90044-0</idno>\n\t\t<ptr target=\"https://www.sciencedirect.com/science/article/pii/0893608089900440\"/>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_SVR8CtF\">Neural Networks</title>\n\t\t<idno type=\"ISSN\">0893-6080</idno>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">2</biblScope>\n\t\t\t<biblScope unit=\"issue\">6</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"459\" to=\"473\"/>\n\t\t\t<date type=\"published\" when=\"1989\">1989</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b42",
+        "title": "Conjunctive representation of position, direction, and velocity in entorhinal cortex",
+        "authors": [
+          "Francesca Sargolini",
+          "Marianne Fyhn",
+          "Torkel Hafting",
+          "Menno Bruce L Mcnaughton",
+          "May-Britt Witter",
+          "Edvard I Moser",
+          "Moser"
+        ],
+        "year": "2006",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,332.82,396.00,8.64;13,117.96,343.78,386.04,8.64;13,117.96,354.56,225.90,8.82\" xml:id=\"b42\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_Xk9Ar92\">Conjunctive representation of position, direction, and velocity in entorhinal cortex</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Francesca</forename><surname>Sargolini</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Marianne</forename><surname>Fyhn</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Torkel</forename><surname>Hafting</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Menno</forename><forename type=\"middle\">P</forename><surname>Bruce L Mcnaughton</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">May-Britt</forename><surname>Witter</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Edvard I</forename><surname>Moser</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Moser</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_gmHqSY5\">Science</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"issue\">5774</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"758\" to=\"762\"/>\n\t\t\t<date type=\"published\" when=\"2006\">2006</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b43",
+        "title": "No free lunch from deep learning in neuroscience: A case study through models of the entorhinal-hippocampal circuit",
+        "authors": [
+          "Rylan Schaeffer",
+          "Mikail Khona",
+          "Ila Fiete"
+        ],
+        "year": "2022",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,374.07,396.00,8.64;13,117.96,384.85,386.04,8.82;13,117.96,395.81,175.55,8.82\" xml:id=\"b43\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_UCzS6V2\">No free lunch from deep learning in neuroscience: A case study through models of the entorhinal-hippocampal circuit</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rylan</forename><surname>Schaeffer</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Mikail</forename><surname>Khona</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ila</forename><surname>Fiete</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_sgEqrwh\">Advances in neural information processing systems</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">35</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"16052\" to=\"16067\"/>\n\t\t\t<date type=\"published\" when=\"2022\">2022</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b44",
+        "title": "Self-supervised learning of representations for space generates multi-modular grid cells",
+        "authors": [
+          "Rylan Schaeffer",
+          "Mikail Khona",
+          "Tzuhsuan Ma",
+          "Cristobal Eyzaguirre",
+          "Sanmi Koyejo",
+          "Ila Fiete"
+        ],
+        "year": "2024",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,415.32,396.00,8.64;13,117.96,426.28,386.04,8.64;13,117.96,437.06,251.21,8.82\" xml:id=\"b44\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_nQDqMnY\">Self-supervised learning of representations for space generates multi-modular grid cells</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rylan</forename><surname>Schaeffer</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Mikail</forename><surname>Khona</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Tzuhsuan</forename><surname>Ma</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Cristobal</forename><surname>Eyzaguirre</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Sanmi</forename><surname>Koyejo</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ila</forename><surname>Fiete</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_k4AuKt6\">Advances in Neural Information Processing Systems</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">36</biblScope>\n\t\t\t<date type=\"published\" when=\"2024\">2024</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b45",
+        "title": "Biological softmax: Demonstrated in modern hopfield networks",
+        "authors": [
+          "A Mallory",
+          "Jeff Snow",
+          "Orchard"
+        ],
+        "year": "2022",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,456.56,396.00,8.64;13,117.96,467.34,356.20,8.82\" xml:id=\"b45\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_HYrsvJx\">Biological softmax: Demonstrated in modern hopfield networks</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">A</forename><surname>Mallory</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Jeff</forename><surname>Snow</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Orchard</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"m\" xml:id=\"_WTd7BWA\">Proceedings of the Annual Meeting of the Cognitive Science Society</title>\n\t\t<meeting>the Annual Meeting of the Cognitive Science Society</meeting>\n\t\t<imprint>\n\t\t\t<date type=\"published\" when=\"2022\">2022</date>\n\t\t\t<biblScope unit=\"volume\">44</biblScope>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b46",
+        "title": "Inferring neural activity before plasticity as a foundation for learning beyond backpropagation",
+        "authors": [
+          "Yuhang Song",
+          "Beren Millidge",
+          "Tommaso Salvatori",
+          "Thomas Lukasiewicz",
+          "Zhenghua Xu",
+          "Rafal Bogacz"
+        ],
+        "year": "2024",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,486.85,396.00,8.64;13,117.96,497.81,386.04,8.64;13,117.96,508.59,208.86,8.82\" xml:id=\"b46\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_tnPZVqA\">Inferring neural activity before plasticity as a foundation for learning beyond backpropagation</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Yuhang</forename><surname>Song</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Beren</forename><surname>Millidge</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Tommaso</forename><surname>Salvatori</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Thomas</forename><surname>Lukasiewicz</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Zhenghua</forename><surname>Xu</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Bogacz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_JxCbfR7\">Nature neuroscience</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">27</biblScope>\n\t\t\t<biblScope unit=\"issue\">2</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"348\" to=\"358\"/>\n\t\t\t<date type=\"published\" when=\"2024\">2024</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b47",
+        "title": "A unified theory for the computational and mechanistic origins of grid cells",
+        "authors": [
+          "Ben Sorscher",
+          "C Gabriel",
+          "Samuel Mel",
+          "Lisa Ocko",
+          "Surya Giocomo",
+          "Ganguli"
+        ],
+        "year": "2023",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,528.10,396.00,8.64;13,117.96,538.88,386.04,8.82;13,117.96,550.02,22.42,8.64\" xml:id=\"b47\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_RtwxMjP\">A unified theory for the computational and mechanistic origins of grid cells</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ben</forename><surname>Sorscher</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">C</forename><surname>Gabriel</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Samuel</forename><forename type=\"middle\">A</forename><surname>Mel</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Lisa</forename><forename type=\"middle\">M</forename><surname>Ocko</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Surya</forename><surname>Giocomo</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Ganguli</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_Xhu27Hc\">Neuron</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">111</biblScope>\n\t\t\t<biblScope unit=\"issue\">1</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"121\" to=\"137\"/>\n\t\t\t<date type=\"published\" when=\"2023\">2023</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b48",
+        "title": "The hippocampus as a predictive map",
+        "authors": [
+          "Matthew Kimberly L Stachenfeld",
+          "Samuel Botvinick",
+          "Gershman"
+        ],
+        "year": "2017",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,569.35,396.00,8.64;13,117.96,580.13,253.62,8.82\" xml:id=\"b48\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_yEGmxcr\">The hippocampus as a predictive map</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Matthew</forename><forename type=\"middle\">M</forename><surname>Kimberly L Stachenfeld</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Samuel</forename><forename type=\"middle\">J</forename><surname>Botvinick</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Gershman</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_XQgPUjm\">Nature neuroscience</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">20</biblScope>\n\t\t\t<biblScope unit=\"issue\">11</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1643\" to=\"1653\"/>\n\t\t\t<date type=\"published\" when=\"2017\">2017</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b49",
+        "title": "Recurrent predictive coding models for associative memory employing covariance learning",
+        "authors": [
+          "Mufeng Tang",
+          "Tommaso Salvatori",
+          "Beren Millidge",
+          "Yuhang Song",
+          "Thomas Lukasiewicz",
+          "Rafal Bogacz"
+        ],
+        "year": "2023",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,599.63,396.00,8.64;13,117.96,610.59,386.04,8.64;13,117.96,621.37,228.75,8.82\" xml:id=\"b49\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_UYqzHTE\">Recurrent predictive coding models for associative memory employing covariance learning</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Mufeng</forename><surname>Tang</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Tommaso</forename><surname>Salvatori</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Beren</forename><surname>Millidge</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Yuhang</forename><surname>Song</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Thomas</forename><surname>Lukasiewicz</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Bogacz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_NChW6kz\">PLoS computational biology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">19</biblScope>\n\t\t\t<biblScope unit=\"issue\">4</biblScope>\n\t\t\t<biblScope unit=\"page\">1010719</biblScope>\n\t\t\t<date type=\"published\" when=\"2023\">2023</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b50",
+        "title": "Sequential memory with temporal predictive coding",
+        "authors": [
+          "Mufeng Tang",
+          "Helen Barron",
+          "Rafal Bogacz"
+        ],
+        "year": "2024",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,640.88,396.00,8.64;13,117.96,651.66,270.02,8.82\" xml:id=\"b50\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_qaNCKcm\">Sequential memory with temporal predictive coding</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Mufeng</forename><surname>Tang</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Helen</forename><surname>Barron</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Bogacz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_YG6Ra7c\">Advances in Neural Information Processing Systems</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">36</biblScope>\n\t\t\t<date type=\"published\" when=\"2024\">2024</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b51",
+        "title": "Learning place cells, grid cells and invariances with excitatory and inhibitory plasticity",
+        "authors": [
+          "Simon Nikolaus",
+          "Weber",
+          "Henning Sprekeler"
+        ],
+        "year": "2018",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,671.17,396.00,8.64;13,117.96,681.95,231.09,8.82\" xml:id=\"b51\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_KrqVPaY\">Learning place cells, grid cells and invariances with excitatory and inhibitory plasticity</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Simon</forename><surname>Nikolaus</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Weber</forename></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Henning</forename><surname>Sprekeler</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_ZbTgses\">Elife</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">7</biblScope>\n\t\t\t<biblScope unit=\"page\">34560</biblScope>\n\t\t\t<date type=\"published\" when=\"2018\">2018</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b52",
+        "title": "An approximation of the error backpropagation algorithm in a predictive coding network with local hebbian synaptic plasticity",
+        "authors": [
+          "C James",
+          "Rafal Whittington",
+          "Bogacz"
+        ],
+        "year": "2017",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"13,108.00,701.46,396.00,8.64;13,117.96,712.24,386.03,8.82;13,117.96,723.38,72.23,8.64;14,108.00,28.88,199.79,8.64\" xml:id=\"b52\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_9YpFGjf\">An approximation of the error backpropagation algorithm in a predictive coding network with local hebbian synaptic plasticity</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">C</forename><forename type=\"middle\">R</forename><surname>James</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Rafal</forename><surname>Whittington</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Bogacz</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_jasrV3t\">Neural computation</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">29</biblScope>\n\t\t\t<biblScope unit=\"issue\">5</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1229\" to=\"1262\"/>\n\t\t\t<date type=\"published\" when=\"2017\">2017</date>\n\t\t</imprint>\n\t</monogr>\n\t<note>Under review as a conference paper at ICLR 2025</note>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b53",
+        "title": "The tolman-eichenbaum machine: unifying space and relational memory through generalization in the hippocampal formation",
+        "authors": [
+          "Timothy James Cr Whittington",
+          "Shirley Muller",
+          "Guifen Mark",
+          "Caswell Chen",
+          "Neil Barry",
+          "Timothy Burgess",
+          "Behrens"
+        ],
+        "year": "2020",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,85.34,396.00,8.64;14,117.96,96.30,386.04,8.64;14,117.96,107.08,355.56,8.82\" xml:id=\"b53\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_dVjzzQB\">The tolman-eichenbaum machine: unifying space and relational memory through generalization in the hippocampal formation</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Timothy</forename><forename type=\"middle\">H</forename><surname>James Cr Whittington</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Shirley</forename><surname>Muller</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Guifen</forename><surname>Mark</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Caswell</forename><surname>Chen</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Neil</forename><surname>Barry</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Timothy</forename><forename type=\"middle\">Ej</forename><surname>Burgess</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Behrens</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_tXWcNTd\">Cell</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">183</biblScope>\n\t\t\t<biblScope unit=\"issue\">5</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1249\" to=\"1263\"/>\n\t\t\t<date type=\"published\" when=\"2020\">2020</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b54",
+        "title": "A model of grid cell development through spatial exploration and spike time-dependent plasticity",
+        "authors": [
+          "John Widloski",
+          "Ila Fiete"
+        ],
+        "year": "2014",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,126.19,396.00,8.64;14,117.96,136.97,250.89,8.82\" xml:id=\"b54\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_xneajSg\">A model of grid cell development through spatial exploration and spike time-dependent plasticity</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">John</forename><surname>Widloski</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Ila</forename><forename type=\"middle\">R</forename><surname>Fiete</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_YMC9tDA\">Neuron</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">83</biblScope>\n\t\t\t<biblScope unit=\"issue\">2</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"481\" to=\"495\"/>\n\t\t\t<date type=\"published\" when=\"2014\">2014</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b55",
+        "title": "An efficient gradient-based algorithm for on-line training of recurrent network trajectories",
+        "authors": [
+          "J Ronald",
+          "Jing Williams",
+          "Peng"
+        ],
+        "year": "1990",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,156.07,396.00,8.64;14,117.96,166.85,290.27,8.82\" xml:id=\"b55\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_AUgtDRD\">An efficient gradient-based algorithm for on-line training of recurrent network trajectories</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">J</forename><surname>Ronald</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Jing</forename><surname>Williams</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Peng</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_DeqQszA\">Neural computation</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">2</biblScope>\n\t\t\t<biblScope unit=\"issue\">4</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"490\" to=\"501\"/>\n\t\t\t<date type=\"published\" when=\"1990\">1990</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b56",
+        "title": "Development of the hippocampal cognitive map in preweanling rats",
+        "authors": [
+          "J Tom",
+          "Francesca Wills",
+          "Neil Cacucci",
+          "John O' Burgess",
+          "Keefe"
+        ],
+        "year": "2010",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,185.96,396.00,8.64;14,117.96,196.74,291.81,8.82\" xml:id=\"b56\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_YunM82A\">Development of the hippocampal cognitive map in preweanling rats</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">J</forename><surname>Tom</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Francesca</forename><surname>Wills</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Neil</forename><surname>Cacucci</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">John O'</forename><surname>Burgess</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Keefe</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_BjsJtuv\">science</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">328</biblScope>\n\t\t\t<biblScope unit=\"issue\">5985</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"1573\" to=\"1576\"/>\n\t\t\t<date type=\"published\" when=\"2010\">2010</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b57",
+        "title": "Passive transport disrupts grid signals in the parahippocampal cortex",
+        "authors": [
+          "Shawn S Winter",
+          "Max Mehlman",
+          "Benjamin Clark",
+          "Jeffrey Taube"
+        ],
+        "year": "2015",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,215.85,396.00,8.64;14,117.96,226.63,346.65,8.82\" xml:id=\"b57\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_jv37t2y\">Passive transport disrupts grid signals in the parahippocampal cortex</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Shawn S</forename><surname>Winter</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Max</forename><forename type=\"middle\">L</forename><surname>Mehlman</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Benjamin</forename><forename type=\"middle\">J</forename><surname>Clark</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Jeffrey</forename><forename type=\"middle\">S</forename><surname>Taube</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_3aRrDG2\">Current Biology</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">25</biblScope>\n\t\t\t<biblScope unit=\"issue\">19</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"2493\" to=\"2502\"/>\n\t\t\t<date type=\"published\" when=\"2015\">2015</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b58",
+        "title": "Trial outcome and associative learning signals in the monkey hippocampus",
+        "authors": [
+          "Sylvia Wirth",
+          "Emin Avsar",
+          "Cindy Chiu",
+          "Varun Sharma",
+          "Anne Smith",
+          "Emery Brown",
+          "Wendy Suzuki"
+        ],
+        "year": "2009",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,245.74,396.00,8.64;14,117.96,256.70,386.04,8.64;14,117.96,267.48,121.03,8.82\" xml:id=\"b58\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_YrhtMu6\">Trial outcome and associative learning signals in the monkey hippocampus</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Sylvia</forename><surname>Wirth</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Emin</forename><surname>Avsar</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Cindy</forename><forename type=\"middle\">C</forename><surname>Chiu</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Varun</forename><surname>Sharma</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Anne</forename><forename type=\"middle\">C</forename><surname>Smith</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Emery</forename><surname>Brown</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Wendy</forename><forename type=\"middle\">A</forename><surname>Suzuki</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_Kc9vvCk\">Neuron</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">61</biblScope>\n\t\t\t<biblScope unit=\"issue\">6</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"930\" to=\"940\"/>\n\t\t\t<date type=\"published\" when=\"2009\">2009</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b59",
+        "title": "Spatial representation and the architecture of the entorhinal cortex",
+        "authors": [
+          "P Menno",
+          "Edvard I Witter",
+          "Moser"
+        ],
+        "year": "2006",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,286.58,396.00,8.64;14,117.96,297.36,222.88,8.82\" xml:id=\"b59\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_XAuPTMy\">Spatial representation and the architecture of the entorhinal cortex</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">P</forename><surname>Menno</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Edvard I</forename><surname>Witter</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Moser</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_JyHy6Bd\">Trends in neurosciences</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">29</biblScope>\n\t\t\t<biblScope unit=\"issue\">12</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"671\" to=\"678\"/>\n\t\t\t<date type=\"published\" when=\"2006\">2006</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b60",
+        "title": "Grid cells without theta oscillations in the entorhinal cortex of bats",
+        "authors": [
+          "Menno Michael M Yartsev",
+          "Nachum Witter",
+          "Ulanovsky"
+        ],
+        "year": "2011",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,316.47,396.00,8.64;14,117.96,327.25,266.78,8.82\" xml:id=\"b60\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_tJKnERv\">Grid cells without theta oscillations in the entorhinal cortex of bats</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Menno</forename><forename type=\"middle\">P</forename><surname>Michael M Yartsev</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Nachum</forename><surname>Witter</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><surname>Ulanovsky</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_hnY4xXs\">Nature</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">479</biblScope>\n\t\t\t<biblScope unit=\"issue\">7371</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"103\" to=\"107\"/>\n\t\t\t<date type=\"published\" when=\"2011\">2011</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n"
+      },
+      {
+        "id": "b61",
+        "title": "Coupled noisy spiking neurons as velocity-controlled oscillators in a model of grid cell spatial firing",
+        "authors": [
+          "Eric Zilli",
+          "Michael Hasselmo"
+        ],
+        "year": "2010",
+        "venue": null,
+        "doi": null,
+        "raw_citation": "<biblStruct xmlns=\"http://www.tei-c.org/ns/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" coords=\"14,108.00,346.36,396.00,8.64;14,117.96,357.14,386.04,8.82;14,117.96,368.28,22.42,8.64\" xml:id=\"b61\">\n\t<analytic>\n\t\t<title level=\"a\" type=\"main\" xml:id=\"_x9nKynj\">Coupled noisy spiking neurons as velocity-controlled oscillators in a model of grid cell spatial firing</title>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Eric</forename><forename type=\"middle\">A</forename><surname>Zilli</surname></persName>\n\t\t</author>\n\t\t<author>\n\t\t\t<persName><forename type=\"first\">Michael</forename><forename type=\"middle\">E</forename><surname>Hasselmo</surname></persName>\n\t\t</author>\n\t</analytic>\n\t<monogr>\n\t\t<title level=\"j\" xml:id=\"_H4eB3p3\">Journal of Neuroscience</title>\n\t\t<imprint>\n\t\t\t<biblScope unit=\"volume\">30</biblScope>\n\t\t\t<biblScope unit=\"issue\">41</biblScope>\n\t\t\t<biblScope unit=\"page\" from=\"13850\" to=\"13860\"/>\n\t\t\t<date type=\"published\" when=\"2010\">2010</date>\n\t\t</imprint>\n\t</monogr>\n</biblStruct>\n\n\t\t\t\t"
+      }
+    ]
+  }
+]

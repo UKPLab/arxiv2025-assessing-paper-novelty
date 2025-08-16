@@ -1,0 +1,319 @@
+[
+  {
+    "paper_id": "cd98854d3482e276b7124712c02e20ed48f56a0f",
+    "title": "A generative model of the hippocampal formation trained with theta driven local learning rules",
+    "abstract": "Advances in generative models have recently revolutionised machine learning. Meanwhile, in neuroscience, generative models have long been thought fundamental to animal intelligence. Understanding the biological mechanisms that support these processes promises to shed light on the relationship between biological and artificial intelligence. In animals, the hippocampal formation is thought to learn and use a generative model to support its role in spatial and non-spatial memory. Here we introduce a biologically plausible model of the hippocampal formation tantamount to a Helmholtz machine that we apply to a temporal stream of inputs. A novel component of our model is that fast theta-band oscillations (5-10 Hz) gate the direction of information flow throughout the network, training it akin to a high-frequency wake-sleep algorithm. Our model accurately infers the latent state of high-dimensional sensory environments and generates realistic sensory predictions. Furthermore, it can learn to path integrate by developing a ring attractor connectivity structure matching previous theoretical proposals and flexibly transfer this structure between environments. Whereas many models trade-off biological plausibility with generality, our model captures a variety of hippocampal cognitive functions under one biologically plausible local learning rule.",
+    "publication_date": "2023-12-13",
+    "venue": "bioRxiv",
+    "year": 2023,
+    "citation_count": 9,
+    "authors": [
+      "Tom M George",
+      "C. Barry",
+      "K. Stachenfeld",
+      "C. Clopath",
+      "T. Fukai"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "791686d4fa91082e225797a13060adeeb0fddf13",
+    "title": "A unified theory for the computational and mechanistic origins of grid cells",
+    "abstract": "The discovery of entorhinal grid cells has generated considerable interest in how and why hexagonal firing fields might mechanistically emerge in a generic manner from neural circuits, and what their computational significance might be. Here we forge an intimate link between the computational problem of path-integration and the existence of hexagonal grids, by demonstrating that such grids arise generically in biologically plausible neural networks trained to path integrate. Moreover, we develop a unifying theory for why hexagonal grids are so ubiquitous in path-integrator circuits. Such trained networks also yield powerful mechanistic hypotheses, exhibiting realistic levels of biological variability not captured by hand-designed models. We furthermore develop methods to analyze the connectome and activity maps of our trained networks to elucidate fundamental mechanisms underlying path integration. These methods provide an instructive roadmap to go from connectomic and physiological measurements to conceptual understanding in a manner that might be generalizable to other settings.",
+    "publication_date": "2020-12-30",
+    "venue": "Neuron",
+    "year": 2020,
+    "citation_count": 83,
+    "authors": [
+      "Ben Sorscher",
+      "Gabriel C. Mel",
+      "Samuel A. Ocko",
+      "Lisa M. Giocomo",
+      "S. Ganguli"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "2510c7bcbd6278b50dc73e02d127546ef70141bd",
+    "title": "Learning an efficient place cell map from grid cells using non-negative sparse coding",
+    "abstract": "Experimental studies of grid cells in the Medial Entorhinal Cortex (MEC) have shown that they are selective to an array of spatial locations in the environment that form a hexagonal grid. However, in a small environment, place cells in the hippocampus are only selective to a single-location of the environment while granule cells in the dentate gyrus of the hippocampus have multiple discrete firing locations, but lack spatial periodicity. Given the anatomical connection from MEC to the hippocampus, previous feedforward models of grid-to-place have been proposed. Here, we propose a unified learning model that can describe the spatial tuning properties of both hippocampal place cells and dentate gyrus granule cells based on non-negative sparse coding. Sparse coding plays an important role in many cortical areas and is proposed here to have a key role in the navigational system of the brain in the hippocampus. Our results show that the hexagonal patterns of grid cells with various orientations, grid spacings and phases are necessary for model cells to learn a single spatial field that efficiently tile the entire spatial environment. However, if there is a lack of diversity in any grid parameters or a lack of cells in the network, this will lead to the emergence of place cells that have multiple firing locations. More surprisingly, the model shows that place cells can also emerge even when non-negative sparse coding is used with weakly-tuned MEC cells, instead of MEC grid cells, as the input to place cells. This work suggests that sparse coding may be one of the underlying organizing principles for the navigational system of the brain.",
+    "publication_date": "2020-08-13",
+    "venue": "",
+    "year": 2020,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  },
+  {
+    "paper_id": "c1585013b1dbb7341a8a6821159d8d7681e81503",
+    "title": "Predictive grid coding in the medial entorhinal cortex",
+    "abstract": "The entorhinal cortex represents allocentric spatial geometry and egocentric speed and heading information required for spatial navigation. However, it remains unclear whether it contributes to the prediction of an animal\u2019s future location. We discovered grid cells in the medial entorhinal cortex (MEC) that have grid fields representing future locations during goal-directed behavior. These predictive grid cells represented prospective spatial information by shifting their grid fields against the direction of travel. Predictive grid cells discharged at the trough phases of the hippocampal CA1 theta oscillation and, together with other types of grid cells, organized sequences of the trajectory from the current to future positions across each theta cycle. Our results suggest that the MEC provides a predictive map that supports forward planning in spatial navigation. Editor\u2019s summary Grid cells in the entorhinal cortex create a coordinate system of the environment for spatial navigation. However, it is not clear whether the entorhinal grid system is also involved in predicting where an animal will be in the next moment. Ouchi and Fujisawa performed high-density neuronal recordings in the entorhinal cortex and hippocampal area CA1 of rats during goal-directed behavior in an open field. They observed neurons in layer 3 of the medial entorhinal cortex that explicitly encode a grid representation of an animal\u2019s future projected location, not the current position, and named them \u201c\u201cpredictive grid cells.\u201d Neuronal assemblies in the medial entorhinal cortex thus organize a predictive cognitive map. \u2014Peter Stern",
+    "publication_date": "2024-08-16",
+    "venue": "Science",
+    "year": 2024,
+    "citation_count": 7,
+    "authors": [
+      "Ayako Ouchi",
+      "Shigeyoshi Fujisawa"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "a538579ac50d659ac0bca9824d6446e741c586b3",
+    "title": "Emergence of grid-like representations by training recurrent neural networks to perform spatial localization",
+    "abstract": "Decades of research on the neural code underlying spatial navigation have revealed a diverse set of neural response properties. The Entorhinal Cortex (EC) of the mammalian brain contains a rich set of spatial correlates, including grid cells which encode space using tessellating patterns. However, the mechanisms and functional significance of these spatial representations remain largely mysterious. As a new way to understand these neural representations, we trained recurrent neural networks (RNNs) to perform navigation tasks in 2D arenas based on velocity inputs. Surprisingly, we find that grid-like spatial response patterns emerge in trained networks, along with units that exhibit other spatial correlates, including border cells and band-like cells. All these different functional types of neurons have been observed experimentally. The order of the emergence of grid-like and border cells is also consistent with observations from developmental studies. Together, our results suggest that grid cells, border cells and others as observed in EC may be a natural solution for representing space efficiently given the predominant recurrent connections in the neural circuits.",
+    "publication_date": "2018-02-15",
+    "venue": "International Conference on Learning Representations",
+    "year": 2018,
+    "citation_count": 216,
+    "authors": [
+      "Christopher J. Cueva",
+      "Xue-Xin Wei"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "27bc20a95969cffa29065fcc1beb63ee2386b852",
+    "title": "Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells",
+    "abstract": "To solve the spatial problems of mapping, localization and navigation, the mammalian lineage has developed striking spatial representations. One important spatial representation is the Nobel-prize winning grid cells: neurons that represent self-location, a local and aperiodic quantity, with seemingly bizarre non-local and spatially periodic activity patterns of a few discrete periods. Why has the mammalian lineage learnt this peculiar grid representation? Mathematical analysis suggests that this multi-periodic representation has excellent properties as an algebraic code with high capacity and intrinsic error-correction, but to date, there is no satisfactory synthesis of core principles that lead to multi-modular grid cells in deep recurrent neural networks. In this work, we begin by identifying key insights from four families of approaches to answering the grid cell question: coding theory, dynamical systems, function optimization and supervised deep learning. We then leverage our insights to propose a new approach that combines the strengths of all four approaches. Our approach is a self-supervised learning (SSL) framework - including data, data augmentations, loss functions and a network architecture - motivated from a normative perspective, without access to supervised position information or engineering of particular readout representations as needed in previous approaches. We show that multiple grid cell modules can emerge in networks trained on our SSL framework and that the networks and emergent representations generalize well outside their training distribution. This work contains insights for neuroscientists interested in the origins of grid cells as well as machine learning researchers interested in novel SSL frameworks.",
+    "publication_date": "2023-11-04",
+    "venue": "Neural Information Processing Systems",
+    "year": 2023,
+    "citation_count": 20,
+    "authors": [
+      "Rylan Schaeffer",
+      "Mikail Khona",
+      "Tzuhsuan Ma",
+      "Cristobal Eyzaguirre",
+      "Sanmi Koyejo",
+      "I. Fiete"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "2bf3295a0cec7163c063c0d3967cc0935396bb3e",
+    "title": "Extracting grid cell characteristics from place cell inputs using non-negative principal component analysis",
+    "abstract": "Many recent models study the downstream projection from grid cells to place cells, while recent data have pointed out the importance of the feedback projection. We thus asked how grid cells are affected by the nature of the input from the place cells. We propose a single-layer neural network with feedforward weights connecting place-like input cells to grid cell outputs. Place-to-grid weights are learned via a generalized Hebbian rule. The architecture of this network highly resembles neural networks used to perform Principal Component Analysis (PCA). Both numerical results and analytic considerations indicate that if the components of the feedforward neural network are non-negative, the output converges to a hexagonal lattice. Without the non-negativity constraint, the output converges to a square lattice. Consistent with experiments, grid spacing ratio between the first two consecutive modules is \u22121.4. Our results express a possible linkage between place cell to grid cell interactions and PCA. DOI: http://dx.doi.org/10.7554/eLife.10094.001",
+    "publication_date": "2016-03-08",
+    "venue": "eLife",
+    "year": 2016,
+    "citation_count": 147,
+    "authors": [
+      "Yedidyah Dordek",
+      "Daniel Soudry",
+      "R. Meir",
+      "D. Derdikman"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "cbeb0b647964650757d5e25aa711916e12a896dc",
+    "title": "Grid cell firing patterns maintain their hexagonal firing patterns on a circular track",
+    "abstract": "In an open two-dimensional environment, grid cells in the medial entorhinal cortex are known to be active in multiple locations, displaying a striking periodic hexagonal firing pattern covering the entire space. Both modeling and experimental data suggest that such periodic spatial representations may emerge from a continuous attractor network. According to this theory, grid cell activity in any stable 1D environment is a slice through an underlying 2D hexagonal pattern, which is supported by some experimental studies but challenged by others. Grid cells are believed to play a fundamental role in path integration, and so understanding their behavior in various environments is crucial for understanding the flow of information through the entorhinal-hippocampal system. To this end, we analyzed the activity of grid cells when rats traversed a circular track. A previous study involving this data set analyzed individual grid cell activity patterns separately, but we found that individual grid cells do not provide sufficient data for determining the under-lying spatial activity pattern. To circumvent this, we compute the population autocorrelation, which pools together population responses from all grid cells within the same module. This novel approach recovers the underlying six-peak hexagonal pattern that was not observable in the individual autocorrelations. We also use the population autocorrelation to infer the spacing and orientation of the population lattice, revealing how the lattice differs across environments. Furthermore, the population autocorrelation of the linearized track reveals that at the level of the population, grid cells have an allocentric code for space. These results are strong support for the attractor network theory for grid cells, and our novel approach can be used to analyze grid cell activity in any undersampled environment.",
+    "publication_date": "2023-09-15",
+    "venue": "",
+    "year": 2023,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  },
+  {
+    "paper_id": "1fe70364ca7c7cf3b5008969518fd3257e62a232",
+    "title": "The hippocampus as a predictive map",
+    "abstract": "A cognitive map has long been the dominant metaphor for hippocampal function, embracing the idea that place cells encode a geometric representation of space. However, evidence for predictive coding, reward sensitivity and policy dependence in place cells suggests that the representation is not purely spatial. We approach this puzzle from a reinforcement learning perspective: what kind of spatial representation is most useful for maximizing future reward? We show that the answer takes the form of a predictive representation. This representation captures many aspects of place cell responses that fall outside the traditional view of a cognitive map. Furthermore, we argue that entorhinal grid cells encode a low-dimensionality basis set for the predictive representation, useful for suppressing noise in predictions and extracting multiscale structure for hierarchical planning.",
+    "publication_date": "2017-06-07",
+    "venue": "Nature Neuroscience",
+    "year": 2017,
+    "citation_count": 757,
+    "authors": [
+      "Kimberly L. Stachenfeld",
+      "M. Botvinick",
+      "S. Gershman"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "26fc224a118e20e5d6bc98b57711001abc20ec00",
+    "title": "Recurrent predictive coding models for associative memory employing covariance learning",
+    "abstract": "The computational principles adopted by the hippocampus in associative memory (AM) tasks have been one of the mostly studied topics in computational and theoretical neuroscience. Classical models of the hippocampal network assume that AM is performed via a form of covariance learning, where associations between memorized items are represented by entries in the learned covariance matrix encoded in the recurrent connections in the hippocampal subfield CA3. On the other hand, it has been recently proposed that AM in the hippocampus is achieved through predictive coding. Hierarchical predictive coding models following this theory perform AM, but fail to capture the recurrent hippocampal structure that encodes the covariance in the classical models. Such a dichotomy pose potential difficulties for developing a unitary theory of how memory is formed and recalled in the hippocampus. Earlier predictive coding models that learn the covariance information of inputs explicitly seem to be a solution to this dichotomy. Here, we show that although these models can perform AM, they do it in an implausible and numerically unstable way. Instead, we propose alternatives to these earlier covariance-learning predictive coding networks, which learn the covariance information implicitly and plausibly, and can use dendritic structures to encode prediction errors. We show analytically that our proposed models are perfectly equivalent to the earlier predictive coding model learning covariance explicitly, and encounter no numerical issues when performing AM tasks in practice. We further show that our models can be combined with hierarchical predictive coding networks to model the hippocampo-neocortical interactions. Our models provide a biologically plausible approach to modelling the hippocampal network, pointing to a potential computational mechanism employed by the hippocampus during memory formation and recall, which unifies predictive coding and covariance learning based on the recurrent network structure. Author summary The hippocampus and adjacent cortical areas have long been considered essential for the formation of associative memories. Earlier theoretical works have assumed that the hippocampus stores in its recurrent connections statistical regularities embedded in the sensory inputs. On the other hand, it has been recently suggested that the hippocampus retrieves memory by generating predictions of ongoing sensory inputs. Computational models have thus been proposed to account for this predictive nature of the hippocampal network using predictive coding, a general theory of information processing in the cortex. However, these hierarchical predictive coding models of the hippocampus did not describe how it stores the statistical regularities that play a key role for associative memory in the classical hippocampal models, hindering a unified understanding of the underlying computational principles employed by the hippocampus. To address this dichotomy, here we present a family of predictive coding models that also learn the statistical information needed for associative memory. Our models can stably perform associative memory tasks in a biologically plausible manner, even with large structured data such as natural scenes. Our work provides a possible mechanism of how the recurrent hippocampal network may employ various computational principles concurrently to perform associative memory.",
+    "publication_date": "2022-11-09",
+    "venue": "bioRxiv",
+    "year": 2022,
+    "citation_count": 25,
+    "authors": [
+      "Mufeng Tang",
+      "Tommaso Salvatori",
+      "Beren Millidge",
+      "Yuhang Song",
+      "Thomas Lukasiewicz",
+      "R. Bogacz"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "20d6f4241af85a9c4fe5f0fcb583c818441282c4",
+    "title": "Learning place cells, grid cells and invariances: A unifying model",
+    "abstract": "Neurons in the hippocampus and adjacent brain areas show a large diversity in their tuning to location and head direction. The underlying circuit mechanisms are not fully resolved. In particular, it is unclear why certain cell types are selective to one spatial variable, but invariant to another. For example, a place cell is highly selective to location, but typically invariant to head direction. Here, we propose that all observed spatial tuning patterns \u2013 in both their selectivity and their invariance \u2013 are a consequence of the same mechanism: Excitatory and inhibitory synaptic plasticity that is driven by the spatial tuning statistics of synaptic inputs. Using simulations and a mathematical analysis, we show that combined excitatory and inhibitory plasticity can lead to localized, grid-like or invariant activity. Combinations of different input statistics along different spatial dimensions reproduce all major spatial tuning patterns observed in rodents. The model is robust to changes in parameters, develops patterns on behavioral time scales and makes distinctive experimental predictions. Our results suggest that the interaction of excitatory and inhibitory plasticity is a general principle for the formation of neural representations.",
+    "publication_date": "2017-02-17",
+    "venue": "",
+    "year": 2017,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  },
+  {
+    "paper_id": "6a77b5266b492c69dec62163cd692f86b9b72860",
+    "title": "Emergent elasticity in the neural code for space",
+    "abstract": "Significance We develop a theoretical model, grounded in known properties of neural dynamics and synaptic plasticity, that can fuse information gathered from the past history of velocity and sequence of encountered landmarks during exploratory behavior, to construct a self-consistent internal representation of space. Moreover, through model reduction techniques, we obtain conceptual insights into how consistent internal spatial representations naturally emerge through an elastic relaxation process in an effective spring\u2013particle system. We verify several experimentally testable predictions of our model involving the spatial behavior of grid cells in the medial entorhinal cortex, as well as suggest additional experiments. Upon encountering a novel environment, an animal must construct a consistent environmental map, as well as an internal estimate of its position within that map, by combining information from two distinct sources: self-motion cues and sensory landmark cues. How do known aspects of neural circuit dynamics and synaptic plasticity conspire to accomplish this feat? Here we show analytically how a neural attractor model that combines path integration of self-motion cues with Hebbian plasticity in synaptic weights from landmark cells can self-organize a consistent map of space as the animal explores an environment. Intriguingly, the emergence of this map can be understood as an elastic relaxation process between landmark cells mediated by the attractor network. Moreover, our model makes several experimentally testable predictions, including (i) systematic path-dependent shifts in the firing fields of grid cells toward the most recently encountered landmark, even in a fully learned environment; (ii) systematic deformations in the firing fields of grid cells in irregular environments, akin to elastic deformations of solids forced into irregular containers; and (iii) the creation of topological defects in grid cell firing patterns through specific environmental manipulations. Taken together, our results conceptually link known aspects of neurons and synapses to an emergent solution of a fundamental computational problem in navigation, while providing a unified account of disparate experimental observations.",
+    "publication_date": "2018-05-21",
+    "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+    "year": 2018,
+    "citation_count": 70,
+    "authors": [
+      "Samuel A. Ocko",
+      "Kiah Hardcastle",
+      "Lisa M. Giocomo",
+      "S. Ganguli"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "8a8f7953894fef09d32c5f35fd79cfbff025e56f",
+    "title": "Sequential Memory with Temporal Predictive Coding",
+    "abstract": "Forming accurate memory of sequential stimuli is a fundamental function of biological agents. However, the computational mechanism underlying sequential memory in the brain remains unclear. Inspired by neuroscience theories and recent successes in applying predictive coding (PC) to static memory tasks, in this work we propose a novel PC-based model for sequential memory, called temporal predictive coding (tPC). We show that our tPC models can memorize and retrieve sequential inputs accurately with a biologically plausible neural implementation. Importantly, our analytical study reveals that tPC can be viewed as a classical Asymmetric Hopfield Network (AHN) with an implicit statistical whitening process, which leads to more stable performance in sequential memory tasks of structured inputs. Moreover, we find that tPC exhibits properties consistent with behavioral observations and theories in neuroscience, thereby strengthening its biological relevance. Our work establishes a possible computational mechanism underlying sequential memory in the brain that can also be theoretically interpreted using existing memory model frameworks.",
+    "publication_date": "2023-05-19",
+    "venue": "Neural Information Processing Systems",
+    "year": 2023,
+    "citation_count": 19,
+    "authors": [
+      "Mufeng Tang",
+      "Helen C. Barron",
+      "R. Bogacz"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "138a75cab26100df70bdb66dd1a28e68612db8ff",
+    "title": "Learning place cells, grid cells and invariances with excitatory and inhibitory plasticity",
+    "abstract": "Neurons in the hippocampus and adjacent brain areas show a large diversity in their tuning to location and head direction, and the underlying circuit mechanisms are not yet resolved. In particular, it is unclear why certain cell types are selective to one spatial variable, but invariant to another. For example, place cells are typically invariant to head direction. We propose that all observed spatial tuning patterns \u2013 in both their selectivity and their invariance \u2013 arise from the same mechanism: Excitatory and inhibitory synaptic plasticity driven by the spatial tuning statistics of synaptic inputs. Using simulations and a mathematical analysis, we show that combined excitatory and inhibitory plasticity can lead to localized, grid-like or invariant activity. Combinations of different input statistics along different spatial dimensions reproduce all major spatial tuning patterns observed in rodents. Our proposed model is robust to changes in parameters, develops patterns on behavioral timescales and makes distinctive experimental predictions.",
+    "publication_date": "2018-02-21",
+    "venue": "eLife",
+    "year": 2018,
+    "citation_count": 50,
+    "authors": [
+      "Simon Nikolaus Weber",
+      "Henning Sprekeler"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "35ce44e06802d9f778eb02bf03a6fc5aa657bd56",
+    "title": "Inferring neural activity before plasticity as a foundation for learning beyond backpropagation",
+    "abstract": "This paper introduces \u2018prospective configuration\u2019, a new principle for learning in neural networks, which differs from backpropagation and is more efficient in learning and more consistent with data on neural activity and behavior. For both humans and machines, the essence of learning is to pinpoint which components in its information processing pipeline are responsible for an error in its output, a challenge that is known as \u2018credit assignment\u2019. It has long been assumed that credit assignment is best solved by backpropagation, which is also the foundation of modern machine learning. Here, we set out a fundamentally different principle on credit assignment called \u2018prospective configuration\u2019. In prospective configuration, the network first infers the pattern of neural activity that should result from learning, and then the synaptic weights are modified to consolidate the change in neural activity. We demonstrate that this distinct mechanism, in contrast to backpropagation, (1) underlies learning in a well-established family of models of cortical circuits, (2) enables learning that is more efficient and effective in many contexts faced by biological organisms and (3) reproduces surprising patterns of neural activity and behavior observed in diverse human and rat learning experiments.",
+    "publication_date": "2024-01-03",
+    "venue": "Nature Neuroscience",
+    "year": 2024,
+    "citation_count": 16,
+    "authors": [
+      "Yuhang Song",
+      "Beren Millidge",
+      "Tommaso Salvatori",
+      "Thomas Lukasiewicz",
+      "Zhenghua Xu",
+      "R. Bogacz"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "bc7417738a7f7186ce9b06933072c4ddd39ce4b1",
+    "title": "Actionable Neural Representations: Grid Cells from Minimal Constraints",
+    "abstract": "To afford flexible behaviour, the brain must build internal representations that mirror the structure of variables in the external world. For example, 2D space obeys rules: the same set of actions combine in the same way everywhere (step north, then south, and you won't have moved, wherever you start). We suggest the brain must represent this consistent meaning of actions across space, as it allows you to find new short-cuts and navigate in unfamiliar settings. We term this representation an `actionable representation'. We formulate actionable representations using group and representation theory, and show that, when combined with biological and functional constraints - non-negative firing, bounded neural activity, and precise coding - multiple modules of hexagonal grid cells are the optimal representation of 2D space. We support this claim with intuition, analytic justification, and simulations. Our analytic results normatively explain a set of surprising grid cell phenomena, and make testable predictions for future experiments. Lastly, we highlight the generality of our approach beyond just understanding 2D space. Our work characterises a new principle for understanding and designing flexible internal representations: they should be actionable, allowing animals and machines to predict the consequences of their actions, rather than just encode.",
+    "publication_date": "2022-09-30",
+    "venue": "International Conference on Learning Representations",
+    "year": 2022,
+    "citation_count": 23,
+    "authors": [
+      "W. Dorrell",
+      "P. Latham",
+      "T. Behrens",
+      "James C. R. Whittington"
+    ],
+    "novel": null,
+    "cited_paper": true
+  },
+  {
+    "paper_id": "d40cb3f74f7e4a0858bc63760ec983f15de8125c",
+    "title": "Grid-Cell Activity on Linear Tracks Indicates Purely Translational Remapping of 2D Firing Patterns at Movement Turning Points",
+    "abstract": "Grid cells in rodent medial entorhinal cortex are thought to play a critical role for spatial navigation. When the animal is freely moving in an open arena the firing fields of each grid cell tend to form a hexagonal lattice spanning the environment. For movements along a linear track the cells seem to respond differently. They show multiple firing fields that are not periodically arranged and whose shape and position change when the running direction is reversed. In addition, peak firing rates vary widely from field to field. Measured along one running direction only, firing fields are, however, compatible with a slice through a two-dimensional (2D) hexagonal pattern. It is an open question, whether this is also true if leftward and rightward runs are jointly considered. By analyzing data from 15 male Long\u2013Evans rats, we show that a single hexagonal firing pattern explains the linear-track data if translational shifts of the pattern are allowed at the movement turning points. A rotation or scaling of the grid is not required. The agreement is further improved if the peak firing rates of the underlying 2D grid fields can vary from field to field, as suggested by recent studies. These findings have direct consequences for experiments using linear tracks in virtual reality. SIGNIFICANCE STATEMENT Various types of neurons support spatial navigation. Their response properties are often studied in reduced settings and might change when the animal can freely explore its environment. Grid cells in rodents, for example, exhibit seemingly irregular firing fields when animal movement is restricted to a linear track but highly regular patterns in two-dimensional (2D) arenas. We show that linear-track responses of a cell for both leftward and rightward running directions can be explained as cuts through a single hexagonal pattern if translational remapping is allowed at movement turning points; neither rotations nor scale transformations are needed. These results provide a basis to quantify grid-cell activity in 1D virtual reality and could help to detect and categorize grid cells without experiments in 2D environments.",
+    "publication_date": "2018-07-05",
+    "venue": "",
+    "year": 2018,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  },
+  {
+    "paper_id": "de629192ca5b0b7195355149dad23bd4124bf3df",
+    "title": "Irregular distribution of grid cell firing fields in rats exploring a 3D volumetric space",
+    "abstract": "We investigated how entorhinal grid cells encode volumetric space. On a horizontal surface, grid cells usually produce multiple, spatially focal, approximately circular firing fields that are evenly sized and spaced to form a regular, close-packed, hexagonal array. This spatial regularity has been suggested to underlie navigational computations. In three dimensions, theoretically the equivalent firing pattern would be a regular, hexagonal close packing of evenly sized spherical fields. In the present study, we report that, in rats foraging in a cubic lattice, grid cells maintained normal temporal firing characteristics and produced spatially stable firing fields. However, although most grid fields were ellipsoid, they were sparser, larger, more variably sized and irregularly arranged, even when only fields abutting the lower surface (equivalent to the floor) were considered. Thus, grid self-organization is shaped by the environment\u2019s structure and/or movement affordances, and grids may not need to be regular to support spatial computations. Grieves et al. show that when rats explore a 3D space, grid cells in the entorhinal cortex exchange their usual spatially regular firing patterns for more irregular ones, suggesting that 3D space is mapped differently than previously thought.",
+    "publication_date": "2021-08-11",
+    "venue": "",
+    "year": 2021,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  },
+  {
+    "paper_id": "d09c79f6b7420c8c8a28ecab0836ec9bacb8f8cf",
+    "title": "A non-spatial account of place and grid cells based on clustering models of concept learning",
+    "abstract": "One view is that conceptual knowledge is organized using the circuitry in the medial temporal lobe (MTL) that supports spatial processing and navigation. In contrast, we find that a domain-general learning algorithm explains key findings in both spatial and conceptual domains. When the clustering model is applied to spatial navigation tasks, so-called place and grid cell-like representations emerge because of the relatively uniform distribution of possible inputs in these tasks. The same mechanism applied to conceptual tasks, where the overall space can be higher-dimensional and sampling sparser, leading to representations more aligned with human conceptual knowledge. Although the types of memory supported by the MTL are superficially dissimilar, the information processing steps appear shared. Our account suggests that the MTL uses a general-purpose algorithm to learn and organize context-relevant information in a useful format, rather than relying on navigation-specific neural circuitry. Spatial maps in the medial temporal lobe (MTL) have been proposed to map abstract conceptual knowledge. Rather than grounding abstract knowledge in a spatial map, the authors propose a general-purpose clustering algorithm that explains how both spatial (including place and grid cells) and higher-dimensional conceptual representations arise during learning.",
+    "publication_date": "2018-09-19",
+    "venue": "",
+    "year": 2018,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  },
+  {
+    "paper_id": "da741827ab6f5bf9762d30b91fd2409ac9e0e272",
+    "title": "World models and predictive coding for cognitive and developmental robotics: frontiers and challenges",
+    "abstract": "ABSTRACT Creating autonomous robots that can actively explore the environment, acquire knowledge and learn skills continuously is the ultimate achievement envisioned in cognitive and developmental robotics. Importantly, if the aim is to create robots that can continuously develop through interactions with their environment, their learning processes should be based on interactions with their physical and social world in the manner of human learning and cognitive development. Based on this context, in this paper, we focus on the two concepts of world models and predictive coding. Recently, world models have attracted renewed attention as a topic of considerable interest in artificial intelligence. Cognitive systems learn world models to better predict future sensory observations and optimize their policies, i.e. controllers. Alternatively, in neuroscience, predictive coding proposes that the brain continuously predicts its inputs and adapts to model its own dynamics and control behavior in its environment. Both ideas may be considered as underpinning the cognitive development of robots and humans capable of continual or lifelong learning. Although many studies have been conducted on predictive coding in cognitive robotics and neurorobotics, the relationship between world model-based approaches in AI and predictive coding in robotics has rarely been discussed. Therefore, in this paper, we clarify the definitions, relationships, and status of current research on these topics, as well as missing pieces of world models and predictive coding in conjunction with crucially related concepts such as the free-energy principle and active inference in the context of cognitive and developmental robotics. Furthermore, we outline the frontiers and challenges involved in world models and predictive coding toward the further integration of AI and robotics, as well as the creation of robots with real cognitive and developmental capabilities in the future. GRAPHICAL ABSTRACT",
+    "publication_date": "2023-01-14",
+    "venue": "",
+    "year": 2023,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  },
+  {
+    "paper_id": "4af94a163a695f14597ac101a9562a68772010ae",
+    "title": "Probabilistic Learning by Rodent Grid Cells",
+    "abstract": "Mounting evidence shows mammalian brains are probabilistic computers, but the specific cells involved remain elusive. Parallel research suggests that grid cells of the mammalian hippocampal formation are fundamental to spatial cognition but their diverse response properties still defy explanation. No plausible model exists which explains stable grids in darkness for twenty minutes or longer, despite being one of the first results ever published on grid cells. Similarly, no current explanation can tie together grid fragmentation and grid rescaling, which show very different forms of flexibility in grid responses when the environment is varied. Other properties such as attractor dynamics and grid anisotropy seem to be at odds with one another unless additional properties are assumed such as a varying velocity gain. Modelling efforts have largely ignored the breadth of response patterns, while also failing to account for the disastrous effects of sensory noise during spatial learning and recall, especially in darkness. Here, published electrophysiological evidence from a range of experiments are reinterpreted using a novel probabilistic learning model, which shows that grid cell responses are accurately predicted by a probabilistic learning process. Diverse response properties of probabilistic grid cells are statistically indistinguishable from rat grid cells across key manipulations. A simple coherent set of probabilistic computations explains stable grid fields in darkness, partial grid rescaling in resized arenas, low-dimensional attractor grid cell dynamics, and grid fragmentation in hairpin mazes. The same computations also reconcile oscillatory dynamics at the single cell level with attractor dynamics at the cell ensemble level. Additionally, a clear functional role for boundary cells is proposed for spatial learning. These findings provide a parsimonious and unified explanation of grid cell function, and implicate grid cells as an accessible neuronal population readout of a set of probabilistic spatial computations.",
+    "publication_date": "2016-10-01",
+    "venue": "",
+    "year": 2016,
+    "citation_count": 0,
+    "authors": "",
+    "novel": null,
+    "cited_paper": false
+  }
+]
