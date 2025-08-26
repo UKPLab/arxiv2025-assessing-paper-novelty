@@ -10,7 +10,7 @@ import json
 import logging
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import List, Optional
 from dataclasses import dataclass, asdict
 from lxml import etree
 from dotenv import load_dotenv
@@ -326,81 +326,30 @@ class EnhancedGrobidParser:
         Returns:
             ParsedPaper object with extracted information
         """
-        # Create the expected output path: data_dir/submission_id/ours/submission_id.json
-        output_path = Path(data_dir) / submission_id / "ours" / f"{submission_id}.json"
+        # Create the expected output path: data_dir/submission_id/submission_id.json
+        output_path = Path(data_dir) / submission_id / f"{submission_id}.json"
         return self.process_single_tei_file(tei_file_path, str(output_path))
 
-    def batch_process_directory(self, tei_dir: str, output_file: str) -> List[ParsedPaper]:
-        """
-        Process all TEI files in a directory and save results to a single JSON file.
-
-        Args:
-            tei_dir: Directory containing TEI XML files
-            output_file: Path to save the combined JSON output
-
-        Returns:
-            List of ParsedPaper objects
-        """
-        tei_dir_path = Path(tei_dir)
-        if not tei_dir_path.exists():
-            raise FileNotFoundError(f"TEI directory not found: {tei_dir}")
-
-        # Find TEI files
-        tei_files = list(tei_dir_path.glob("*.tei.xml"))
-        if not tei_files:
-            tei_files = list(tei_dir_path.glob("*.xml"))
-
-        if not tei_files:
-            raise FileNotFoundError(f"No TEI files found in {tei_dir}")
-
-        logging.info(f"Found {len(tei_files)} TEI files to process")
-
-        # Parse all files
-        parsed_papers = []
-        for tei_file in sorted(tei_files):
-            logging.info(f"Processing {tei_file.name}")
-            parsed_paper = self.parse_tei_file(tei_file)
-            parsed_papers.append(parsed_paper)
-
-        # Save results
-        output_path = Path(output_file)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        
-        output_data = [asdict(paper) for paper in parsed_papers]
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(output_data, f, indent=2, ensure_ascii=False)
-
-        logging.info(f"Results saved to {output_path}")
-        return parsed_papers
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Enhanced GROBID TEI XML Parser")
-    parser.add_argument(
-        "--tei-dir", 
-        type=str,
-        help="Directory containing GROBID TEI XML files"
-    )
-    parser.add_argument(
-        "--tei-file",
-        type=str, 
-        help="Single TEI XML file to process"
-    )
-    parser.add_argument(
-        "--output", 
-        type=str,
-        default="parsed_papers.json", 
-        help="Output JSON file path"
-    )
+    parser = argparse.ArgumentParser(description="Enhanced GROBID TEI XML Parser - single submission mode only")
     parser.add_argument(
         "--data-dir",
         type=str,
-        help="Base data directory for pipeline integration"
+        required=True,
+        help="Base data directory"
     )
     parser.add_argument(
         "--submission-id",
         type=str,
-        help="Submission ID for pipeline integration (requires --data-dir)"
+        required=True,
+        help="Submission ID to process"
+    )
+    parser.add_argument(
+        "--tei-file",
+        type=str,
+        help="TEI XML file path (default: data_dir/submission_id/submission_id_fulltext.tei.xml)"
     )
     parser.add_argument(
         "--verbose", "-v", 
@@ -410,18 +359,9 @@ def main():
 
     args = parser.parse_args()
 
-    # Validate arguments
-    if not args.tei_dir and not args.tei_file:
-        parser.error("Either --tei-dir or --tei-file must be specified")
-    
-    if args.tei_dir and args.tei_file:
-        parser.error("Cannot specify both --tei-dir and --tei-file")
-    
-    if args.submission_id and not args.data_dir:
-        parser.error("--submission-id requires --data-dir")
-    
-    if args.data_dir and not args.submission_id:
-        parser.error("--data-dir requires --submission-id")
+    # Use default TEI file path if not provided
+    if not args.tei_file:
+        args.tei_file = str(Path(args.data_dir) / args.submission_id / f"{args.submission_id}_fulltext.tei.xml")
 
     # Configure logging
     log_level = logging.DEBUG if args.verbose else logging.INFO
@@ -431,46 +371,26 @@ def main():
     grobid_parser = EnhancedGrobidParser()
 
     try:
-        if args.tei_file:
-            if args.data_dir and args.submission_id:
-                # Pipeline integration mode
-                parsed_paper = grobid_parser.process_for_pipeline(
-                    args.tei_file, args.data_dir, args.submission_id
-                )
-                logging.info(f"📊 Pipeline processing summary:")
-                logging.info(f"   Submission ID: {args.submission_id}")
-                logging.info(f"   Output: {args.data_dir}/{args.submission_id}/ours/{args.submission_id}.json")
-            else:
-                # Regular single file processing
-                parsed_paper = grobid_parser.process_single_tei_file(args.tei_file, args.output)
-                
-            # Print summary for single file
-            logging.info(f"   Title: {parsed_paper.title}")
-            logging.info(f"   Abstract: {len(parsed_paper.abstract) if parsed_paper.abstract else 0} chars")
-            logging.info(f"   Cited papers: {len(parsed_paper.cited_papers)}")
-            logging.info(f"   Citation contexts: {len(parsed_paper.citation_contexts)}")
+        # Process for pipeline
+        parsed_paper = grobid_parser.process_for_pipeline(
+            args.tei_file, args.data_dir, args.submission_id
+        )
         
-        else:
-            # Process directory
-            parsed_papers = grobid_parser.batch_process_directory(args.tei_dir, args.output)
-            
-            # Print summary statistics
-            total_papers = len(parsed_papers)
-            total_cited = sum(len(p.cited_papers) for p in parsed_papers)
-            total_contexts = sum(len(p.citation_contexts) for p in parsed_papers)
-
-            logging.info(f"📊 Batch processing summary:")
-            logging.info(f"   Papers processed: {total_papers}")
-            logging.info(f"   Total cited papers: {total_cited}")
-            logging.info(f"   Total citation contexts: {total_contexts}")
-            if total_papers > 0:
-                logging.info(f"   Avg citations per paper: {total_cited/total_papers:.1f}")
-                logging.info(f"   Avg contexts per paper: {total_contexts/total_papers:.1f}")
+        logging.info(f"📊 Processing summary:")
+        logging.info(f"   Submission ID: {args.submission_id}")
+        logging.info(f"   Input: {args.tei_file}")
+        logging.info(f"   Output: {args.data_dir}/{args.submission_id}/{args.submission_id}.json")
+        logging.info(f"   Title: {parsed_paper.title}")
+        logging.info(f"   Abstract: {len(parsed_paper.abstract) if parsed_paper.abstract else 0} chars")
+        logging.info(f"   Cited papers: {len(parsed_paper.cited_papers)}")
+        logging.info(f"   Citation contexts: {len(parsed_paper.citation_contexts)}")
 
         logging.info(f"✅ Processing completed successfully")
+        print(f"✅ Successfully processed submission {args.submission_id}")
 
     except Exception as e:
         logging.error(f"❌ Error during processing: {e}")
+        print(f"❌ Failed to process submission {args.submission_id}: {e}")
         sys.exit(1)
 
 

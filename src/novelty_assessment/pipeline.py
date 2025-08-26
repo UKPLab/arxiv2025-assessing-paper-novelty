@@ -52,7 +52,7 @@ class NoveltyAssessmentPipeline:
 
         # Step 2: Generate research landscape analysis
         print("Step 2/4: Generating research landscape analysis...")
-        self.analyzer.run_analysis(data_dir, submission_id, "ours/research_landscape.txt")
+        self.analyzer.run_analysis(data_dir, submission_id, "research_landscape.txt")
         print("✓ Research landscape analysis completed")
 
         # Step 3: Assess novelty
@@ -89,7 +89,7 @@ class NoveltyAssessmentPipeline:
 
         if start_step <= 2:
             print("Step 2/4: Generating research landscape analysis...")
-            self.analyzer.run_analysis(data_dir, submission_id, "ours/research_landscape.txt")
+            self.analyzer.run_analysis(data_dir, submission_id, "research_landscape.txt")
             print("✓ Research landscape analysis completed")
 
         if start_step <= 3:
@@ -124,19 +124,19 @@ class NoveltyAssessmentPipeline:
         }
 
         # Check for structured representation
-        structured_path = os.path.join(data_dir, submission_id, "ours", "structured_representation.json")
+        structured_path = os.path.join(data_dir, submission_id, "structured_representation.json")
         status["structured_extraction"] = os.path.exists(structured_path)
 
         # Check for research landscape
-        landscape_path = os.path.join(data_dir, submission_id, "ours", "research_landscape.txt")
+        landscape_path = os.path.join(data_dir, submission_id, "research_landscape.txt")
         status["research_landscape"] = os.path.exists(landscape_path)
 
         # Check for novelty assessment
-        assessment_path = os.path.join(data_dir, submission_id, "ours", "novelty_delta_analysis.txt")
+        assessment_path = os.path.join(data_dir, submission_id, "novelty_delta_analysis.txt")
         status["novelty_assessment"] = os.path.exists(assessment_path)
 
         # Check for reviewer summary
-        summary_path = os.path.join(data_dir, submission_id, "ours", "summary.txt")
+        summary_path = os.path.join(data_dir, submission_id, "summary.txt")
         status["reviewer_summary"] = os.path.exists(summary_path)
 
         return status

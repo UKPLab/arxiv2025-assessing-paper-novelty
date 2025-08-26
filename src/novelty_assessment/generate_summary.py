@@ -91,18 +91,18 @@ class ReviewGuidanceGenerator:
             Reviewer guidance
         """
         # Load novelty assessment (standard path)
-        assessment_file = os.path.join(data_dir, submission_id, "ours", "novelty_delta_analysis.txt")
+        assessment_file = os.path.join(data_dir, submission_id, "novelty_delta_analysis.txt")
         novelty_assessment = self.load_novelty_assessment(assessment_file)
 
         # Generate guidance
         guidance = self.generate_guidance(novelty_assessment)
 
         # Save guidance to file (standard path)
-        output_file = os.path.join(data_dir, submission_id, "ours", "summary.txt")
+        output_file = os.path.join(data_dir, submission_id, "summary.txt")
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(guidance.content)
 
-        print(f"Review guidance saved to ours/summary.txt")
+        print(f"Review guidance saved to summary.txt")
 
         from litellm import cost_per_token
 
@@ -396,13 +396,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--assessment-file",
         type=str,
-        default="ours/novelty_delta_analysis.txt",
+        default="novelty_delta_analysis.txt",
         help="Path to novelty assessment file"
     )
     parser.add_argument(
         "--output-file",
         type=str,
-        default="ours/summary.txt",
+        default="summary.txt",
         help="Output file for summary"
     )
     parser.add_argument(
@@ -437,7 +437,7 @@ if __name__ == "__main__":
         # Prepare batch inference data
         generator.prepare_batch_inference_data(
             args.data_dir,
-            args.assessment_file.replace("ours/", ""),
+            args.assessment_file,
             args.model
         )
     
@@ -446,5 +446,5 @@ if __name__ == "__main__":
         generator.process_batch_results(
             args.data_dir,
             args.results_file,
-            args.output_file.replace("ours/", "")
+            args.output_file
         )

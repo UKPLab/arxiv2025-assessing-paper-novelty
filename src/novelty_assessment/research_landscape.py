@@ -137,7 +137,7 @@ class ResearchLandscapeAnalyzer:
         papers = []
 
         with open(
-            os.path.join(data_dir, submission_id, "ours", f"{submission_id}.json"),
+            os.path.join(data_dir, submission_id, f"{submission_id}.json"),
             "r",
             encoding="utf-8",
         ) as f:
@@ -154,7 +154,7 @@ class ResearchLandscapeAnalyzer:
 
 
         structured_representation_path = os.path.join(
-            data_dir, submission_id, "ours", "structured_representation.json"
+            data_dir, submission_id, "structured_representation.json"
         )
         if not os.path.exists(structured_representation_path):
             return []
@@ -593,7 +593,7 @@ if __name__ == "__main__":
     
     if args.submission_id:
         # Single submission analysis
-        analyzer.run_analysis(args.data_dir, args.submission_id, "ours/research_landscape.txt")
+        analyzer.run_analysis(args.data_dir, args.submission_id, "research_landscape.txt")
     
     if args.prepare:
         # Prepare batch inference data

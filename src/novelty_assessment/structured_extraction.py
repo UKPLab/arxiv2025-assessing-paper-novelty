@@ -120,13 +120,13 @@ class StructuredRepresentationGenerator:
         submission_path = os.path.join(data_dir, submission_id)
 
         # Load main paper
-        with open(f"{submission_path}/ours/{submission_id}.json", "r") as f:
+        with open(f"{submission_path}/{submission_id}.json", "r") as f:
             main_paper = json.load(f)
 
         # Get introduction if available
         intro = ""
-        if os.path.exists(f"{submission_path}/ours/{submission_id}_intro.txt"):
-            with open(f"{submission_path}/ours/{submission_id}_intro.txt", "r") as f:
+        if os.path.exists(f"{submission_path}/introductions/{submission_id}_intro.txt"):
+            with open(f"{submission_path}/introductions/{submission_id}_intro.txt", "r") as f:
                 intro = f.read()
 
         # Process main paper
@@ -143,7 +143,7 @@ class StructuredRepresentationGenerator:
         for paper in related_papers[:10]:  # Process top 10
             paper_intro = ""
             intro_path = (
-                f"{submission_path}/ours/related_papers/{paper['paper_id']}_intro.txt"
+                f"{submission_path}/introductions/{paper['paper_id']}_intro.txt"
             )
             if os.path.exists(intro_path):
                 with open(intro_path, "r") as f:
@@ -215,7 +215,7 @@ class StructuredRepresentationGenerator:
             )
 
         # Save results
-        output_path = f"{submission_path}/ours/structured_representation.json"
+        output_path = f"{submission_path}/structured_representation.json"
         with open(output_path, "w") as f:
             json.dump({"structured_representation": output}, f, indent=4)
 
@@ -254,7 +254,7 @@ class StructuredRepresentationGenerator:
             )
 
             # Check if submission paper exists
-            submission_paper_path = f"{data_dir}/{submission}/ours/{submission_id}.json"
+            submission_paper_path = f"{data_dir}/{submission}/{submission}.json"
             if not os.path.exists(submission_paper_path):
                 print(f"Skipping {submission}: main paper not found")
                 continue
@@ -270,10 +270,10 @@ class StructuredRepresentationGenerator:
             main_paper_abstract = paper_obj["abstract"]
             main_paper_introduction = ""
             if os.path.exists(
-                f"{data_dir}/{submission}/ours/{submission_id}_intro.txt"
+                f"{data_dir}/{submission}/introductions/{submission}_intro.txt"
             ):
                 main_paper_introduction = open(
-                    f"{data_dir}/{submission}/ours/{submission_id}_intro.txt", "r"
+                    f"{data_dir}/{submission}/introductions/{submission}_intro.txt", "r"
                 ).read()
                 main_papers_with_intro += 1
 
@@ -327,10 +327,10 @@ class StructuredRepresentationGenerator:
                 paper_title = paper["title"]
                 paper_abstract = paper["abstract"]
                 if os.path.exists(
-                    f"{data_dir}/{submission}/ours/related_papers/{paper_id}_intro.txt"
+                    f"{data_dir}/{submission}/introductions/{paper_id}_intro.txt"
                 ):
                     paper_introduction = open(
-                        f"{data_dir}/{submission}/ours/related_papers/{paper_id}_intro.txt",
+                        f"{data_dir}/{submission}/introductions/{paper_id}_intro.txt",
                         "r",
                     ).read()
                     selected_papers_with_intro += 1
@@ -534,7 +534,7 @@ class StructuredRepresentationGenerator:
 
             # Save structured representation
             with open(
-                f"{data_dir}/{submission_id}/ours/structured_representation.json", "w"
+                f"{data_dir}/{submission_id}/structured_representation.json", "w"
             ) as f:
                 json.dump(
                     {"structured_representation": structured_representation},

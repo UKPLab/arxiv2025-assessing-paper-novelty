@@ -211,7 +211,7 @@ class NoveltyAssessor:
             PaperInformation object for the submission paper
         """
         file_path = os.path.join(
-            data_dir, submission_id, "ours", f"structured_representation.json"
+            data_dir, submission_id, f"structured_representation.json"
         )
 
         if not os.path.exists(file_path):
@@ -220,7 +220,7 @@ class NoveltyAssessor:
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        with open(f"{data_dir}/{submission_id}/ours/{submission_id}.json", "r") as f:
+        with open(f"{data_dir}/{submission_id}/{submission_id}.json", "r") as f:
             paper_obj = json.load(f)
 
         structured_representation = data["structured_representation"]
@@ -234,7 +234,7 @@ class NoveltyAssessor:
         return paper_info
 
     def load_citation_contexts(self, data_dir: str, submission_id: str) -> str:
-        with open(f"{data_dir}/{submission_id}/ours/{submission_id}.json", "r") as f:
+        with open(f"{data_dir}/{submission_id}/{submission_id}.json", "r") as f:
             paper_obj = json.load(f)
 
         with open(
@@ -386,7 +386,7 @@ class NoveltyAssessor:
         submission = self.load_submission_paper(data_dir, submission_id)
 
         # Load landscape analysis (standard path)
-        landscape_path = os.path.join(data_dir, submission_id, "ours", "research_landscape.txt")
+        landscape_path = os.path.join(data_dir, submission_id, "research_landscape.txt")
         landscape_analysis = self.load_landscape_analysis(landscape_path)
 
         # Load non-cited papers from ranked papers
@@ -407,12 +407,12 @@ class NoveltyAssessor:
         )
 
         # Save assessment to file (standard path)
-        output_path = os.path.join(data_dir, submission_id, "ours", "novelty_delta_analysis.txt")
+        output_path = os.path.join(data_dir, submission_id, "novelty_delta_analysis.txt")
         if assessment:
             with open(output_path, "w", encoding="utf-8") as f:
                 f.write(assessment.content)
 
-        print(f"Novelty assessment saved to ours/novelty_delta_analysis.txt")
+        print(f"Novelty assessment saved to novelty_delta_analysis.txt")
 
         from litellm import cost_per_token
 
@@ -735,13 +735,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--landscape-file",
         type=str,
-        default="ours/research_landscape.txt",
+        default="research_landscape.txt",
         help="Path to landscape analysis file"
     )
     parser.add_argument(
         "--output-file",
         type=str,
-        default="ours/novelty_delta_analysis.txt",
+        default="novelty_delta_analysis.txt",
         help="Output file for assessment"
     )
     parser.add_argument(

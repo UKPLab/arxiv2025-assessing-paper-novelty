@@ -1,35 +1,34 @@
-import json
-import time
-from pathlib import Path
-import traceback
-from datetime import datetime
-import logging
-from rapidfuzz import fuzz
-from datetime import datetime, timedelta
-import json
-import re
-import time
-import os
-import logging
+# Standard library imports
 import argparse
+import json
+import logging
+import os
+import re
+import sys
+import time
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional
+
+# Third-party imports
 import numpy as np
-from dataclasses import dataclass, asdict
 import requests
+from dataclasses import dataclass, asdict
+from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_community.chat_models import ChatLiteLLM
 from langchain_core.messages import SystemMessage, HumanMessage
 from pydantic import BaseModel, Field
+from rapidfuzz import fuzz
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-import sys
-from dotenv import load_dotenv
+
+logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
 
-sys.path.append("/ukp-storage-1/afzal/novelty_assessment/data_iclr_all_topics/RankGPT")
+sys.path.append("/home/afzal/novelty_assessment/RankGPT")
 
 from rank_gpt import (
     create_permutation_instruction,
@@ -622,21 +621,20 @@ class PaperRankingSystem:
         return list(unique_papers.values())
 
     def save_results(self, results: RankingResults) -> None:
-        """Save results to files organized by submission_id."""
-        submission_dir = self.results_dir / results.submission_id
-        submission_dir.mkdir(exist_ok=True)
+        """Save results directly to results_dir."""
+        self.results_dir.mkdir(parents=True, exist_ok=True)
 
-        self.logger.info(f"Saving results to {submission_dir}")
+        self.logger.info(f"Saving results to {self.results_dir}")
 
         try:
             # Save final ranked papers
-            with open(submission_dir / "ranked_papers.json", "w") as f:
+            with open(self.results_dir / "ranked_papers.json", "w") as f:
                 json.dump(
                     [p.to_dict() for p in results.final_ranked_papers], f, indent=2
                 )
 
             # Save all retrieved papers
-            with open(submission_dir / "all_retrieved_papers.json", "w") as f:
+            with open(self.results_dir / "all_retrieved_papers.json", "w") as f:
                 json.dump(
                     [p.to_dict() for p in results.all_retrieved_papers], f, indent=2
                 )
@@ -651,14 +649,14 @@ class PaperRankingSystem:
                 "num_final_ranked": len(results.final_ranked_papers),
                 "num_all_retrieved": len(results.all_retrieved_papers),
             }
-            with open(submission_dir / "metadata.json", "w") as f:
+            with open(self.results_dir / "metadata.json", "w") as f:
                 json.dump(metadata, f, indent=2)
 
             # Save complete results
-            with open(submission_dir / "complete_results.json", "w") as f:
+            with open(self.results_dir / "complete_results.json", "w") as f:
                 json.dump(results.to_dict(), f, indent=2)
 
-            self.logger.info(f"Results saved successfully to {submission_dir}")
+            self.logger.info(f"Results saved successfully to {self.results_dir}")
 
         except Exception as e:
             self.logger.error(f"Error saving results: {str(e)}")
@@ -835,9 +833,9 @@ def process_for_pipeline(data_dir: str, submission_id: str) -> bool:
         Success status
     """
     # Load submission data
-    input_file = os.path.join(data_dir, submission_id, "ours", f"{submission_id}.json")
+    input_file = Path(data_dir) / submission_id / f"{submission_id}.json"
     
-    if not os.path.exists(input_file):
+    if not input_file.exists():
         raise FileNotFoundError(f"Input file not found: {input_file}")
     
     with open(input_file, "r", encoding="utf-8") as f:
@@ -848,8 +846,8 @@ def process_for_pipeline(data_dir: str, submission_id: str) -> bool:
         keyword_model="gpt-4o",
         ranking_model="gpt-3.5-turbo",
         embedding_model="allenai/specter2_base",
-        results_dir=os.path.join(data_dir, submission_id, "related_work_data"),
-        log_dir=os.path.join(data_dir, submission_id, "logs"),
+        results_dir=str(Path(data_dir) / submission_id / "related_work_data"),
+        log_dir=str(Path(data_dir) / submission_id / "logs"),
     )
     
     try:
@@ -882,7 +880,7 @@ def process_for_pipeline(data_dir: str, submission_id: str) -> bool:
             return False
         
         # Run the pipeline
-        results = ranking_system.find_similar_papers(
+        ranking_system.find_similar_papers(
             source_paper=source_paper,
             cited_papers=valid_cited_papers,
             submission_id=submission_id,
@@ -900,16 +898,18 @@ def process_for_pipeline(data_dir: str, submission_id: str) -> bool:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Paper retrieval and ranking system")
+    parser = argparse.ArgumentParser(description="Paper retrieval and ranking system - single submission mode only")
     parser.add_argument(
-        "--input",
+        "--data-dir",
         type=str,
-        help="Input file (batch mode) or data directory (pipeline mode)"
+        required=True,
+        help="Data directory containing submission data"
     )
     parser.add_argument(
         "--submission-id",
         type=str,
-        help="Submission ID for pipeline mode"
+        required=True,
+        help="Submission ID to process"
     )
     parser.add_argument(
         "--keyword-model",
@@ -930,12 +930,6 @@ def main():
         help="Embedding model for similarity"
     )
     parser.add_argument(
-        "--results-dir",
-        type=str,
-        default="results",
-        help="Directory to save results"
-    )
-    parser.add_argument(
         "--verbose", "-v",
         action="store_true",
         help="Verbose logging"
@@ -943,270 +937,12 @@ def main():
     
     args = parser.parse_args()
     
-    if args.submission_id:
-        # Pipeline mode - single submission
-        if not args.input:
-            parser.error("--input (data directory) is required for pipeline mode")
-        
-        success = process_for_pipeline(args.input, args.submission_id)
-        if success:
-            print(f"✅ Successfully processed submission {args.submission_id}")
-        else:
-            print(f"❌ Failed to process submission {args.submission_id}")
+    # Process single submission
+    success = process_for_pipeline(args.data_dir, args.submission_id)
+    if success:
+        print(f"✅ Successfully processed submission {args.submission_id}")
     else:
-        # Batch mode - process file of submissions
-        if not args.input:
-            parser.error("--input is required")
-        
-        # Load batch data
-        with open(args.input, "r") as f:
-            ss_cited_papers = json.load(f)
-        
-        print(f"Loaded {len(ss_cited_papers)} submissions for batch processing")
-        
-        # Initialize ranking system
-        ranking_system = PaperRankingSystem(
-            keyword_model=args.keyword_model,
-            ranking_model=args.ranking_model,
-            embedding_model=args.embedding_model,
-            results_dir=args.results_dir,
-            log_dir="logs",
-        )
-        
-        # Process batch (keeping existing batch logic)
-        batch_process_submissions(ss_cited_papers, ranking_system)
-
-
-def batch_process_submissions(ss_cited_papers, ranking_system):
-    """Process multiple submissions in batch mode."""
-    print(f"Loaded {len(ss_cited_papers)} ICLR 2024 submissions for processing")
-    print("Note: Filtering for papers published before October 1, 2024")
-
-    # Get the logger from the ranking system
-    logger = ranking_system.logger
-
-    logger.info(
-        f"Starting ICLR 2024 dataset processing with {len(ss_cited_papers)} submissions"
-    )
-    logger.info(
-        "Submission deadline: October 1, 2024 - filtering for papers before this date"
-    )
-
-    # Track processing statistics
-    stats = {
-        "total_submissions": len(ss_cited_papers),
-        "successful": 0,
-        "failed": 0,
-        "skipped": 0,
-        "total_cost": 0.0,
-        "start_time": datetime.now(),
-        "failed_submissions": [],
-    }
-
-    logger.info(f"Processing statistics initialized: {stats}")
-
-    # Process each submission
-    for idx, sample_submission in enumerate(ss_cited_papers):
-    submission_id = sample_submission["filename"]
-
-    logger.info(
-        f"Processing submission {idx+1}/{len(ss_cited_papers)}: {submission_id}"
-    )
-    logger.debug(f"Title: {sample_submission['title']}")
-
-    print(f"\n{'='*60}")
-    print(f"Processing {idx+1}/{len(ss_cited_papers)}: {submission_id}")
-    print(f"Title: {sample_submission['title'][:80]}...")
-    print(f"{'='*60}")
-
-    try:
-        # Check if already processed (optional - skip if results exist)
-        result_dir = Path("results") / submission_id
-        if result_dir.exists() and (result_dir / "complete_results.json").exists():
-            logger.info(f"Skipping {submission_id} - already processed")
-            print(f"⏭️  Skipping {submission_id} - already processed")
-            stats["skipped"] += 1
-            continue
-
-        # Create source paper (ICLR 2024 submission deadline: Oct 1, 2024)
-        source_paper = Paper(
-            paper_id=submission_id,
-            title=sample_submission["title"],
-            abstract=sample_submission["abstract"],
-            year="2024",  # ICLR 2024 submissions
-            publication_date="2024-10-01",  # ICLR submission deadline
-        )
-
-        logger.debug(f"Created source paper: {source_paper.title}")
-
-        # Process cited papers
-        valid_cited_papers = []
-        for i, cited_paper_data in enumerate(sample_submission["cited_papers"]):
-            if cited_paper_data.get("ss_paper_obj", {}):
-                # Clean up the cited paper data
-                ss_paper_obj = cited_paper_data["ss_paper_obj"].copy()
-                ss_paper_obj.pop("citations", None)  # Remove citations if present
-                ss_paper_obj["cited_paper"] = True  # Mark as cited paper
-
-                try:
-                    cited_paper = Paper(**ss_paper_obj)
-                    valid_cited_papers.append(cited_paper)
-                    logger.debug(f"Added cited paper {i+1}: {cited_paper.title}")
-                except Exception as e:
-                    logger.warning(
-                        f"Failed to create Paper object for cited paper {i+1}: {e}"
-                    )
-                    continue
-
-        logger.info(
-            f"Found {len(valid_cited_papers)} valid cited papers for {submission_id}"
-        )
-        print(f"📚 Found {len(valid_cited_papers)} valid cited papers")
-
-        # Skip if no valid cited papers (optional)
-        if len(valid_cited_papers) == 0:
-            logger.warning(f"Skipping {submission_id} - no valid cited papers")
-            print(f"⏭️  Skipping {submission_id} - no valid cited papers")
-            stats["skipped"] += 1
-            continue
-
-        # Run the pipeline
-        logger.info(f"Starting pipeline for {submission_id}")
-        start_time = time.time()
-
-        results = ranking_system.find_similar_papers(
-            source_paper=source_paper,
-            cited_papers=valid_cited_papers,
-            submission_id=submission_id,
-            max_papers_per_query=20,
-            top_n_similarity=100,
-            combination_k=15,
-        )
-
-        processing_time = time.time() - start_time
-
-        # Update statistics
-        stats["successful"] += 1
-        stats["total_cost"] += results.total_cost
-
-        # Count cited vs non-cited in final ranking
-        cited_count, non_cited_count = ranking_system.count_cited_papers(
-            results.final_ranked_papers
-        )
-
-        logger.info(f"Pipeline completed successfully for {submission_id}")
-        logger.info(
-            f"Final ranking: {len(results.final_ranked_papers)} papers ({cited_count} cited, {non_cited_count} non-cited)"
-        )
-        logger.info(
-            f"Cost: ${results.total_cost:.4f}, Processing time: {processing_time:.1f}s"
-        )
-
-        print(f"✅ SUCCESS for {submission_id}:")
-        print(f"   📊 Final ranking: {len(results.final_ranked_papers)} papers")
-        print(f"   📚 Cited papers in final: {cited_count}")
-        print(f"   🔍 Non-cited papers in final: {non_cited_count}")
-        print(f"   💰 Cost: ${results.total_cost:.4f}")
-        print(f"   ⏱️  Processing time: {processing_time:.1f}s")
-
-    except Exception as e:
-        stats["failed"] += 1
-        error_details = {
-            "submission_id": submission_id,
-            "error": str(e),
-            "traceback": traceback.format_exc(),
-        }
-        stats["failed_submissions"].append(error_details)
-
-        logger.error(f"Pipeline failed for {submission_id}: {e}")
-        logger.debug(f"Full traceback for {submission_id}:\n{traceback.format_exc()}")
-
-        print(f"❌ FAILED for {submission_id}: {e}")
-        print(f"Full traceback logged to file")
-
-        # Continue with next submission instead of stopping
-        continue
-
-    # Log and print progress every 10 submissions
-    if (idx + 1) % 10 == 0:
-        elapsed_time = (datetime.now() - stats["start_time"]).total_seconds()
-        avg_time_per_submission = elapsed_time / (idx + 1)
-        remaining_submissions = len(ss_cited_papers) - (idx + 1)
-        estimated_remaining_time = remaining_submissions * avg_time_per_submission
-
-        progress_msg = (
-            f"Progress: {idx + 1}/{len(ss_cited_papers)} processed. "
-            f"Success: {stats['successful']}, Failed: {stats['failed']}, Skipped: {stats['skipped']}. "
-            f"Total cost: ${stats['total_cost']:.2f}. "
-            f"Avg time: {avg_time_per_submission:.1f}s. "
-            f"Est. remaining: {estimated_remaining_time/3600:.1f}h"
-        )
-
-        logger.info(progress_msg)
-
-        print(f"\n📈 PROGRESS UPDATE:")
-        print(f"   Processed: {idx + 1}/{len(ss_cited_papers)}")
-        print(
-            f"   Success: {stats['successful']}, Failed: {stats['failed']}, Skipped: {stats['skipped']}"
-        )
-        print(f"   Total cost so far: ${stats['total_cost']:.2f}")
-        print(f"   Average time per submission: {avg_time_per_submission:.1f}s")
-        print(f"   Estimated remaining time: {estimated_remaining_time/3600:.1f} hours")
-
-# Final summary
-end_time = datetime.now()
-total_time = (end_time - stats["start_time"]).total_seconds()
-
-final_summary = (
-    f"Processing completed. Total: {stats['total_submissions']}, "
-    f"Successful: {stats['successful']}, Failed: {stats['failed']}, "
-    f"Skipped: {stats['skipped']}, Total cost: ${stats['total_cost']:.2f}, "
-    f"Total time: {total_time/3600:.2f}h"
-)
-
-logger.info(final_summary)
-
-print(f"\n🎯 FINAL SUMMARY:")
-print(f"{'='*60}")
-print(f"Total submissions: {stats['total_submissions']}")
-print(f"✅ Successful: {stats['successful']}")
-print(f"❌ Failed: {stats['failed']}")
-print(f"⏭️  Skipped: {stats['skipped']}")
-print(f"💰 Total cost: ${stats['total_cost']:.2f}")
-print(f"⏱️  Total time: {total_time/3600:.2f} hours")
-print(
-    f"📊 Average cost per submission: ${stats['total_cost']/max(stats['successful'], 1):.4f}"
-)
-print(f"📊 Average time per submission: {total_time/max(stats['successful'], 1):.1f}s")
-
-# Save processing statistics
-stats_file = Path("results") / "processing_stats.json"
-final_stats = {
-    **stats,
-    "end_time": end_time.isoformat(),
-    "start_time": stats["start_time"].isoformat(),
-    "total_time_seconds": total_time,
-    "average_cost_per_successful": stats["total_cost"] / max(stats["successful"], 1),
-    "average_time_per_successful": total_time / max(stats["successful"], 1),
-}
-
-with open(stats_file, "w") as f:
-    json.dump(final_stats, f, indent=2)
-
-logger.info(f"Processing statistics saved to: {stats_file}")
-print(f"\n📋 Processing statistics saved to: {stats_file}")
-
-# Save failed submissions for debugging
-if stats["failed_submissions"]:
-    failed_file = Path("results") / "failed_submissions.json"
-    with open(failed_file, "w") as f:
-        json.dump(stats["failed_submissions"], f, indent=2)
-
-    logger.warning(f"Failed submission details saved to: {failed_file}")
-    print(f"❌ Failed submission details saved to: {failed_file}")
-
-        logger.info("Full dataset processing completed successfully")
-        print(f"\n🎉 Processing complete! Check the 'results' directory for all outputs.")
+        print(f"❌ Failed to process submission {args.submission_id}")
 
 
 if __name__ == "__main__":

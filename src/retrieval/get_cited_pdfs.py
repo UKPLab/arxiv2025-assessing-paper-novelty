@@ -20,20 +20,14 @@ load_dotenv()
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler(f'pdf_download_{time.strftime("%Y%m%d_%H%M%S")}.log'),
-        logging.StreamHandler(),
-    ],
+    format="%(asctime)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
 
-# Initialize ACL Anthology
-logger.info("Initializing ACL Anthology...")
-anthology = Anthology.from_repo()
-anthology_papers = list(anthology.papers())
-paper_titles = [str(i.title).lower() for i in anthology_papers]
-logger.info(f"Loaded {len(anthology_papers)} ACL papers")
+# ACL Anthology - lazy initialization
+anthology = None
+anthology_papers = None
+paper_titles = None
 
 INDENT = "    "  # 4-space indentation
 
@@ -57,6 +51,16 @@ def search_arxiv_by_title(title):
 
 
 def fetch_acl_pdf_url(title):
+    global anthology, anthology_papers, paper_titles
+    
+    # Initialize ACL Anthology on first use
+    if anthology is None:
+        logger.info("Initializing ACL Anthology...")
+        anthology = Anthology.from_repo()
+        anthology_papers = list(anthology.papers())
+        paper_titles = [str(i.title).lower() for i in anthology_papers]
+        logger.info(f"Loaded {len(anthology_papers)} ACL papers")
+    
     # Use fuzzy matching to find the closest title
     closest_match = process.extractOne(
         title, paper_titles, scorer=fuzz.token_set_ratio, score_cutoff=80
@@ -166,193 +170,6 @@ def find_and_download_pdf(paper_data, pdfs_dir):
         return "1"
 
 
-def process_ranking_results(results_dir="results", max_submissions=None, start_from=0):
-    """
-    Process all ranking results and download PDFs for ranked papers.
-    Adds PDFs to the existing results directory structure.
-
-    Args:
-        results_dir: Directory containing ranking results
-        max_submissions: Maximum number of submissions to process (for testing)
-        start_from: Skip this many submissions (for resuming)
-    """
-    results_path = Path(results_dir)
-
-    # Statistics
-    stats = {
-        "total_submissions": 0,
-        "total_papers": 0,
-        "downloaded": 0,
-        "already_exists": 0,
-        "failed": 0,
-        "not_found": 0,
-        "skipped": 0,
-    }
-
-    # Find all submission directories
-    all_submission_dirs = [d for d in results_path.iterdir() if d.is_dir()]
-    all_submission_dirs.sort()  # Sort for consistent ordering
-
-    # Apply start_from and max_submissions filters
-    submission_dirs = all_submission_dirs[start_from:]
-    if max_submissions:
-        submission_dirs = submission_dirs[:max_submissions]
-
-    stats["total_submissions"] = len(submission_dirs)
-
-    logger.info(f"Found {len(all_submission_dirs)} total submission results")
-    logger.info(
-        f"Processing {len(submission_dirs)} submissions (starting from {start_from})"
-    )
-
-    for i, submission_dir in enumerate(submission_dirs):
-        submission_id = submission_dir.name
-        complete_results_file = submission_dir / "complete_results.json"
-
-        print(f"\n{'='*80}")
-        print(f"Processing {i+1}/{len(submission_dirs)}: {submission_id}")
-        print(f"Overall progress: {start_from + i + 1}/{len(all_submission_dirs)}")
-        print(f"{'='*80}")
-
-        logger.info(f"Starting processing for {submission_id}")
-
-        if not complete_results_file.exists():
-            logger.warning(f"No complete results found for {submission_id}")
-            stats["skipped"] += 1
-            continue
-
-        # Check if PDFs already exist
-        pdfs_dir = submission_dir / "pdfs"
-        if pdfs_dir.exists():
-            existing_pdfs = list(pdfs_dir.glob("*.pdf"))
-            print(f"📁 Found {len(existing_pdfs)} existing PDFs")
-
-        try:
-            with open(complete_results_file, "r") as f:
-                results = json.load(f)
-
-            # Get final ranked papers
-            final_ranked = results.get("final_ranked_papers", [])
-            print(f"📊 Found {len(final_ranked)} ranked papers")
-            logger.info(f"Found {len(final_ranked)} ranked papers for {submission_id}")
-            stats["total_papers"] += len(final_ranked)
-
-            if len(final_ranked) == 0:
-                logger.warning(f"No ranked papers found for {submission_id}")
-                stats["skipped"] += 1
-                continue
-
-            # Create pdfs subdirectory within the submission directory
-            pdfs_dir = submission_dir / "pdfs"
-            pdfs_dir.mkdir(exist_ok=True)
-
-            # Download PDFs for each ranked paper
-            for j, paper in enumerate(final_ranked):
-                print(f"\n--- Paper {j+1}/{len(final_ranked)} ---")
-                logger.debug(
-                    f"Processing paper {j+1}: {paper.get('title', 'Unknown')[:50]}..."
-                )
-
-                result = find_and_download_pdf(paper, str(pdfs_dir))
-
-                if result == "2":
-                    stats["downloaded"] += 1
-                elif result == "3":
-                    stats["not_found"] += 1
-                else:
-                    stats["failed"] += 1
-
-                # Small delay to be nice to APIs
-                time.sleep(1)  # Increased delay to be safer
-
-            # Update metadata.json to include PDF download stats
-            metadata_file = submission_dir / "metadata.json"
-            if metadata_file.exists():
-                try:
-                    with open(metadata_file, "r") as f:
-                        metadata = json.load(f)
-
-                    # Count actual PDFs downloaded
-                    pdf_files = list(pdfs_dir.glob("*.pdf"))
-                    metadata["pdf_download"] = {
-                        "total_papers": len(final_ranked),
-                        "pdfs_downloaded": len(pdf_files),
-                        "download_success_rate": (
-                            len(pdf_files) / len(final_ranked) * 100
-                            if final_ranked
-                            else 0
-                        ),
-                        "download_timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-                    }
-
-                    with open(metadata_file, "w") as f:
-                        json.dump(metadata, f, indent=2)
-
-                    logger.info(f"Updated metadata for {submission_id}")
-                except Exception as e:
-                    logger.warning(
-                        f"Failed to update metadata for {submission_id}: {e}"
-                    )
-
-            print(f"\n✅ Completed {submission_id}")
-            print(f"📁 PDFs saved to: {pdfs_dir}")
-            logger.info(f"Completed processing {submission_id}")
-
-        except Exception as e:
-            logger.error(f"Error processing {submission_id}: {e}")
-            stats["failed"] += 1
-            continue
-
-        # Progress update every 5 submissions
-        if (i + 1) % 5 == 0:
-            logger.info(f"Progress: {i+1}/{len(submission_dirs)} submissions processed")
-            logger.info(f"Stats so far: {stats}")
-
-            # Save intermediate stats
-            intermediate_stats_file = (
-                results_path / "pdf_download_stats_intermediate.json"
-            )
-            with open(intermediate_stats_file, "w") as f:
-                json.dump(
-                    {
-                        **stats,
-                        "last_processed": submission_id,
-                        "progress": f"{i+1}/{len(submission_dirs)}",
-                        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-                    },
-                    f,
-                    indent=2,
-                )
-
-    # Final summary
-    print(f"\n🎯 FINAL SUMMARY:")
-    print(f"{'='*60}")
-    print(f"Total submissions processed: {stats['total_submissions']}")
-    print(f"Total papers attempted: {stats['total_papers']}")
-    print(f"✅ Successfully downloaded: {stats['downloaded']}")
-    print(f"❌ Failed to download: {stats['failed']}")
-    print(f"🔍 Not found: {stats['not_found']}")
-    print(f"⏭️  Skipped: {stats['skipped']}")
-
-    success_rate = stats["downloaded"] / max(stats["total_papers"], 1) * 100
-    print(f"📊 Success rate: {success_rate:.1f}%")
-
-    # Save statistics to main results directory
-    stats_file = results_path / "pdf_download_stats.json"
-    final_stats = {
-        **stats,
-        "completion_timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "success_rate": success_rate,
-    }
-    with open(stats_file, "w") as f:
-        json.dump(final_stats, f, indent=2)
-
-    logger.info(f"Download statistics saved to: {stats_file}")
-    logger.info("PDF download process completed!")
-
-    return stats
-
-
 def process_for_pipeline(data_dir: str, submission_id: str) -> bool:
     """
     Process a single submission for pipeline integration.
@@ -438,33 +255,18 @@ def process_for_pipeline(data_dir: str, submission_id: str) -> bool:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Download PDFs for ranked papers")
-    parser.add_argument(
-        "--results-dir",
-        type=str,
-        default="results",
-        help="Directory containing ranking results (batch mode)"
-    )
+    parser = argparse.ArgumentParser(description="Download PDFs for ranked papers - single submission mode only")
     parser.add_argument(
         "--data-dir",
         type=str,
-        help="Base data directory (pipeline mode)"
+        required=True,
+        help="Base data directory"
     )
     parser.add_argument(
         "--submission-id",
         type=str,
-        help="Submission ID for pipeline mode"
-    )
-    parser.add_argument(
-        "--max-submissions",
-        type=int,
-        help="Maximum number of submissions to process (batch mode)"
-    )
-    parser.add_argument(
-        "--start-from",
-        type=int,
-        default=0,
-        help="Skip this many submissions (batch mode)"
+        required=True,
+        help="Submission ID to process"
     )
     parser.add_argument(
         "--verbose", "-v",
@@ -478,23 +280,12 @@ if __name__ == "__main__":
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
     
-    if args.submission_id:
-        # Pipeline mode - single submission
-        if not args.data_dir:
-            parser.error("--data-dir is required for pipeline mode")
-        
-        logger.info(f"Processing submission {args.submission_id} in pipeline mode")
-        success = process_for_pipeline(args.data_dir, args.submission_id)
-        
-        if success:
-            logger.info(f"✅ Successfully downloaded PDFs for {args.submission_id}")
-        else:
-            logger.error(f"❌ Failed to download PDFs for {args.submission_id}")
+    logger.info(f"Processing submission {args.submission_id}")
+    success = process_for_pipeline(args.data_dir, args.submission_id)
+    
+    if success:
+        logger.info(f"✅ Successfully downloaded PDFs for {args.submission_id}")
+        print(f"✅ Successfully processed submission {args.submission_id}")
     else:
-        # Batch mode - process multiple submissions
-        logger.info("Running in batch mode")
-        process_ranking_results(
-            results_dir=args.results_dir,
-            max_submissions=args.max_submissions,
-            start_from=args.start_from
-        )
+        logger.error(f"❌ Failed to download PDFs for {args.submission_id}")
+        print(f"❌ Failed to process submission {args.submission_id}")
